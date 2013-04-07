@@ -1,0 +1,31 @@
+﻿.green {font-family:arial,helvetica;}
+.green .ajax__tab_body 
+{
+    font-size:10pt;
+    border:2px solid #e3f0cb;
+    border-top:none;
+    background-color:#ffffff;
+}
+.green .ajax__tab_header 
+{
+	background-color:#e5f1ce;
+	border:solid 2px #e3f0cb;
+	border-bottom:none;
+	padding:2px 2px 4px 2px;
+	text-align:center; /* center the tabs horizontally */
+}
+.green .ajax__tab_tab
+{
+    font-size:10pt;
+	font-weight:bold;
+    color:#99ba4e;
+    text-align:center;	
+	border:solid 1px #d5e7b5;
+	padding:5px;
+}
+.green .ajax__tab_active .ajax__tab_tab,
+.green .ajax__tab_hover .ajax__tab_tab
+{
+	background-color:#f4f7ef;
+}
+

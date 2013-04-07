@@ -1,0 +1,68 @@
+﻿.opera
+{
+	display:block;
+	/* fonts for the tabs */
+	font-family:"Trebuchet MS",Trebuchet,Verdana,Helvetica,Arial,sans-serif;
+	font-size:10px;	
+}
+.opera .ajax__tab_tab
+{
+	/* header text is always be bold */
+	font-weight:bold;	
+}
+.opera .ajax__tab_body 
+{
+	background-color:#fff;
+	border:1px solid #eeeeee;
+	border-top:none;
+	padding:7px;
+}
+.opera .ajax__tab_header
+{
+	border-bottom:1px solid #eeeeee;
+	padding-right:7px;
+}
+
+/* regular header styles */
+.opera .ajax__tab_header .ajax__tab_tab
+{
+	/* left/right rounded images are 11 pixels wide */
+	margin:0px 7px 0px 7px;
+	color:#fff; 
+	background:url(img/bg.gif) repeat-x;	
+}
+.opera .ajax__tab_header .ajax__tab_outer
+{
+	/* 2 pixel horizontal space between tabs */
+	margin-right:2px;
+	background:url(img/right.gif) no-repeat right top;
+}
+.opera .ajax__tab_header .ajax__tab_inner
+{
+	background:url(img/left.gif) no-repeat left top;
+}
+
+/* active/hover headers styles */
+.opera .ajax__tab_active .ajax__tab_tab, 
+.opera .ajax__tab_hover .ajax__tab_tab  
+{
+	/* left/right rounded images are 11 pixels wide */
+	margin:0px 7px 0px 7px;
+	color:#111111;
+	background:url(img/bg.gif) repeat-x 0pt -48px;	
+	cursor:pointer;
+}
+.opera .ajax__tab_active .ajax__tab_outer,
+.opera .ajax__tab_hover .ajax__tab_outer
+{
+	/* 2 pixel horizontal space between tabs */
+	margin-right:2px;
+	background:url(img/right.gif) no-repeat 100% -48px;
+}
+.opera .ajax__tab_active .ajax__tab_inner,
+.opera .ajax__tab_hover .ajax__tab_inner
+{
+	background:url(img/left.gif) no-repeat 0pt -48px;
+}
+
+

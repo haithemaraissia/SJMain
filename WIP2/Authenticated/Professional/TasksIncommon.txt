@@ -1,0 +1,6 @@
+In common tabs
+event, profile, message,  account, Quick Watch, account
+
+
+No in common
+projects, bids, portfolio, work sample

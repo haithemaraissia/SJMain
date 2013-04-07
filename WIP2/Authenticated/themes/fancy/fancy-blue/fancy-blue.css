@@ -1,0 +1,14 @@
+﻿.fancy-blue .ajax__tab_header 
+{
+    background:url(img/blue_bg.gif) repeat-x;
+}
+.fancy-blue .ajax__tab_hover .ajax__tab_outer,
+.fancy-blue .ajax__tab_active .ajax__tab_outer 
+{
+    background:url(img/blue_left.gif) no-repeat left top;
+}
+.fancy-blue .ajax__tab_hover .ajax__tab_inner,
+.fancy-blue .ajax__tab_active .ajax__tab_inner 
+{
+    background:url(img/blue_right.gif) no-repeat right top;
+}

@@ -1,0 +1,14 @@
+﻿.fancy-red .ajax__tab_header 
+{
+    background:url(img/red_bg.gif) repeat-x;
+}
+.fancy-red .ajax__tab_hover .ajax__tab_outer,
+.fancy-red .ajax__tab_active .ajax__tab_outer 
+{
+    background:url(img/red_left.gif) no-repeat left top;
+}
+.fancy-red .ajax__tab_hover .ajax__tab_inner,
+.fancy-red .ajax__tab_active .ajax__tab_inner 
+{
+    background:url(img/red_right.gif) no-repeat right top;
+}

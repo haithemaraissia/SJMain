@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SearchProfessionalDataSet" targetNamespace="http://tempuri.org/SearchProfessionalDataSet.xsd" xmlns:mstns="http://tempuri.org/SearchProfessionalDataSet.xsd" xmlns="http://tempuri.org/SearchProfessionalDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SideJobConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SideJobConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SideJobConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DefaultSearchDataTableTableAdapter" GeneratorDataComponentClassName="DefaultSearchDataTableTableAdapter" Name="DefaultSearchDataTable" UserDataComponentName="DefaultSearchDataTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillDefault" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDefault" GeneratorSourceName="FillDefault" GetMethodModifier="Public" GetMethodName="GetDefault" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDefault" UserSourceName="FillDefault">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT ProfessionalSkill.ProID, ProfessionalGeneral.UserName, ProfessionalGeneral.CountryName,
+                             (SELECT        Path
+                               FROM            CountriesUpdate
+                               WHERE        (CountryId = ProfessionalGeneral.CountryID)) AS CountryFlag, ProfessionalGeneral.RegionName, Skills.CategoryID, Skills.CategoryName, Skills.JobID, 
+                         Skills.JobTitle, ProfessionalAdditionalInformation.Rank, ProfessionalAdditionalInformation.Points, ProfessionalAdditionalInformation.Reputation, 
+                         ProfessionalAdditionalInformation.ProjectCompleted, ProfessionalAdditionalInformation.MoneyEarned, 
+                         ProfessionalAdditionalInformation.ProjectCompleted + ProfessionalAdditionalInformation.ProjectCanceled AS TotalProject, SUBSTRING(ProfessionalPortfolio.About, 0, 
+                         100) AS About, ProfessionalRating.IntRate
+FROM            Skills INNER JOIN
+                         ProfessionalSkill ON Skills.SkillID = ProfessionalSkill.SkillID INNER JOIN
+                         ProfessionalGeneral ON ProfessionalSkill.ProID = ProfessionalGeneral.ProID INNER JOIN
+                         ProfessionalAdditionalInformation ON ProfessionalGeneral.ProID = ProfessionalAdditionalInformation.ProID INNER JOIN
+                         ProfessionalPortfolio ON ProfessionalGeneral.ProID = ProfessionalPortfolio.ProID INNER JOIN
+                         ProfessionalRating ON ProfessionalGeneral.ProID = ProfessionalRating.ProID
+WHERE        (ProfessionalPortfolio.Modified = 0)
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProID" DataSetColumn="ProID" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+              <Mapping SourceColumn="CountryName" DataSetColumn="CountryName" />
+              <Mapping SourceColumn="CountryFlag" DataSetColumn="CountryFlag" />
+              <Mapping SourceColumn="RegionName" DataSetColumn="RegionName" />
+              <Mapping SourceColumn="CategoryID" DataSetColumn="CategoryID" />
+              <Mapping SourceColumn="CategoryName" DataSetColumn="CategoryName" />
+              <Mapping SourceColumn="JobID" DataSetColumn="JobID" />
+              <Mapping SourceColumn="JobTitle" DataSetColumn="JobTitle" />
+              <Mapping SourceColumn="Rank" DataSetColumn="Rank" />
+              <Mapping SourceColumn="Points" DataSetColumn="Points" />
+              <Mapping SourceColumn="Reputation" DataSetColumn="Reputation" />
+              <Mapping SourceColumn="ProjectCompleted" DataSetColumn="ProjectCompleted" />
+              <Mapping SourceColumn="MoneyEarned" DataSetColumn="MoneyEarned" />
+              <Mapping SourceColumn="TotalProject" DataSetColumn="TotalProject" />
+              <Mapping SourceColumn="About" DataSetColumn="About" />
+              <Mapping SourceColumn="IntRate" DataSetColumn="IntRate" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByUsername" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetByUsername" GeneratorSourceName="FillByUsername" GetMethodModifier="Public" GetMethodName="GetByUsername" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetByUsername" UserSourceName="FillByUsername">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT ProfessionalSkill.ProID, ProfessionalGeneral.UserName, ProfessionalGeneral.CountryName,
+                             (SELECT        Path
+                               FROM            CountriesUpdate
+                               WHERE        (CountryId = ProfessionalGeneral.CountryID)) AS CountryFlag, ProfessionalGeneral.RegionName, Skills.CategoryID, Skills.CategoryName, Skills.JobID, 
+                         Skills.JobTitle, ProfessionalAdditionalInformation.Rank, ProfessionalAdditionalInformation.Points, ProfessionalAdditionalInformation.Reputation, 
+                         ProfessionalAdditionalInformation.ProjectCompleted, ProfessionalAdditionalInformation.MoneyEarned, 
+                         ProfessionalAdditionalInformation.ProjectCompleted + ProfessionalAdditionalInformation.ProjectCanceled AS TotalProject, SUBSTRING(ProfessionalPortfolio.About, 0, 
+                         100) AS About, ProfessionalRating.IntRate
+FROM            Skills INNER JOIN
+                         ProfessionalSkill ON Skills.SkillID = ProfessionalSkill.SkillID INNER JOIN
+                         ProfessionalGeneral ON ProfessionalSkill.ProID = ProfessionalGeneral.ProID INNER JOIN
+                         ProfessionalAdditionalInformation ON ProfessionalGeneral.ProID = ProfessionalAdditionalInformation.ProID INNER JOIN
+                         ProfessionalPortfolio ON ProfessionalGeneral.ProID = ProfessionalPortfolio.ProID INNER JOIN
+                         ProfessionalRating ON ProfessionalGeneral.ProID = ProfessionalRating.ProID
+WHERE        (ProfessionalPortfolio.Modified = 0)
+AND ProfessionalGeneral.UserName = @UserName
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="UserName" ColumnName="UserName" DataSourceName="SIDEJOBS.dbo.ProfessionalGeneral" DataTypeServer="nvarchar(256)" DbType="String" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="256" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillContinent" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetContinent" GeneratorSourceName="FillContinent" GetMethodModifier="Public" GetMethodName="GetContinent" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetContinent" UserSourceName="FillContinent">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT ProfessionalSkill.ProID, ProfessionalGeneral.UserName, ProfessionalGeneral.CountryName,
+                             (SELECT        Path
+                               FROM            CountriesUpdate
+                               WHERE        (CountryId = ProfessionalGeneral.CountryID)) AS CountryFlag, ProfessionalGeneral.RegionName, Skills.CategoryID, Skills.CategoryName, Skills.JobID, 
+                         Skills.JobTitle, ProfessionalAdditionalInformation.Rank, ProfessionalAdditionalInformation.Points, ProfessionalAdditionalInformation.Reputation, 
+                         ProfessionalAdditionalInformation.ProjectCompleted, ProfessionalAdditionalInformation.MoneyEarned, 
+                         ProfessionalAdditionalInformation.ProjectCompleted + ProfessionalAdditionalInformation.ProjectCanceled AS TotalProject, SUBSTRING(ProfessionalPortfolio.About, 0, 
+                         100) AS About, ProfessionalRating.IntRate
+FROM            Skills INNER JOIN
+                         ProfessionalSkill ON Skills.SkillID = ProfessionalSkill.SkillID INNER JOIN
+                         ProfessionalGeneral ON ProfessionalSkill.ProID = ProfessionalGeneral.ProID INNER JOIN
+                         ProfessionalAdditionalInformation ON ProfessionalGeneral.ProID = ProfessionalAdditionalInformation.ProID INNER JOIN
+                         ProfessionalPortfolio ON ProfessionalGeneral.ProID = ProfessionalPortfolio.ProID INNER JOIN
+                         ProfessionalRating ON ProfessionalGeneral.ProID = ProfessionalRating.ProID
+WHERE        (ProfessionalPortfolio.Modified = 0) AND (ProfessionalGeneral.CountryID = @CountryID) AND (ProfessionalGeneral.RegionID = @RegionID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="CountryID" ColumnName="CountryID" DataSourceName="SIDEJOBS.dbo.ProfessionalGeneral" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CountryID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="CountryID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="RegionID" ColumnName="RegionID" DataSourceName="SIDEJOBS.dbo.ProfessionalGeneral" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@RegionID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="RegionID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillCustom" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetCustom" GeneratorSourceName="FillCustom" GetMethodModifier="Public" GetMethodName="GetCustom" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetCustom" UserSourceName="FillCustom">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT ProfessionalSkill.ProID, ProfessionalGeneral.UserName, ProfessionalGeneral.CountryName,
+                             (SELECT        Path
+                               FROM            CountriesUpdate
+                               WHERE        (CountryId = ProfessionalGeneral.CountryID)) AS CountryFlag, ProfessionalGeneral.RegionName, Skills.CategoryID, Skills.CategoryName, Skills.JobID, 
+                         Skills.JobTitle, ProfessionalAdditionalInformation.Rank, ProfessionalAdditionalInformation.Points, ProfessionalAdditionalInformation.Reputation, 
+                         ProfessionalAdditionalInformation.ProjectCompleted, ProfessionalAdditionalInformation.MoneyEarned, 
+                         ProfessionalAdditionalInformation.ProjectCompleted + ProfessionalAdditionalInformation.ProjectCanceled AS TotalProject, SUBSTRING(ProfessionalPortfolio.About, 0, 
+                         100) AS About, ProfessionalRating.IntRate
+FROM            Skills INNER JOIN
+                         ProfessionalSkill ON Skills.SkillID = ProfessionalSkill.SkillID INNER JOIN
+                         ProfessionalGeneral ON ProfessionalSkill.ProID = ProfessionalGeneral.ProID INNER JOIN
+                         ProfessionalAdditionalInformation ON ProfessionalGeneral.ProID = ProfessionalAdditionalInformation.ProID INNER JOIN
+                         ProfessionalPortfolio ON ProfessionalGeneral.ProID = ProfessionalPortfolio.ProID INNER JOIN
+                         ProfessionalRating ON ProfessionalGeneral.ProID = ProfessionalRating.ProID
+WHERE        (ProfessionalPortfolio.Modified = 0) AND (ProfessionalSkill.ProID = @ProID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ProID" ColumnName="ProID" DataSourceName="SIDEJOBS.dbo.ProfessionalSkill" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ProID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ProID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CustomerInvitationDataTableTableAdapter" GeneratorDataComponentClassName="CustomerInvitationDataTableTableAdapter" Name="CustomerInvitationDataTable" UserDataComponentName="CustomerInvitationDataTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillCustomerInvitation" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetCustomerInvitation" GeneratorSourceName="FillCustomerInvitation" GetMethodModifier="Public" GetMethodName="GetCustomerInvitation" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetCustomerInvitation" UserSourceName="FillCustomerInvitation">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CustomerProject.CustomerID, CustomerProject.ProjectID, Projects.HighestBid, Projects.HighestBidUsername, Projects.Status, ProjectRequirements.TimeLeft, 
+                         CustomerGeneral.UserName
+FROM            CustomerProject INNER JOIN
+                         Projects ON CustomerProject.ProjectID = Projects.ProjectID INNER JOIN
+                         ProjectRequirements ON Projects.ProjectID = ProjectRequirements.ProjectID INNER JOIN
+                         CustomerGeneral ON CustomerProject.CustomerID = CustomerGeneral.CustomerID
+WHERE        (CustomerProject.CustomerID = @CustomerID) AND (Projects.Status = N'OPEN')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="CustomerID" ColumnName="CustomerID" DataSourceName="SIDEJOBS.dbo.CustomerProject" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CustomerID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="CustomerID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustomerID" DataSetColumn="CustomerID" />
+              <Mapping SourceColumn="ProjectID" DataSetColumn="ProjectID" />
+              <Mapping SourceColumn="HighestBid" DataSetColumn="HighestBid" />
+              <Mapping SourceColumn="HighestBidUsername" DataSetColumn="HighestBidUsername" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="TimeLeft" DataSetColumn="TimeLeft" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProfessionalInvitationDataTableTableAdapter" GeneratorDataComponentClassName="ProfessionalInvitationDataTableTableAdapter" Name="ProfessionallnvitationDataTable" UserDataComponentName="ProfessionalInvitationDataTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillProfessionalInvitationDataTable" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetProfessionalInvitationDataTable" GeneratorSourceName="FillProfessionalInvitationDataTable" GetMethodModifier="Public" GetMethodName="GetProfessionalInvitationDataTable" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetProfessionalInvitationDataTable" UserSourceName="FillProfessionalInvitationDataTable">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ProfessionalProject.ProID, ProfessionalProject.ProjectID, Projects.HighestBid, Projects.HighestBidUsername, Projects.Status, ProjectRequirements.TimeLeft, ProfessionalGeneral.UserName FROM ProfessionalProject INNER JOIN Projects ON ProfessionalProject.ProjectID = Projects.ProjectID INNER JOIN ProjectRequirements ON Projects.ProjectID = ProjectRequirements.ProjectID INNER JOIN ProfessionalGeneral ON ProfessionalProject.ProID = ProfessionalGeneral.ProID WHERE (ProfessionalProject.ProID = @ProID) AND (Projects.Status = N'OPEN')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ProID" ColumnName="ProID" DataSourceName="SIDEJOBS.dbo.ProfessionalProject" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ProID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ProID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProID" DataSetColumn="ProID" />
+              <Mapping SourceColumn="ProjectID" DataSetColumn="ProjectID" />
+              <Mapping SourceColumn="HighestBid" DataSetColumn="HighestBid" />
+              <Mapping SourceColumn="HighestBidUsername" DataSetColumn="HighestBidUsername" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="TimeLeft" DataSetColumn="TimeLeft" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SelectProfessionalPhotoTableAdapter" GeneratorDataComponentClassName="SelectProfessionalPhotoTableAdapter" Name="SelectProfessionalPhoto" UserDataComponentName="SelectProfessionalPhotoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectName="SIDEJOBS.dbo.SelectProfessionalPhoto" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillProfessionalImage" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetProfessionalImage" GeneratorSourceName="FillProfessionalImage" GetMethodModifier="Public" GetMethodName="GetProfessionalImage" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetProfessionalImage" UserSourceName="FillProfessionalImage">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SelectProfessionalPhoto</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ProID" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PhotoID" DataSetColumn="PhotoID" />
+              <Mapping SourceColumn="PhotoPath" DataSetColumn="PhotoPath" />
+              <Mapping SourceColumn="Caption" DataSetColumn="Caption" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IndustryJobsTableAdapter" GeneratorDataComponentClassName="IndustryJobsTableAdapter" Name="IndustryJobs" UserDataComponentName="IndustryJobsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectName="SIDEJOBS.dbo.Skills" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillJobsByIndustry" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetJobsByIndustry" GeneratorSourceName="FillJobsByIndustry" GetMethodModifier="Public" GetMethodName="GetJobsByIndustry" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetJobsByIndustry" UserSourceName="FillJobsByIndustry">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CategoryID, COUNT(*) AS Count, CategoryName + ' (' + CAST(COUNT(*) AS varchar) + ' )' AS CustomJobCount,  SUBSTRING(CategoryName, 0, 26) AS CustomCategory
+FROM            Skills
+GROUP BY CategoryName, CategoryID
+ORDER BY Count DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Count" DataSetColumn="Count" />
+              <Mapping SourceColumn="CategoryID" DataSetColumn="CategoryID" />
+              <Mapping SourceColumn="CustomJobCount" DataSetColumn="CustomJobCount" />
+              <Mapping SourceColumn="CustomCategory" DataSetColumn="CustomCategory" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProfessionalCountryTableAdapter" GeneratorDataComponentClassName="ProfessionalCountryTableAdapter" Name="ProfessionalCountry" UserDataComponentName="ProfessionalCountryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectName="SIDEJOBS.dbo.ProfessionalGeneral" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillProfessionalCountry" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetProfessionalCountry" GeneratorSourceName="FillProfessionalCountry" GetMethodModifier="Public" GetMethodName="GetProfessionalCountry" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetProfessionalCountry" UserSourceName="FillProfessionalCountry">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        COUNT(*) AS ProNumber, ProfessionalGeneral.CountryName + ' (' + CAST(COUNT(*) AS varchar) + ' )' AS CustomProfessionalCustomCountryCount, 
+                         ProfessionalGeneral.CountryID
+FROM            ProfessionalSkill INNER JOIN
+                         ProfessionalGeneral ON ProfessionalSkill.ProID = ProfessionalGeneral.ProID
+GROUP BY ProfessionalGeneral.CountryName, ProfessionalGeneral.CountryID
+ORDER BY ProNumber DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProNumber" DataSetColumn="ProNumber" />
+              <Mapping SourceColumn="CustomProfessionalCustomCountryCount" DataSetColumn="CustomProfessionalCustomCountryCount" />
+              <Mapping SourceColumn="CountryID" DataSetColumn="CountryID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProfessionalRegionTableAdapter" GeneratorDataComponentClassName="ProfessionalRegionTableAdapter" Name="ProfessionalRegion" UserDataComponentName="ProfessionalRegionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectName="SIDEJOBS.dbo.ProfessionalGeneral" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillProfessionalRegion" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetProfessionalRegion" GeneratorSourceName="FillProfessionalRegion" GetMethodModifier="Public" GetMethodName="GetProfessionalRegion" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetProfessionalRegion" UserSourceName="FillProfessionalRegion">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        COUNT(*) AS ProNumber, ProfessionalGeneral.RegionName + ' (' + CAST(COUNT(*) AS varchar) + ' )' AS CustomProfessionalCustomRegionCount, 
+                         ProfessionalGeneral.RegionID
+FROM            ProfessionalGeneral INNER JOIN
+                         ProfessionalSkill ON ProfessionalGeneral.ProID = ProfessionalSkill.ProID
+GROUP BY ProfessionalGeneral.RegionName, ProfessionalGeneral.RegionID
+ORDER BY ProNumber DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProNumber" DataSetColumn="ProNumber" />
+              <Mapping SourceColumn="CustomProfessionalCustomRegionCount" DataSetColumn="CustomProfessionalCustomRegionCount" />
+              <Mapping SourceColumn="RegionID" DataSetColumn="RegionID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FindUSZipCodesWithinRadiusTableAdapter" GeneratorDataComponentClassName="FindUSZipCodesWithinRadiusTableAdapter" Name="FindUSZipCodesWithinRadius" UserDataComponentName="FindUSZipCodesWithinRadiusTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectName="SIDEJOBS.dbo.FindUSZipCodesWithinRadius" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillUSZipCodeRadius" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetUSZipCodeRadius" GeneratorSourceName="FillUSZipCodeRadius" GetMethodModifier="Public" GetMethodName="GetUSZipCodeRadius" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetUSZipCodeRadius" UserSourceName="FillUSZipCodeRadius">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.FindUSZipCodesWithinRadius</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="char" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@ZipCode" Precision="0" ProviderType="Char" Scale="0" Size="5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@GivenMileRadius" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ZipCode" DataSetColumn="ZipCode" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FindCanadaZipCodesWithinRadiusTableAdapter" GeneratorDataComponentClassName="FindCanadaZipCodesWithinRadiusTableAdapter" Name="FindCanadaZipCodesWithinRadius" UserDataComponentName="FindCanadaZipCodesWithinRadiusTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SideJobConnectionString (Web.config)" DbObjectName="SIDEJOBS.dbo.FindCanadaZipCodesWithinRadius" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="FillCanadaZipCodeRadius" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetCanadaZipCodeRadius" GeneratorSourceName="FillCanadaZipCodeRadius" GetMethodModifier="Public" GetMethodName="GetCanadaZipCodeRadius" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetCanadaZipCodeRadius" UserSourceName="FillCanadaZipCodeRadius">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.FindCanadaZipCodesWithinRadius</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="char" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@ZipCode" Precision="0" ProviderType="Char" Scale="0" Size="5" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@GivenMileRadius" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ZipCode" DataSetColumn="ZipCode" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SearchProfessionalDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="SearchProfessionalDataSet" msprop:Generator_UserDSName="SearchProfessionalDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DefaultSearchDataTable" msprop:Generator_TableClassName="DefaultSearchDataTableDataTable" msprop:Generator_TableVarName="tableDefaultSearchDataTable" msprop:Generator_TablePropName="DefaultSearchDataTable" msprop:Generator_RowDeletingName="DefaultSearchDataTableRowDeleting" msprop:Generator_UserTableName="DefaultSearchDataTable" msprop:Generator_RowChangingName="DefaultSearchDataTableRowChanging" msprop:Generator_RowEvHandlerName="DefaultSearchDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="DefaultSearchDataTableRowDeleted" msprop:Generator_RowEvArgName="DefaultSearchDataTableRowChangeEvent" msprop:Generator_RowChangedName="DefaultSearchDataTableRowChanged" msprop:Generator_RowClassName="DefaultSearchDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProID" msprop:Generator_ColumnVarNameInTable="columnProID" msprop:Generator_ColumnPropNameInRow="ProID" msprop:Generator_ColumnPropNameInTable="ProIDColumn" msprop:Generator_UserColumnName="ProID" type="xs:int" />
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountryName" msprop:Generator_ColumnVarNameInTable="columnCountryName" msprop:Generator_ColumnPropNameInRow="CountryName" msprop:Generator_ColumnPropNameInTable="CountryNameColumn" msprop:Generator_UserColumnName="CountryName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountryFlag" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCountryFlag" msprop:Generator_ColumnPropNameInRow="CountryFlag" msprop:Generator_ColumnPropNameInTable="CountryFlagColumn" msprop:Generator_UserColumnName="CountryFlag" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegionName" msprop:Generator_ColumnVarNameInTable="columnRegionName" msprop:Generator_ColumnPropNameInRow="RegionName" msprop:Generator_ColumnPropNameInTable="RegionNameColumn" msprop:Generator_UserColumnName="RegionName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CategoryID" msprop:Generator_ColumnVarNameInTable="columnCategoryID" msprop:Generator_ColumnPropNameInRow="CategoryID" msprop:Generator_ColumnPropNameInTable="CategoryIDColumn" msprop:Generator_UserColumnName="CategoryID" type="xs:int" />
+              <xs:element name="CategoryName" msprop:Generator_ColumnVarNameInTable="columnCategoryName" msprop:Generator_ColumnPropNameInRow="CategoryName" msprop:Generator_ColumnPropNameInTable="CategoryNameColumn" msprop:Generator_UserColumnName="CategoryName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JobID" msprop:Generator_ColumnVarNameInTable="columnJobID" msprop:Generator_ColumnPropNameInRow="JobID" msprop:Generator_ColumnPropNameInTable="JobIDColumn" msprop:Generator_UserColumnName="JobID" type="xs:int" />
+              <xs:element name="JobTitle" msprop:Generator_ColumnVarNameInTable="columnJobTitle" msprop:Generator_ColumnPropNameInRow="JobTitle" msprop:Generator_ColumnPropNameInTable="JobTitleColumn" msprop:Generator_UserColumnName="JobTitle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rank" msprop:Generator_ColumnVarNameInTable="columnRank" msprop:Generator_ColumnPropNameInRow="Rank" msprop:Generator_ColumnPropNameInTable="RankColumn" msprop:Generator_UserColumnName="Rank" type="xs:int" />
+              <xs:element name="Points" msprop:Generator_ColumnVarNameInTable="columnPoints" msprop:Generator_ColumnPropNameInRow="Points" msprop:Generator_ColumnPropNameInTable="PointsColumn" msprop:Generator_UserColumnName="Points" type="xs:int" />
+              <xs:element name="Reputation" msprop:Generator_ColumnVarNameInTable="columnReputation" msprop:Generator_ColumnPropNameInRow="Reputation" msprop:Generator_ColumnPropNameInTable="ReputationColumn" msprop:Generator_UserColumnName="Reputation" type="xs:int" />
+              <xs:element name="ProjectCompleted" msprop:Generator_ColumnVarNameInTable="columnProjectCompleted" msprop:Generator_ColumnPropNameInRow="ProjectCompleted" msprop:Generator_ColumnPropNameInTable="ProjectCompletedColumn" msprop:Generator_UserColumnName="ProjectCompleted" type="xs:int" />
+              <xs:element name="MoneyEarned" msprop:Generator_ColumnVarNameInTable="columnMoneyEarned" msprop:Generator_ColumnPropNameInRow="MoneyEarned" msprop:Generator_ColumnPropNameInTable="MoneyEarnedColumn" msprop:Generator_UserColumnName="MoneyEarned" type="xs:decimal" />
+              <xs:element name="TotalProject" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalProject" msprop:Generator_ColumnPropNameInRow="TotalProject" msprop:Generator_ColumnPropNameInTable="TotalProjectColumn" msprop:Generator_UserColumnName="TotalProject" type="xs:int" minOccurs="0" />
+              <xs:element name="About" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAbout" msprop:Generator_ColumnPropNameInRow="About" msprop:Generator_ColumnPropNameInTable="AboutColumn" msprop:Generator_UserColumnName="About" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IntRate" msprop:Generator_ColumnVarNameInTable="columnIntRate" msprop:Generator_ColumnPropNameInRow="IntRate" msprop:Generator_ColumnPropNameInTable="IntRateColumn" msprop:Generator_UserColumnName="IntRate" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CustomerInvitationDataTable" msprop:Generator_TableClassName="CustomerInvitationDataTableDataTable" msprop:Generator_TableVarName="tableCustomerInvitationDataTable" msprop:Generator_TablePropName="CustomerInvitationDataTable" msprop:Generator_RowDeletingName="CustomerInvitationDataTableRowDeleting" msprop:Generator_UserTableName="CustomerInvitationDataTable" msprop:Generator_RowChangingName="CustomerInvitationDataTableRowChanging" msprop:Generator_RowEvHandlerName="CustomerInvitationDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerInvitationDataTableRowDeleted" msprop:Generator_RowEvArgName="CustomerInvitationDataTableRowChangeEvent" msprop:Generator_RowChangedName="CustomerInvitationDataTableRowChanged" msprop:Generator_RowClassName="CustomerInvitationDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:int" />
+              <xs:element name="ProjectID" msprop:Generator_ColumnVarNameInTable="columnProjectID" msprop:Generator_ColumnPropNameInRow="ProjectID" msprop:Generator_ColumnPropNameInTable="ProjectIDColumn" msprop:Generator_UserColumnName="ProjectID" type="xs:int" />
+              <xs:element name="HighestBid" msprop:Generator_ColumnVarNameInTable="columnHighestBid" msprop:Generator_ColumnPropNameInRow="HighestBid" msprop:Generator_ColumnPropNameInTable="HighestBidColumn" msprop:Generator_UserColumnName="HighestBid" type="xs:double" minOccurs="0" />
+              <xs:element name="HighestBidUsername" msprop:Generator_ColumnVarNameInTable="columnHighestBidUsername" msprop:Generator_ColumnPropNameInRow="HighestBidUsername" msprop:Generator_ColumnPropNameInTable="HighestBidUsernameColumn" msprop:Generator_UserColumnName="HighestBidUsername" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TimeLeft" msprop:Generator_ColumnVarNameInTable="columnTimeLeft" msprop:Generator_ColumnPropNameInRow="TimeLeft" msprop:Generator_ColumnPropNameInTable="TimeLeftColumn" msprop:Generator_UserColumnName="TimeLeft" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProfessionallnvitationDataTable" msprop:Generator_TableClassName="ProfessionallnvitationDataTableDataTable" msprop:Generator_TableVarName="tableProfessionallnvitationDataTable" msprop:Generator_TablePropName="ProfessionallnvitationDataTable" msprop:Generator_RowDeletingName="ProfessionallnvitationDataTableRowDeleting" msprop:Generator_UserTableName="ProfessionallnvitationDataTable" msprop:Generator_RowChangingName="ProfessionallnvitationDataTableRowChanging" msprop:Generator_RowEvHandlerName="ProfessionallnvitationDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfessionallnvitationDataTableRowDeleted" msprop:Generator_RowEvArgName="ProfessionallnvitationDataTableRowChangeEvent" msprop:Generator_RowChangedName="ProfessionallnvitationDataTableRowChanged" msprop:Generator_RowClassName="ProfessionallnvitationDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProID" msprop:Generator_ColumnVarNameInTable="columnProID" msprop:Generator_ColumnPropNameInRow="ProID" msprop:Generator_ColumnPropNameInTable="ProIDColumn" msprop:Generator_UserColumnName="ProID" type="xs:int" />
+              <xs:element name="ProjectID" msprop:Generator_ColumnVarNameInTable="columnProjectID" msprop:Generator_ColumnPropNameInRow="ProjectID" msprop:Generator_ColumnPropNameInTable="ProjectIDColumn" msprop:Generator_UserColumnName="ProjectID" type="xs:int" />
+              <xs:element name="HighestBid" msprop:Generator_ColumnVarNameInTable="columnHighestBid" msprop:Generator_ColumnPropNameInRow="HighestBid" msprop:Generator_ColumnPropNameInTable="HighestBidColumn" msprop:Generator_UserColumnName="HighestBid" type="xs:double" minOccurs="0" />
+              <xs:element name="HighestBidUsername" msprop:Generator_ColumnVarNameInTable="columnHighestBidUsername" msprop:Generator_ColumnPropNameInRow="HighestBidUsername" msprop:Generator_ColumnPropNameInTable="HighestBidUsernameColumn" msprop:Generator_UserColumnName="HighestBidUsername" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TimeLeft" msprop:Generator_ColumnVarNameInTable="columnTimeLeft" msprop:Generator_ColumnPropNameInRow="TimeLeft" msprop:Generator_ColumnPropNameInTable="TimeLeftColumn" msprop:Generator_UserColumnName="TimeLeft" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SelectProfessionalPhoto" msprop:Generator_TableClassName="SelectProfessionalPhotoDataTable" msprop:Generator_TableVarName="tableSelectProfessionalPhoto" msprop:Generator_TablePropName="SelectProfessionalPhoto" msprop:Generator_RowDeletingName="SelectProfessionalPhotoRowDeleting" msprop:Generator_UserTableName="SelectProfessionalPhoto" msprop:Generator_RowChangingName="SelectProfessionalPhotoRowChanging" msprop:Generator_RowEvHandlerName="SelectProfessionalPhotoRowChangeEventHandler" msprop:Generator_RowDeletedName="SelectProfessionalPhotoRowDeleted" msprop:Generator_RowEvArgName="SelectProfessionalPhotoRowChangeEvent" msprop:Generator_RowChangedName="SelectProfessionalPhotoRowChanged" msprop:Generator_RowClassName="SelectProfessionalPhotoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PhotoID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPhotoID" msprop:Generator_ColumnPropNameInRow="PhotoID" msprop:Generator_ColumnPropNameInTable="PhotoIDColumn" msprop:Generator_UserColumnName="PhotoID" type="xs:int" />
+              <xs:element name="PhotoPath" msprop:Generator_ColumnVarNameInTable="columnPhotoPath" msprop:Generator_ColumnPropNameInRow="PhotoPath" msprop:Generator_ColumnPropNameInTable="PhotoPathColumn" msprop:Generator_UserColumnName="PhotoPath">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Caption" msprop:Generator_ColumnVarNameInTable="columnCaption" msprop:Generator_ColumnPropNameInRow="Caption" msprop:Generator_ColumnPropNameInTable="CaptionColumn" msprop:Generator_UserColumnName="Caption" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IndustryJobs" msprop:Generator_TableClassName="IndustryJobsDataTable" msprop:Generator_TableVarName="tableIndustryJobs" msprop:Generator_TablePropName="IndustryJobs" msprop:Generator_RowDeletingName="IndustryJobsRowDeleting" msprop:Generator_UserTableName="IndustryJobs" msprop:Generator_RowChangingName="IndustryJobsRowChanging" msprop:Generator_RowEvHandlerName="IndustryJobsRowChangeEventHandler" msprop:Generator_RowDeletedName="IndustryJobsRowDeleted" msprop:Generator_RowEvArgName="IndustryJobsRowChangeEvent" msprop:Generator_RowChangedName="IndustryJobsRowChanged" msprop:Generator_RowClassName="IndustryJobsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Count" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" msprop:Generator_UserColumnName="Count" type="xs:int" minOccurs="0" />
+              <xs:element name="CategoryID" msprop:Generator_ColumnVarNameInTable="columnCategoryID" msprop:Generator_ColumnPropNameInRow="CategoryID" msprop:Generator_ColumnPropNameInTable="CategoryIDColumn" msprop:Generator_UserColumnName="CategoryID" type="xs:int" />
+              <xs:element name="CustomJobCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCustomJobCount" msprop:Generator_ColumnPropNameInRow="CustomJobCount" msprop:Generator_ColumnPropNameInTable="CustomJobCountColumn" msprop:Generator_UserColumnName="CustomJobCount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="84" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustomCategory" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCustomCategory" msprop:Generator_ColumnPropNameInRow="CustomCategory" msprop:Generator_ColumnPropNameInTable="CustomCategoryColumn" msprop:Generator_UserColumnName="CustomCategory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="26" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProfessionalCountry" msprop:Generator_TableClassName="ProfessionalCountryDataTable" msprop:Generator_TableVarName="tableProfessionalCountry" msprop:Generator_TablePropName="ProfessionalCountry" msprop:Generator_RowDeletingName="ProfessionalCountryRowDeleting" msprop:Generator_UserTableName="ProfessionalCountry" msprop:Generator_RowChangingName="ProfessionalCountryRowChanging" msprop:Generator_RowEvHandlerName="ProfessionalCountryRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfessionalCountryRowDeleted" msprop:Generator_RowEvArgName="ProfessionalCountryRowChangeEvent" msprop:Generator_RowChangedName="ProfessionalCountryRowChanged" msprop:Generator_RowClassName="ProfessionalCountryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProNumber" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnProNumber" msprop:Generator_ColumnPropNameInRow="ProNumber" msprop:Generator_ColumnPropNameInTable="ProNumberColumn" msprop:Generator_UserColumnName="ProNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="CustomProfessionalCustomCountryCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCustomProfessionalCustomCountryCount" msprop:Generator_ColumnPropNameInRow="CustomProfessionalCustomCountryCount" msprop:Generator_ColumnPropNameInTable="CustomProfessionalCustomCountryCountColumn" msprop:Generator_UserColumnName="CustomProfessionalCustomCountryCount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="162" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountryID" msprop:Generator_ColumnVarNameInTable="columnCountryID" msprop:Generator_ColumnPropNameInRow="CountryID" msprop:Generator_ColumnPropNameInTable="CountryIDColumn" msprop:Generator_UserColumnName="CountryID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProfessionalRegion" msprop:Generator_TableClassName="ProfessionalRegionDataTable" msprop:Generator_TableVarName="tableProfessionalRegion" msprop:Generator_TablePropName="ProfessionalRegion" msprop:Generator_RowDeletingName="ProfessionalRegionRowDeleting" msprop:Generator_UserTableName="ProfessionalRegion" msprop:Generator_RowChangingName="ProfessionalRegionRowChanging" msprop:Generator_RowEvHandlerName="ProfessionalRegionRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfessionalRegionRowDeleted" msprop:Generator_RowEvArgName="ProfessionalRegionRowChangeEvent" msprop:Generator_RowChangedName="ProfessionalRegionRowChanged" msprop:Generator_RowClassName="ProfessionalRegionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProNumber" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnProNumber" msprop:Generator_ColumnPropNameInRow="ProNumber" msprop:Generator_ColumnPropNameInTable="ProNumberColumn" msprop:Generator_UserColumnName="ProNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="CustomProfessionalCustomRegionCount" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCustomProfessionalCustomRegionCount" msprop:Generator_ColumnPropNameInRow="CustomProfessionalCustomRegionCount" msprop:Generator_ColumnPropNameInTable="CustomProfessionalCustomRegionCountColumn" msprop:Generator_UserColumnName="CustomProfessionalCustomRegionCount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="162" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegionID" msprop:Generator_ColumnVarNameInTable="columnRegionID" msprop:Generator_ColumnPropNameInRow="RegionID" msprop:Generator_ColumnPropNameInTable="RegionIDColumn" msprop:Generator_UserColumnName="RegionID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FindUSZipCodesWithinRadius" msprop:Generator_TableClassName="FindUSZipCodesWithinRadiusDataTable" msprop:Generator_TableVarName="tableFindUSZipCodesWithinRadius" msprop:Generator_TablePropName="FindUSZipCodesWithinRadius" msprop:Generator_RowDeletingName="FindUSZipCodesWithinRadiusRowDeleting" msprop:Generator_UserTableName="FindUSZipCodesWithinRadius" msprop:Generator_RowChangingName="FindUSZipCodesWithinRadiusRowChanging" msprop:Generator_RowEvHandlerName="FindUSZipCodesWithinRadiusRowChangeEventHandler" msprop:Generator_RowDeletedName="FindUSZipCodesWithinRadiusRowDeleted" msprop:Generator_RowEvArgName="FindUSZipCodesWithinRadiusRowChangeEvent" msprop:Generator_RowChangedName="FindUSZipCodesWithinRadiusRowChanged" msprop:Generator_RowClassName="FindUSZipCodesWithinRadiusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ZipCode" msprop:Generator_ColumnVarNameInTable="columnZipCode" msprop:Generator_ColumnPropNameInRow="ZipCode" msprop:Generator_ColumnPropNameInTable="ZipCodeColumn" msprop:Generator_UserColumnName="ZipCode" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FindCanadaZipCodesWithinRadius" msprop:Generator_TableClassName="FindCanadaZipCodesWithinRadiusDataTable" msprop:Generator_TableVarName="tableFindCanadaZipCodesWithinRadius" msprop:Generator_TablePropName="FindCanadaZipCodesWithinRadius" msprop:Generator_RowDeletingName="FindCanadaZipCodesWithinRadiusRowDeleting" msprop:Generator_UserTableName="FindCanadaZipCodesWithinRadius" msprop:Generator_RowChangingName="FindCanadaZipCodesWithinRadiusRowChanging" msprop:Generator_RowEvHandlerName="FindCanadaZipCodesWithinRadiusRowChangeEventHandler" msprop:Generator_RowDeletedName="FindCanadaZipCodesWithinRadiusRowDeleted" msprop:Generator_RowEvArgName="FindCanadaZipCodesWithinRadiusRowChangeEvent" msprop:Generator_RowChangedName="FindCanadaZipCodesWithinRadiusRowChanged" msprop:Generator_RowClassName="FindCanadaZipCodesWithinRadiusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ZipCode" msprop:Generator_ColumnVarNameInTable="columnZipCode" msprop:Generator_ColumnPropNameInRow="ZipCode" msprop:Generator_ColumnPropNameInTable="ZipCodeColumn" msprop:Generator_UserColumnName="ZipCode" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CustomerInvitationDataTable" />
+      <xs:field xpath="mstns:ProjectID" />
+    </xs:unique>
+    <xs:unique name="ProfessionallnvitationDataTable_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ProfessionallnvitationDataTable" />
+      <xs:field xpath="mstns:ProjectID" />
+    </xs:unique>
+    <xs:unique name="SelectProfessionalPhoto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SelectProfessionalPhoto" />
+      <xs:field xpath="mstns:PhotoID" />
+    </xs:unique>
+    <xs:unique name="FindUSZipCodesWithinRadius_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FindUSZipCodesWithinRadius" />
+      <xs:field xpath="mstns:ZipCode" />
+    </xs:unique>
+    <xs:unique name="FindCanadaZipCodesWithinRadius_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FindCanadaZipCodesWithinRadius" />
+      <xs:field xpath="mstns:ZipCode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

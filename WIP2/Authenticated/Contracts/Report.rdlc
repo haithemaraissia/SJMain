@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="ContractDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>60875f2a-fff6-4acd-8c47-f0be8d314b57</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="ContractDataSet">
+      <Fields>
+        <Field Name="ContractID">
+          <DataField>ContractID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectID">
+          <DataField>ProjectID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ContractDate">
+          <DataField>ContractDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BidderID">
+          <DataField>BidderID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BidderRole">
+          <DataField>BidderRole</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BidderUsername">
+          <DataField>BidderUsername</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BidderFirstName">
+          <DataField>BidderFirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BidderLastName">
+          <DataField>BidderLastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BidderAddress">
+          <DataField>BidderAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BidderCountryID">
+          <DataField>BidderCountryID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BidderCountryName">
+          <DataField>BidderCountryName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BidderRegionID">
+          <DataField>BidderRegionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BidderRegionName">
+          <DataField>BidderRegionName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BidderCityID">
+          <DataField>BidderCityID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BidderCityName">
+          <DataField>BidderCityName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BidderZipcode">
+          <DataField>BidderZipcode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BidderHomePhoneNumber">
+          <DataField>BidderHomePhoneNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BidderMobilePhoneNumber">
+          <DataField>BidderMobilePhoneNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterID">
+          <DataField>PosterID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PosterRole">
+          <DataField>PosterRole</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterUsername">
+          <DataField>PosterUsername</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterFirstName">
+          <DataField>PosterFirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterLastName">
+          <DataField>PosterLastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterAddress">
+          <DataField>PosterAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterCountryID">
+          <DataField>PosterCountryID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PosterCountryName">
+          <DataField>PosterCountryName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterRegionID">
+          <DataField>PosterRegionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PosterRegionName">
+          <DataField>PosterRegionName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterCityID">
+          <DataField>PosterCityID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PosterCityName">
+          <DataField>PosterCityName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterZipcode">
+          <DataField>PosterZipcode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterHomePhoneNumber">
+          <DataField>PosterHomePhoneNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PosterMobilePhoneNumber">
+          <DataField>PosterMobilePhoneNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LCID">
+          <DataField>LCID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectCategoryID">
+          <DataField>ProjectCategoryID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectCategoryName">
+          <DataField>ProjectCategoryName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectJobID">
+          <DataField>ProjectJobID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectJobTitle">
+          <DataField>ProjectJobTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectExperienceID">
+          <DataField>ProjectExperienceID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectCrewNumberID">
+          <DataField>ProjectCrewNumberID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectLicensedID">
+          <DataField>ProjectLicensedID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectInsuredID">
+          <DataField>ProjectInsuredID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectRelocationID">
+          <DataField>ProjectRelocationID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectTitle">
+          <DataField>ProjectTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectStartDate">
+          <DataField>ProjectStartDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ProjectEndDate">
+          <DataField>ProjectEndDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ProjectDescription">
+          <DataField>ProjectDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectSpecialNotes">
+          <DataField>ProjectSpecialNotes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectAddress">
+          <DataField>ProjectAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectCountryID">
+          <DataField>ProjectCountryID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectCountryName">
+          <DataField>ProjectCountryName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectRegionID">
+          <DataField>ProjectRegionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectRegionName">
+          <DataField>ProjectRegionName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectCityID">
+          <DataField>ProjectCityID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProjectCityName">
+          <DataField>ProjectCityName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProjectZipcode">
+          <DataField>ProjectZipcode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>ContractDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ContractDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Haithem\AppData\Local\Temp\VWDWebCache\ftp_ftp.haithem-araissia.com_WIP2_RightCleanSideJOB2008FromInetpub\CleanSIDEJOB2008\App_Code\ContractDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>Contract</rd:TableName>
+        <rd:TableAdapterFillMethod>FillContract</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetContract</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>ContractTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="ContractDescriptionDataSet">
+      <Query>
+        <DataSourceName>ContractDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ContractDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\h_a\Desktop\WIP2\App_Code\ContractDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>ContractDescription</rd:TableName>
+        <rd:TableAdapterFillMethod>FillContractDescription</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetContractDescription</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>ContractDescriptionTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Textbox Name="BidderCountryName">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!BidderCountryName.Value, "ContractDataSet")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>BidderCountryName</rd:DefaultName>
+        <Top>1.36125in</Top>
+        <Left>1.5175in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="ProjectID">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Sum(Fields!ProjectID.Value, "ContractDataSet")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ProjectID</rd:DefaultName>
+        <Top>0.48625in</Top>
+        <Left>1.86125in</Left>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>3.77083in</Height>
+    <Style />
+  </Body>
+  <Width>11.46875in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <rd:ReportID>45341ed1-22a3-47eb-b4e4-5279987e3b57</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+</Report>

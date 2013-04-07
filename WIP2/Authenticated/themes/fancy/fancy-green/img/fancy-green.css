@@ -1,0 +1,14 @@
+﻿.fancy-green .ajax__tab_header 
+{
+    background:url(img/green_bg.gif) repeat-x;
+}
+.fancy-green .ajax__tab_hover .ajax__tab_outer,
+.fancy-green .ajax__tab_active .ajax__tab_outer 
+{
+    background:url(img/green_left.gif) no-repeat left top;
+}
+.fancy-green .ajax__tab_hover .ajax__tab_inner,
+.fancy-green .ajax__tab_active .ajax__tab_inner 
+{
+    background:url(img/green_right.gif) no-repeat right top;
+}

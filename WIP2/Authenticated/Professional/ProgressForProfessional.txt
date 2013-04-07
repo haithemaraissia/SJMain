@@ -1,0 +1,50 @@
+﻿Start from ProfessionalBest5.aspx
+
+REcheck all predone tabs
+
+stop at skills
+and then incomment workshop tabs
+
+
+--==
+Complete EditPhoto
+Test all the Tabs
+Clean Skills and Workshop
+
+
+Pages:
+EditProfile
+EditPhoto
+EditAlbum
+UploadPhoto
+Rearrange
+
+same for profile and workshop
+
+Database
+PostJob
+SignUP
+Cleaning and CSS
+--=
+
+
+===PHASE 1===
+Complete EditPhoto
+Test all the Tabs
+Clean Skills and Workshop
+
+
+Pages:
+EditProfile
+EditPhoto
+EditAlbum
+UploadPhoto
+Rearrange
+
+same for profile and workshop
+
+Database
+PostJob
+SignUP
+Cleaning and CSS
+==PHASE 1==
