@@ -12,6 +12,16 @@
         media="screen" />
     <meta property="og:url" content="http://www.my-side-job.com" />
     <link rel="canonical" href="http://www.my-side-job.com" />
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -24,7 +34,101 @@
         <table align="center" id="TemplateGlobalTable">
             <tr>
                 <td>
-                    &nbsp;
+                    <div class="style2">
+                        SITEMAP<br />
+                        <br />
+                        <br />
+&nbsp;</div>
+                    <table class="style1">
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                Client</td>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                Customer</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                Post Project</td>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                Find Job</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                Benefits</td>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                Benefits</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                HowDoesitWork</td>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                HowsDoesItWork</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                Profile</td>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                Profile</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <table style="text-align: center"class="style1">
+                        <tr>
+                            <td >
+                                My-Side-Job</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                About</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Help</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Product</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Contact US</td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
         </table>

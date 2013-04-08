@@ -8,21 +8,37 @@ Namespace NotAuthenticated
 
     Partial Class LockedUser
         Inherits Page
+        Private _language As Integer
+        Public Property Language() As Integer
+            Get
+                Return _language
+            End Get
+            Set(ByVal value As Integer)
+                value = _language
+            End Set
+        End Property
+
+        Protected Sub SEO()
+            Page.Title = Resources.Resource.SignUpTitle.ToString
+            Page.MetaDescription = Resources.Resource.SignUpDescription.ToString
+            Page.MetaKeywords = Resources.Resource.SignUpKeywords.ToString
+        End Sub
 
         Protected Overrides Sub InitializeCulture()
+            Utility.InitializeAllCulture(Session("LCID"), Request.QueryString("l"))
+            ActivateLanguage()
+        End Sub
 
-            Dim lang As String = Request.QueryString("l")
-            If lang IsNot Nothing Or lang <> "" Then
-                Thread.CurrentThread.CurrentUICulture = New CultureInfo(lang)
-                Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(lang)
-                Session("LCID") = lang
-            Else
-                If Session("LCID") IsNot Nothing Or Session("LCID") <> "" Then
-                    Thread.CurrentThread.CurrentUICulture = New CultureInfo(Session("LCID").ToString())
-                    Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(Session("LCID").ToString())
-                End If
-            End If
+        Protected Sub ActivateLanguage()
+            Select Case Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName.ToString
+                Case "en"
+                    ''English
+                    _language = 1
 
+                Case "fr"
+                    '"French
+                    _language = 2
+            End Select
         End Sub
 
         Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -31,9 +47,9 @@ Namespace NotAuthenticated
             Dim role As String = ""
             Dim currentid As String = ""
 
-            If Not (Request.QueryString("role") Is Nothing) Then
-                If Request.QueryString("role").ToString() <> "" Then
-                    role = Request.QueryString("role").ToString()
+            If Not (Request.QueryString("r") Is Nothing) Then
+                If Request.QueryString("r").ToString() <> "" Then
+                    role = Request.QueryString("r").ToString()
                     If Not (Request.QueryString("ID") Is Nothing) Then
                         If Request.QueryString("ID").ToString() <> "" Then
                             currentid = Request.QueryString("ID").ToString()
@@ -68,6 +84,7 @@ Namespace NotAuthenticated
                 End If
                 UserID.Text = currentid
             End If
+            SEO()
         End Sub
     End Class
 End Namespace

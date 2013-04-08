@@ -1,9 +1,9 @@
 
 Partial Class Authenticated_Admin_UserProfileManagement
-    Inherits System.Web.UI.Page
+    Inherits Page
 
-   
-    Protected Sub GridView1_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles GridView1.RowCommand
+    Protected Sub GridView1_RowCommand(ByVal sender As Object, ByVal e As GridViewCommandEventArgs) _
+        Handles GridView1.RowCommand
         Select Case e.CommandName
             Case "AcceptChange"
 
@@ -20,12 +20,11 @@ Partial Class Authenticated_Admin_UserProfileManagement
                 'UpdatePanel1.Update()
 
 
-
         End Select
-
     End Sub
 
-    Protected Sub GridView1_RowCreated(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles GridView1.RowCreated
+    Protected Sub GridView1_RowCreated(ByVal sender As Object, ByVal e As GridViewRowEventArgs) _
+        Handles GridView1.RowCreated
         ''The GridViewCommandEventArgs class does not contain a 
         '' property that indicates which row's command button was
         ''clicked. To identify which row's button was clicked, use 
@@ -35,10 +34,6 @@ Partial Class Authenticated_Admin_UserProfileManagement
         'If e.Row.RowType = DataControlRowType.DataRow Then
         '    CType((e.Row.Cells(0).FindControl("Button1")), Button).CommandArgument = e.Row.RowIndex.ToString()
         'End If
-
-
-
-
     End Sub
 
 
@@ -51,13 +46,10 @@ Partial Class Authenticated_Admin_UserProfileManagement
 
     'End Sub
 
-    Protected Sub GridView1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles GridView1.SelectedIndexChanged
+    Protected Sub GridView1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) _
+        Handles GridView1.SelectedIndexChanged
         SqlDataSource1.DeleteParameters(0).DefaultValue = GridView1.SelectedPersistedDataKey.Value.ToString
         SqlDataSource1.Delete()
         GridView1.DataBind()
-
-
-
-
     End Sub
 End Class

@@ -12,6 +12,35 @@
         media="screen" />
     <meta property="og:url" content="http://www.my-side-job.com" />
     <link rel="canonical" href="http://www.my-side-job.com" />
+    <style type="text/css">
+        .style1
+        {
+            width: 80%;
+        }
+        .style2
+        {
+            width: 152px;
+            height: 136px;
+        }
+        .style3
+        {
+            width: 150px;
+            height: 150px;
+        }
+        .style4
+        {
+            width: 150px;
+            height: 150px;
+        }
+        .style5
+        {
+            width: 195px;
+        }
+        .style6
+        {
+            width: 450px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -24,7 +53,69 @@
         <table align="center" id="TemplateGlobalTable">
             <tr>
                 <td>
-                    &nbsp;
+                    <table class="style1">
+                        <tr>
+                            <td class="style5">
+                                &nbsp;</td>
+                            <td class="style6">
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="style5">
+                                <img alt="" class="style2" src="sample1.jpg" /></td>
+                            <td class="style6">
+                                *WIP2 Site<br />
+                                *<br />
+                                *<br />
+                                *</td>
+                            <td>
+                                Join US</td>
+                        </tr>
+                        <tr>
+                            <td class="style5">
+                                &nbsp;</td>
+                            <td class="style6">
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="style5">
+                                <img alt="" class="style3" src="sample2.jpg" height="150px" />
+                                
+                                </td>
+                            <td class="style6">
+                                *Advertise</td>
+                            <td>
+                                Join US</td>
+                        </tr>
+                        <tr>
+                            <td class="style5">
+                                &nbsp;</td>
+                            <td class="style6">
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="style5">
+                                <img class="style4" src="sample3.jpg" /></td>
+                            <td class="style6">
+                                Newsletters</td>
+                            <td>
+                                Join US</td>
+                        </tr>
+                           <tr>
+                            <td class="style5">
+                                <img class="style4" src="sample3.jpg" /></td>
+                            <td class="style6">
+                                API</td>
+                            <td>
+                                Join US</td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
         </table>

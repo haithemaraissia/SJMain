@@ -132,7 +132,7 @@ public partial class Paypal_Start : System.Web.UI.Page
 
         CustomerPDTDataSet.CustomerPaymentDueDataTable CustomerPaymentDueTable;
         GetValue(out CustomerPaymentDueTable);
-        const string business = "admin_1329938514_biz@yahoo.com";
+        const string business = "site_1359998662_biz@haithem-araissia.com";
         string item_name = CustomerPaymentDueTable.Rows[0]["ProjectTitle"].ToString();
         string project_id = Request.QueryString["ID"].ToString();
         string customer_id = GetCustomerID();
@@ -147,7 +147,7 @@ public partial class Paypal_Start : System.Web.UI.Page
             redirect += "&amount=" + Amount.Text.ToString();
             redirect += "&currency_code=" + CurrencyDropDownList.SelectedValue.ToString();
             redirect += "&payer_id=" + customer_id.ToString();
-            redirect += "&receiver_email=" + "admin_1329938514_biz@yahoo.com";
+            redirect += "&receiver_email=" + "site_1359998662_biz@haithem-araissia.com";
             redirect += "&custom=" + project_id;
             redirect += "&notify_url" + notify_url;
             redirect += "&return=" + return_URL;

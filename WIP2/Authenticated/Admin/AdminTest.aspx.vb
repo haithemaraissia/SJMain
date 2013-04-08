@@ -1,21 +1,24 @@
 Imports System.Data.SqlClient
 Imports System.Data
-Partial Class Authenticated_Admin_AdminTest
-    Inherits System.Web.UI.Page
+Imports System.Net.Mail
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+Partial Class Authenticated_Admin_AdminTest
+    Inherits Page
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
         TimeUP()
 
         Maintenance()
-
     End Sub
 
 
     Protected Sub TimeUP()
         'Create a connection
 
-        Dim ProfileConnection As New SqlConnection(ConfigurationManager.ConnectionStrings("SideJobConnectionString").ConnectionString)
+        Dim _
+            ProfileConnection As _
+                New SqlConnection(ConfigurationManager.ConnectionStrings("SideJobConnectionString").ConnectionString)
         ProfileConnection.Open()
 
 
@@ -36,16 +39,17 @@ Partial Class Authenticated_Admin_AdminTest
             '    Something went wrong, so rollback the transaction
             '    ProfileTransaction.Rollback()
 
-            Throw        'Bubble up the exception
+            Throw
+            'Bubble up the exception
             ''maybe over here 
             Response.Redirect(Request.Url.ToString)
 
 
         Finally
 
-            ProfileConnection.Close() 'Finally, close the connection
+            ProfileConnection.Close()
+            'Finally, close the connection
         End Try
-
     End Sub
 
     Protected Sub Maintenance()
@@ -105,9 +109,6 @@ Partial Class Authenticated_Admin_AdminTest
         Next
 
         EmailAutomation()
-
-
-
     End Sub
 
     Protected Sub EmailAutomation()
@@ -124,18 +125,17 @@ Partial Class Authenticated_Admin_AdminTest
             'Dim EmailAddress As String = EmailRow.EmailAddress.ToString
             'Dim Title As String = EmailRow.Title.ToString
             'Dim Message As String = EmailRow.Message.ToString
-            
 
 
-            Dim mailMessage As System.Net.Mail.MailMessage = New System.Net.Mail.MailMessage()
-            mailMessage.From = New System.Net.Mail.MailAddress("SideJobs@yahoo.com")
-            mailMessage.To.Add(New System.Net.Mail.MailAddress(EmailRow.EmailAddress.ToString))
+            Dim mailMessage As MailMessage = New MailMessage()
+            mailMessage.From = New MailAddress("SideJobs@yahoo.com")
+            mailMessage.To.Add(New MailAddress(EmailRow.EmailAddress.ToString))
             mailMessage.Subject = EmailRow.Title.ToString
             mailMessage.Body = EmailRow.Message.ToString
-            mailMessage.Priority = Net.Mail.MailPriority.High
+            mailMessage.Priority = MailPriority.High
 
             Try
-                Dim smtpClient As System.Net.Mail.SmtpClient = New System.Net.Mail.SmtpClient()
+                Dim smtpClient As SmtpClient = New SmtpClient()
                 smtpClient.Send(mailMessage)
 
                 'Catch smtpEx As System.Net.Mail.SmtpFailedRecipientsException
@@ -178,7 +178,5 @@ Partial Class Authenticated_Admin_AdminTest
 
         ''delete the email table 
         EmailAdapter.DeleteMessage()
-
-
     End Sub
 End Class

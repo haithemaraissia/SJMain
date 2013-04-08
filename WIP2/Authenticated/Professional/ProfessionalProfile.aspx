@@ -988,7 +988,7 @@
                                                                         <asp:LinkButton ID="ViewProjectLinkButton" runat="server" CausesValidation="False"
                                                                             CommandName="select" Font-Bold="True" ForeColor="#000040" OnClientClick="FireAnimation();"
                                                                             Style="position: relative" Text="<%$ Resources:Resource, ViewProjectLinkButton %>"
-                                                                            OnClick="ViewProjectLinkButton_Click" CssClass="UnderlineLink"></asp:LinkButton>
+                                                                            OnClick="ViewProjectLinkButtonClick" CssClass="UnderlineLink"></asp:LinkButton>
                                                                     </ItemTemplate>
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField>
@@ -1376,7 +1376,7 @@
                                                         <asp:GridView ID="LostBidsGridView" runat="server" AllowPaging="True" AutoGenerateColumns="False"
                                                             CellPadding="4" DataKeyNames="BidID" DataSourceID="LostBidsObjectDataSource"
                                                             ForeColor="#333333" GridLines="None" Height="90%" HorizontalAlign="Center" OnRowDeleting="LostBids_RowDeleting"
-                                                            OnSelectedIndexChanged="LostBids_SelectedIndexChanged" PageSize="5" Style="position: relative"
+                                                            OnSelectedIndexChanged="LostBidsSelectedIndexChanged" PageSize="5" Style="position: relative"
                                                             Width="100%">
                                                             <Columns>
                                                                 <asp:BoundField DataField="BidID" HeaderText="<%$ Resources:Resource, BidID %>" ReadOnly="True"
@@ -1404,7 +1404,7 @@
                                                                 <asp:TemplateField>
                                                                     <ItemTemplate>
                                                                         <asp:LinkButton ID="NewBidLinkButton" runat="server" CausesValidation="False" CommandName="select"
-                                                                            Font-Bold="True" ForeColor="Black" OnClick="NewBidLinkButton_Click" CssClass="UnderlineLink"
+                                                                            Font-Bold="True" ForeColor="Black" OnClick="NewBidLinkButtonClick" CssClass="UnderlineLink"
                                                                             Style="position: relative" Text="<%$ Resources:Resource, Bid %>"></asp:LinkButton></ItemTemplate>
                                                                 </asp:TemplateField>
                                                             </Columns>
@@ -2050,9 +2050,8 @@
                                                                         </td>
                                                                         <td style="width: 100px; text-align: center">
                                                                             <br />
-                                                                            <asp:LinkButton ID="DownloadLinkButton" runat="server" ForeColor="#400000" CssClass="UnderlineLink"
-                                                                                Style="position: relative" CausesValidation="False" Font-Bold="True" OnClick="DownloadLinkButton_Click"
-                                                                                Text="<%$ Resources:Resource, ViewandPrint %>"></asp:LinkButton>
+                                                                            <asp:ImageButton ID="PDFButton" runat="server" ImageUrl="~/Images/Contract/PDF.jpg"
+                                                                                Width="32px" Height="32px" OnClick="PDFButtonClick" CausesValidation="false" />&nbsp;&nbsp;
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
@@ -3509,34 +3508,6 @@
             </InsertParameters>
         </asp:ObjectDataSource>
     </p>
-    <asp:Panel ID="ProfessionalReport" runat="server">
-        <rsweb:ReportViewer ID="ProfessionalReportViewer" runat="server" Font-Names="Verdana"
-            Font-Size="8pt" InteractiveDeviceInfos="(Collection)" WaitMessageFont-Names="Verdana"
-            WaitMessageFont-Size="14pt" Height="536px" Width="712px" ExportContentDisposition="AlwaysAttachment"
-            Visible="True" SizeToReportContent="True">
-            <LocalReport ReportPath="Authenticated\Contracts\Report.rdlc" EnableExternalImages="True"
-                EnableHyperlinks="True">
-                <DataSources>
-                    <rsweb:ReportDataSource DataSourceId="ProfessionalContractObjectDataSource" Name="ProfessionalContractDataSet" />
-                    <rsweb:ReportDataSource DataSourceId="ProfessionalContractDescriptionObjectDataSource"
-                        Name="ProfessionalContractDataSet" />
-                </DataSources>
-            </LocalReport>
-        </rsweb:ReportViewer>
-        <asp:ObjectDataSource ID="ProfessionalContractObjectDataSource" runat="server" OldValuesParameterFormatString="original_{0}"
-            SelectMethod="GetContract" TypeName="ContractDataSetTableAdapters.ContractTableAdapter">
-            <SelectParameters>
-                <asp:Parameter Name="ContractID" Type="Int32" />
-            </SelectParameters>
-        </asp:ObjectDataSource>
-        <asp:ObjectDataSource ID="ProfessionalContractDescriptionObjectDataSource" runat="server"
-            OldValuesParameterFormatString="original_{0}" SelectMethod="GetContractDescription"
-            TypeName="ContractDataSetTableAdapters.ContractDescriptionTableAdapter">
-            <SelectParameters>
-                <asp:SessionParameter DefaultValue="1" Name="LCID" SessionField="LCID" Type="Int32" />
-            </SelectParameters>
-        </asp:ObjectDataSource>
-    </asp:Panel>
     <asp:Panel ID="GlobalChangePasswordPanel" runat="server" Style="z-index: 100; left: 199px;
         position: absolute; top: 921px; display: none;" Width="400px" Height="266px"
         BackColor="Transparent">

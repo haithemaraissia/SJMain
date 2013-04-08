@@ -1,5 +1,4 @@
 ﻿
 Partial Class Authenticated_Admin_Automation
-    Inherits System.Web.UI.Page
-
+    Inherits Page
 End Class

@@ -373,7 +373,7 @@ namespace EmailTemplates.Customer
 
         protected void OkButtonClick(object sender, EventArgs e)
         {
-            Response.Redirect("http://my-side-job.com");
+            Response.Redirect("http://my-side-job.com/Authenticated/Customer/CustomerProfile.aspx");
         }
     }
 }

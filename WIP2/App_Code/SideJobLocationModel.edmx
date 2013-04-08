@@ -77,7 +77,6 @@
           <EntitySet Name="Customer" EntityType="DB_33736_sidejobModel.Store.Customer" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerAccount" EntityType="DB_33736_sidejobModel.Store.CustomerAccount" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerAdditionalInformation" EntityType="DB_33736_sidejobModel.Store.CustomerAdditionalInformation" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CustomerBid" EntityType="DB_33736_sidejobModel.Store.CustomerBid" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerComment" EntityType="DB_33736_sidejobModel.Store.CustomerComment" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerCommentReceived" EntityType="DB_33736_sidejobModel.Store.CustomerCommentReceived" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerCommentReceivedSummary" EntityType="DB_33736_sidejobModel.Store.CustomerCommentReceivedSummary" store:Type="Tables" Schema="dbo" />
@@ -89,7 +88,6 @@
           <EntitySet Name="CustomerGeneral" EntityType="DB_33736_sidejobModel.Store.CustomerGeneral" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerGeneral2" EntityType="DB_33736_sidejobModel.Store.CustomerGeneral2" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerHackedPDT" EntityType="DB_33736_sidejobModel.Store.CustomerHackedPDT" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CustomerHistoryBid" EntityType="DB_33736_sidejobModel.Store.CustomerHistoryBid" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerInvitationReceived" EntityType="DB_33736_sidejobModel.Store.CustomerInvitationReceived" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerInvitationSent" EntityType="DB_33736_sidejobModel.Store.CustomerInvitationSent" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerIPN" EntityType="DB_33736_sidejobModel.Store.CustomerIPN" store:Type="Tables" Schema="dbo" />
@@ -104,8 +102,6 @@
           <EntitySet Name="CustomerPicture" EntityType="DB_33736_sidejobModel.Store.CustomerPicture" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerPortfolio" EntityType="DB_33736_sidejobModel.Store.CustomerPortfolio" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerProject" EntityType="DB_33736_sidejobModel.Store.CustomerProject" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CustomerProjectPhoto" EntityType="DB_33736_sidejobModel.Store.CustomerProjectPhoto" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CustomerProjectPicture" EntityType="DB_33736_sidejobModel.Store.CustomerProjectPicture" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerProjectTemp" EntityType="DB_33736_sidejobModel.Store.CustomerProjectTemp" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerRating" EntityType="DB_33736_sidejobModel.Store.CustomerRating" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="CustomerRevokedBids" EntityType="DB_33736_sidejobModel.Store.CustomerRevokedBids" store:Type="Tables" Schema="dbo" />
@@ -318,10 +314,6 @@
             <End Role="Customer" EntitySet="Customer" />
             <End Role="CustomerAccount" EntitySet="CustomerAccount" />
           </AssociationSet>
-          <AssociationSet Name="FK_CustomerBid_Customer" Association="DB_33736_sidejobModel.Store.FK_CustomerBid_Customer">
-            <End Role="Customer" EntitySet="Customer" />
-            <End Role="CustomerBid" EntitySet="CustomerBid" />
-          </AssociationSet>
           <AssociationSet Name="FK_CustomerComment_Customer" Association="DB_33736_sidejobModel.Store.FK_CustomerComment_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="CustomerComment" EntitySet="CustomerComment" />
@@ -337,10 +329,6 @@
           <AssociationSet Name="FK_CustomerGeneral_Customer" Association="DB_33736_sidejobModel.Store.FK_CustomerGeneral_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="CustomerGeneral2" EntitySet="CustomerGeneral2" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CustomerHistoryBid_CustomerBid" Association="DB_33736_sidejobModel.Store.FK_CustomerHistoryBid_CustomerBid">
-            <End Role="CustomerBid" EntitySet="CustomerBid" />
-            <End Role="CustomerHistoryBid" EntitySet="CustomerHistoryBid" />
           </AssociationSet>
           <AssociationSet Name="FK_CustomerMessage_Customer" Association="DB_33736_sidejobModel.Store.FK_CustomerMessage_Customer">
             <End Role="Customer" EntitySet="Customer" />
@@ -369,10 +357,6 @@
           <AssociationSet Name="FK_CustomerPortfolio_Customer" Association="DB_33736_sidejobModel.Store.FK_CustomerPortfolio_Customer">
             <End Role="Customer" EntitySet="Customer" />
             <End Role="CustomerPortfolio" EntitySet="CustomerPortfolio" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CustomerProjectPhoto_CustomerProjectPicture" Association="DB_33736_sidejobModel.Store.FK_CustomerProjectPhoto_CustomerProjectPicture">
-            <End Role="CustomerProjectPicture" EntitySet="CustomerProjectPicture" />
-            <End Role="CustomerProjectPhoto" EntitySet="CustomerProjectPhoto" />
           </AssociationSet>
           <AssociationSet Name="FK_CustomerProjectTemp_Customer" Association="DB_33736_sidejobModel.Store.FK_CustomerProjectTemp_Customer">
             <End Role="Customer" EntitySet="Customer" />
@@ -1494,14 +1478,6 @@
           <Property Name="Points" Type="int" />
           <Property Name="ProjectPosted" Type="int" />
         </EntityType>
-        <EntityType Name="CustomerBid">
-          <Key>
-            <PropertyRef Name="BidID" />
-          </Key>
-          <Property Name="CustomerID" Type="int" Nullable="false" />
-          <Property Name="BidID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="NumberofBids" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="CustomerComment">
           <Key>
             <PropertyRef Name="CommentID" />
@@ -1690,15 +1666,6 @@
           <Property Name="SubscriberId" Type="varchar" Nullable="false" MaxLength="200" />
           <Property Name="CustomerID" Type="int" Nullable="false" />
           <Property Name="ProjectID" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="CustomerHistoryBid">
-          <Key>
-            <PropertyRef Name="BidID" />
-          </Key>
-          <Property Name="ProjectID" Type="int" Nullable="false" />
-          <Property Name="AmountOffered" Type="smallmoney" Nullable="false" />
-          <Property Name="BidID" Type="int" Nullable="false" />
-          <Property Name="BidDate" Type="smalldatetime" Nullable="false" />
         </EntityType>
         <EntityType Name="CustomerInvitationReceived">
           <Key>
@@ -1896,28 +1863,6 @@
           <Property Name="CustomerID" Type="int" Nullable="false" />
           <Property Name="ProjectID" Type="int" Nullable="false" />
           <Property Name="NumberofProjects" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="CustomerProjectPhoto">
-          <Key>
-            <PropertyRef Name="PhotoID" />
-          </Key>
-          <Property Name="PhotoID" Type="int" Nullable="false" />
-          <Property Name="PhotoPath" Type="ntext" Nullable="false" />
-          <Property Name="Caption" Type="nvarchar" MaxLength="50" />
-          <Property Name="AlbumID" Type="int" Nullable="false" />
-          <Property Name="CustomerID" Type="int" Nullable="false" />
-          <Property Name="PhotoRank" Type="int" Nullable="false" />
-          <Property Name="ProjectID" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="CustomerProjectPicture">
-          <Key>
-            <PropertyRef Name="AlbumID" />
-          </Key>
-          <Property Name="CustomerID" Type="int" Nullable="false" />
-          <Property Name="AlbumID" Type="int" Nullable="false" />
-          <Property Name="AlbumCaption" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Numberofimages" Type="int" Nullable="false" />
-          <Property Name="ProjectID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CustomerProjectTemp">
           <Key>
@@ -4139,18 +4084,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CustomerBid_Customer">
-          <End Role="Customer" Type="DB_33736_sidejobModel.Store.Customer" Multiplicity="1" />
-          <End Role="CustomerBid" Type="DB_33736_sidejobModel.Store.CustomerBid" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Customer">
-              <PropertyRef Name="CustomerID" />
-            </Principal>
-            <Dependent Role="CustomerBid">
-              <PropertyRef Name="CustomerID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_CustomerComment_Customer">
           <End Role="Customer" Type="DB_33736_sidejobModel.Store.Customer" Multiplicity="1" />
           <End Role="CustomerComment" Type="DB_33736_sidejobModel.Store.CustomerComment" Multiplicity="*" />
@@ -4196,18 +4129,6 @@
             </Principal>
             <Dependent Role="CustomerGeneral2">
               <PropertyRef Name="CustomerID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CustomerHistoryBid_CustomerBid">
-          <End Role="CustomerBid" Type="DB_33736_sidejobModel.Store.CustomerBid" Multiplicity="1" />
-          <End Role="CustomerHistoryBid" Type="DB_33736_sidejobModel.Store.CustomerHistoryBid" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="CustomerBid">
-              <PropertyRef Name="BidID" />
-            </Principal>
-            <Dependent Role="CustomerHistoryBid">
-              <PropertyRef Name="BidID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4292,20 +4213,6 @@
             </Principal>
             <Dependent Role="CustomerPortfolio">
               <PropertyRef Name="CustomerID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CustomerProjectPhoto_CustomerProjectPicture">
-          <End Role="CustomerProjectPicture" Type="DB_33736_sidejobModel.Store.CustomerProjectPicture" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="CustomerProjectPhoto" Type="DB_33736_sidejobModel.Store.CustomerProjectPhoto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CustomerProjectPicture">
-              <PropertyRef Name="AlbumID" />
-            </Principal>
-            <Dependent Role="CustomerProjectPhoto">
-              <PropertyRef Name="AlbumID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4808,7 +4715,6 @@
           <EntitySet Name="Customers" EntityType="SidejobModel.Customer" />
           <EntitySet Name="CustomerAccounts" EntityType="SidejobModel.CustomerAccount" />
           <EntitySet Name="CustomerAdditionalInformations" EntityType="SidejobModel.CustomerAdditionalInformation" />
-          <EntitySet Name="CustomerBids" EntityType="SidejobModel.CustomerBid" />
           <EntitySet Name="CustomerComments" EntityType="SidejobModel.CustomerComment" />
           <EntitySet Name="CustomerCommentReceiveds" EntityType="SidejobModel.CustomerCommentReceived" />
           <EntitySet Name="CustomerCommentReceivedSummaries" EntityType="SidejobModel.CustomerCommentReceivedSummary" />
@@ -4820,7 +4726,6 @@
           <EntitySet Name="CustomerGenerals" EntityType="SidejobModel.CustomerGeneral" />
           <EntitySet Name="CustomerGeneral2" EntityType="SidejobModel.CustomerGeneral2" />
           <EntitySet Name="CustomerHackedPDTs" EntityType="SidejobModel.CustomerHackedPDT" />
-          <EntitySet Name="CustomerHistoryBids" EntityType="SidejobModel.CustomerHistoryBid" />
           <EntitySet Name="CustomerInvitationReceiveds" EntityType="SidejobModel.CustomerInvitationReceived" />
           <EntitySet Name="CustomerInvitationSents" EntityType="SidejobModel.CustomerInvitationSent" />
           <EntitySet Name="CustomerIPNs" EntityType="SidejobModel.CustomerIPN" />
@@ -4835,8 +4740,6 @@
           <EntitySet Name="CustomerPictures" EntityType="SidejobModel.CustomerPicture" />
           <EntitySet Name="CustomerPortfolios" EntityType="SidejobModel.CustomerPortfolio" />
           <EntitySet Name="CustomerProjects" EntityType="SidejobModel.CustomerProject" />
-          <EntitySet Name="CustomerProjectPhotoes" EntityType="SidejobModel.CustomerProjectPhoto" />
-          <EntitySet Name="CustomerProjectPictures" EntityType="SidejobModel.CustomerProjectPicture" />
           <EntitySet Name="CustomerProjectTemps" EntityType="SidejobModel.CustomerProjectTemp" />
           <EntitySet Name="CustomerRatings" EntityType="SidejobModel.CustomerRating" />
           <EntitySet Name="CustomerRevokedBids" EntityType="SidejobModel.CustomerRevokedBid" />
@@ -5019,10 +4922,6 @@
             <End Role="Customer" EntitySet="Customers" />
             <End Role="CustomerAccount" EntitySet="CustomerAccounts" />
           </AssociationSet>
-          <AssociationSet Name="FK_CustomerBid_Customer" Association="SidejobModel.FK_CustomerBid_Customer">
-            <End Role="Customer" EntitySet="Customers" />
-            <End Role="CustomerBid" EntitySet="CustomerBids" />
-          </AssociationSet>
           <AssociationSet Name="FK_CustomerComment_Customer" Association="SidejobModel.FK_CustomerComment_Customer">
             <End Role="Customer" EntitySet="Customers" />
             <End Role="CustomerComment" EntitySet="CustomerComments" />
@@ -5075,17 +4974,9 @@
             <End Role="Customer" EntitySet="Customers" />
             <End Role="CustomerTransaction" EntitySet="CustomerTransactions" />
           </AssociationSet>
-          <AssociationSet Name="FK_CustomerHistoryBid_CustomerBid" Association="SidejobModel.FK_CustomerHistoryBid_CustomerBid">
-            <End Role="CustomerBid" EntitySet="CustomerBids" />
-            <End Role="CustomerHistoryBid" EntitySet="CustomerHistoryBids" />
-          </AssociationSet>
           <AssociationSet Name="FK_CustomerPhoto_CustomerPicture" Association="SidejobModel.FK_CustomerPhoto_CustomerPicture">
             <End Role="CustomerPicture" EntitySet="CustomerPictures" />
             <End Role="CustomerPhoto" EntitySet="CustomerPhotoes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CustomerProjectPhoto_CustomerProjectPicture" Association="SidejobModel.FK_CustomerProjectPhoto_CustomerProjectPicture">
-            <End Role="CustomerProjectPicture" EntitySet="CustomerProjectPictures" />
-            <End Role="CustomerProjectPhoto" EntitySet="CustomerProjectPhotoes" />
           </AssociationSet>
           <AssociationSet Name="FK_ProfessionalAccount_Professional" Association="SidejobModel.FK_ProfessionalAccount_Professional">
             <End Role="Professional" EntitySet="Professionals" />
@@ -5922,7 +5813,6 @@
           <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
           <Property Name="LCID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CustomerAccount" Relationship="SidejobModel.FK_CustomerAccount_Customer" FromRole="Customer" ToRole="CustomerAccount" />
-          <NavigationProperty Name="CustomerBids" Relationship="SidejobModel.FK_CustomerBid_Customer" FromRole="Customer" ToRole="CustomerBid" />
           <NavigationProperty Name="CustomerComments" Relationship="SidejobModel.FK_CustomerComment_Customer" FromRole="Customer" ToRole="CustomerComment" />
           <NavigationProperty Name="CustomerEvents" Relationship="SidejobModel.FK_CustomerEvent_Customer" FromRole="Customer" ToRole="CustomerEvent" />
           <NavigationProperty Name="CustomerFavorites" Relationship="SidejobModel.FK_CustomerFavorite_Customer1" FromRole="Customer" ToRole="CustomerFavorite" />
@@ -5971,16 +5861,6 @@
           <Property Name="InvitationSent" Type="Int32" />
           <Property Name="Points" Type="Int32" />
           <Property Name="ProjectPosted" Type="Int32" />
-        </EntityType>
-        <EntityType Name="CustomerBid">
-          <Key>
-            <PropertyRef Name="BidID" />
-          </Key>
-          <Property Name="CustomerID" Type="Int32" Nullable="false" />
-          <Property Name="BidID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NumberofBids" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Customer" Relationship="SidejobModel.FK_CustomerBid_Customer" FromRole="CustomerBid" ToRole="Customer" />
-          <NavigationProperty Name="CustomerHistoryBid" Relationship="SidejobModel.FK_CustomerHistoryBid_CustomerBid" FromRole="CustomerBid" ToRole="CustomerHistoryBid" />
         </EntityType>
         <EntityType Name="CustomerComment">
           <Key>
@@ -6174,16 +6054,6 @@
           <Property Name="SubscriberId" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
           <Property Name="CustomerID" Type="Int32" Nullable="false" />
           <Property Name="ProjectID" Type="Int32" Nullable="false" />
-        </EntityType>
-        <EntityType Name="CustomerHistoryBid">
-          <Key>
-            <PropertyRef Name="BidID" />
-          </Key>
-          <Property Name="ProjectID" Type="Int32" Nullable="false" />
-          <Property Name="AmountOffered" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
-          <Property Name="BidID" Type="Int32" Nullable="false" />
-          <Property Name="BidDate" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="CustomerBid" Relationship="SidejobModel.FK_CustomerHistoryBid_CustomerBid" FromRole="CustomerHistoryBid" ToRole="CustomerBid" />
         </EntityType>
         <EntityType Name="CustomerInvitationReceived">
           <Key>
@@ -6389,30 +6259,6 @@
           <Property Name="CustomerID" Type="Int32" Nullable="false" />
           <Property Name="ProjectID" Type="Int32" Nullable="false" />
           <Property Name="NumberofProjects" Type="Int32" Nullable="false" />
-        </EntityType>
-        <EntityType Name="CustomerProjectPhoto">
-          <Key>
-            <PropertyRef Name="PhotoID" />
-          </Key>
-          <Property Name="PhotoID" Type="Int32" Nullable="false" />
-          <Property Name="PhotoPath" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Caption" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="AlbumID" Type="Int32" Nullable="false" />
-          <Property Name="CustomerID" Type="Int32" Nullable="false" />
-          <Property Name="PhotoRank" Type="Int32" Nullable="false" />
-          <Property Name="ProjectID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CustomerProjectPicture" Relationship="SidejobModel.FK_CustomerProjectPhoto_CustomerProjectPicture" FromRole="CustomerProjectPhoto" ToRole="CustomerProjectPicture" />
-        </EntityType>
-        <EntityType Name="CustomerProjectPicture">
-          <Key>
-            <PropertyRef Name="AlbumID" />
-          </Key>
-          <Property Name="CustomerID" Type="Int32" Nullable="false" />
-          <Property Name="AlbumID" Type="Int32" Nullable="false" />
-          <Property Name="AlbumCaption" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Numberofimages" Type="Int32" Nullable="false" />
-          <Property Name="ProjectID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CustomerProjectPhotoes" Relationship="SidejobModel.FK_CustomerProjectPhoto_CustomerProjectPicture" FromRole="CustomerProjectPicture" ToRole="CustomerProjectPhoto" />
         </EntityType>
         <EntityType Name="CustomerProjectTemp">
           <Key>
@@ -8456,18 +8302,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CustomerBid_Customer">
-          <End Role="Customer" Type="SidejobModel.Customer" Multiplicity="1" />
-          <End Role="CustomerBid" Type="SidejobModel.CustomerBid" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Customer">
-              <PropertyRef Name="CustomerID" />
-            </Principal>
-            <Dependent Role="CustomerBid">
-              <PropertyRef Name="CustomerID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_CustomerComment_Customer">
           <End Role="Customer" Type="SidejobModel.Customer" Multiplicity="1" />
           <End Role="CustomerComment" Type="SidejobModel.CustomerComment" Multiplicity="*" />
@@ -8624,18 +8458,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CustomerHistoryBid_CustomerBid">
-          <End Role="CustomerBid" Type="SidejobModel.CustomerBid" Multiplicity="1" />
-          <End Role="CustomerHistoryBid" Type="SidejobModel.CustomerHistoryBid" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="CustomerBid">
-              <PropertyRef Name="BidID" />
-            </Principal>
-            <Dependent Role="CustomerHistoryBid">
-              <PropertyRef Name="BidID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_CustomerPhoto_CustomerPicture">
           <End Role="CustomerPicture" Type="SidejobModel.CustomerPicture" Multiplicity="1" />
           <End Role="CustomerPhoto" Type="SidejobModel.CustomerPhoto" Multiplicity="*" />
@@ -8644,20 +8466,6 @@
               <PropertyRef Name="AlbumID" />
             </Principal>
             <Dependent Role="CustomerPhoto">
-              <PropertyRef Name="AlbumID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_CustomerProjectPhoto_CustomerProjectPicture">
-          <End Role="CustomerProjectPicture" Type="SidejobModel.CustomerProjectPicture" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="CustomerProjectPhoto" Type="SidejobModel.CustomerProjectPhoto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CustomerProjectPicture">
-              <PropertyRef Name="AlbumID" />
-            </Principal>
-            <Dependent Role="CustomerProjectPhoto">
               <PropertyRef Name="AlbumID" />
             </Dependent>
           </ReferentialConstraint>
@@ -10067,11 +9875,6 @@
             <ScalarProperty Name="Points" ColumnName="Points" />
             <ScalarProperty Name="ProjectPosted" ColumnName="ProjectPosted" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="CustomerBids"><EntityTypeMapping TypeName="SidejobModel.CustomerBid"><MappingFragment StoreEntitySet="CustomerBid">
-            <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-            <ScalarProperty Name="BidID" ColumnName="BidID" />
-            <ScalarProperty Name="NumberofBids" ColumnName="NumberofBids" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="CustomerComments"><EntityTypeMapping TypeName="SidejobModel.CustomerComment"><MappingFragment StoreEntitySet="CustomerComment">
             <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
             <ScalarProperty Name="CommentID" ColumnName="CommentID" />
@@ -10228,12 +10031,6 @@
             <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
             <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="CustomerHistoryBids"><EntityTypeMapping TypeName="SidejobModel.CustomerHistoryBid"><MappingFragment StoreEntitySet="CustomerHistoryBid">
-            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
-            <ScalarProperty Name="AmountOffered" ColumnName="AmountOffered" />
-            <ScalarProperty Name="BidID" ColumnName="BidID" />
-            <ScalarProperty Name="BidDate" ColumnName="BidDate" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="CustomerInvitationReceiveds"><EntityTypeMapping TypeName="SidejobModel.CustomerInvitationReceived"><MappingFragment StoreEntitySet="CustomerInvitationReceived">
             <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
             <ScalarProperty Name="InvitationID" ColumnName="InvitationID" />
@@ -10388,22 +10185,6 @@
             <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
             <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
             <ScalarProperty Name="NumberofProjects" ColumnName="NumberofProjects" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="CustomerProjectPhotoes"><EntityTypeMapping TypeName="SidejobModel.CustomerProjectPhoto"><MappingFragment StoreEntitySet="CustomerProjectPhoto">
-            <ScalarProperty Name="PhotoID" ColumnName="PhotoID" />
-            <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
-            <ScalarProperty Name="Caption" ColumnName="Caption" />
-            <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
-            <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-            <ScalarProperty Name="PhotoRank" ColumnName="PhotoRank" />
-            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="CustomerProjectPictures"><EntityTypeMapping TypeName="SidejobModel.CustomerProjectPicture"><MappingFragment StoreEntitySet="CustomerProjectPicture">
-            <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-            <ScalarProperty Name="AlbumID" ColumnName="AlbumID" />
-            <ScalarProperty Name="AlbumCaption" ColumnName="AlbumCaption" />
-            <ScalarProperty Name="Numberofimages" ColumnName="Numberofimages" />
-            <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="CustomerProjectTemps"><EntityTypeMapping TypeName="SidejobModel.CustomerProjectTemp"><MappingFragment StoreEntitySet="CustomerProjectTemp">
             <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
@@ -12486,7 +12267,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="SideJobLocationModel">
+      <Diagram Name="SideJobLocationModel" ZoomLevel="86">
         <EntityTypeShape EntityType="SidejobModel.AdminstratorMessage" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5571907552083335" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.AfricaCountry" Width="1.5" PointX="2.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.AlphabeticLetter" Width="1.5" PointX="4.75" PointY="0.75" Height="1.7879850260416665" IsExpanded="true" />
@@ -12536,7 +12317,6 @@
         <EntityTypeShape EntityType="SidejobModel.Customer" Width="1.5" PointX="7.75" PointY="28.875" Height="4.672506510416671" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerAccount" Width="1.5" PointX="10" PointY="3.625" Height="4.4802050781249818" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerAdditionalInformation" Width="1.5" PointX="29.75" PointY="12.75" Height="2.1725878906249818" IsExpanded="true" />
-        <EntityTypeShape EntityType="SidejobModel.CustomerBid" Width="1.5" PointX="10" PointY="8.875" Height="1.9802864583333246" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerComment" Width="1.5" PointX="10" PointY="11.5" Height="1.5956835937499818" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerCommentReceived" Width="1.5" PointX="17.75" PointY="29.75" Height="2.9417936197916674" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerCommentReceivedSummary" Width="1.5" PointX="19.75" PointY="29.75" Height="2.1725878906249818" IsExpanded="true" />
@@ -12548,7 +12328,6 @@
         <EntityTypeShape EntityType="SidejobModel.CustomerGeneral" Width="1.5" PointX="12.75" PointY="30.75" Height="4.4802050781249818" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerGeneral2" Width="1.5" PointX="10" PointY="21.75" Height="4.4802050781249818" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerHackedPDT" Width="1.5" PointX="14.75" PointY="30.75" Height="4.2879036458333246" IsExpanded="true" />
-        <EntityTypeShape EntityType="SidejobModel.CustomerHistoryBid" Width="1.5" PointX="12.25" PointY="8.875" Height="1.980286458333353" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerInvitationReceived" Width="1.5" PointX="30.75" PointY="5.75" Height="1.9802864583333246" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerInvitationSent" Width="1.5" PointX="30.75" PointY="15.75" Height="1.9802864583333246" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerIPN" Width="1.5" PointX="30.75" PointY="18.75" Height="7.3647265624999818" IsExpanded="true" />
@@ -12563,8 +12342,6 @@
         <EntityTypeShape EntityType="SidejobModel.CustomerPicture" Width="1.5" PointX="10" PointY="43.75" Height="2.1725878906249818" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerPortfolio" Width="1.5" PointX="10" PointY="46.75" Height="1.980286458333353" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerProject" Width="1.5" PointX="25.75" PointY="31.75" Height="1.5956835937499818" IsExpanded="true" />
-        <EntityTypeShape EntityType="SidejobModel.CustomerProjectPhoto" Width="1.5" PointX="17" PointY="9" Height="2.557190755208353" IsExpanded="true" />
-        <EntityTypeShape EntityType="SidejobModel.CustomerProjectPicture" Width="1.5" PointX="14.75" PointY="9.125" Height="2.1725878906249818" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerProjectTemp" Width="1.5" PointX="10" PointY="49.5" Height="2.7494921874999818" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerRating" Width="1.5" PointX="31.75" PointY="27.75" Height="2.9417936197916674" IsExpanded="true" />
         <EntityTypeShape EntityType="SidejobModel.CustomerRevokedBid" Width="1.5" PointX="31.75" PointY="31.75" Height="2.3648893229166674" IsExpanded="true" />
@@ -12756,18 +12533,9 @@
           <ConnectorPoint PointX="8.398436875" PointY="5.8651025390624909" />
           <ConnectorPoint PointX="10" PointY="5.8651025390624909" />
         </AssociationConnector>
-        <AssociationConnector Association="SidejobModel.FK_CustomerBid_Customer" ManuallyRouted="false">
-          <ConnectorPoint PointX="8.9062525" PointY="28.875" />
-          <ConnectorPoint PointX="8.9062525" PointY="9.8651432291666623" />
-          <ConnectorPoint PointX="10" PointY="9.8651432291666623" />
-        </AssociationConnector>
         <AssociationConnector Association="SidejobModel.FK_CustomerComment_Customer" ManuallyRouted="false">
-          <ConnectorPoint PointX="8.0937475" PointY="28.875" />
-          <ConnectorPoint PointX="8.0937475" PointY="12.297841796874991" />
-          <ConnectorPoint PointX="8.4166666666666661" PointY="12.297841796874991" />
-          <ConnectorPoint PointX="8.5833333333333339" PointY="12.297841796874991" />
-          <ConnectorPoint PointX="8.8229191666666669" PointY="12.297841796874991" />
-          <ConnectorPoint PointX="8.9895858333333347" PointY="12.297841796874991" />
+          <ConnectorPoint PointX="8.8808617187500012" PointY="28.875" />
+          <ConnectorPoint PointX="8.8808617187500012" PointY="12.297841796874991" />
           <ConnectorPoint PointX="10" PointY="12.297841796874991" />
         </AssociationConnector>
         <AssociationConnector Association="SidejobModel.FK_CustomerEvent_Customer" ManuallyRouted="false">
@@ -12776,27 +12544,15 @@
           <ConnectorPoint PointX="10" PointY="14.865143229166677" />
         </AssociationConnector>
         <AssociationConnector Association="SidejobModel.FK_CustomerFavorite_Customer1" ManuallyRouted="false">
-          <ConnectorPoint PointX="8.6523446875000012" PointY="28.875" />
-          <ConnectorPoint PointX="8.6523446875000012" PointY="17.518992513020834" />
-          <ConnectorPoint PointX="8.8229191666666669" PointY="17.518992513020834" />
-          <ConnectorPoint PointX="8.9895858333333347" PointY="17.518992513020834" />
-          <ConnectorPoint PointX="9.0260454166666673" PointY="17.518992513020834" />
-          <ConnectorPoint PointX="9.1927120833333351" PointY="17.518992513020834" />
+          <ConnectorPoint PointX="8.6269539062500016" PointY="28.875" />
+          <ConnectorPoint PointX="8.6269539062500016" PointY="17.518992513020834" />
+          <ConnectorPoint PointX="8.7975283854166673" PointY="17.518992513020834" />
+          <ConnectorPoint PointX="8.9641950520833351" PointY="17.518992513020834" />
           <ConnectorPoint PointX="10" PointY="17.518992513020834" />
         </AssociationConnector>
         <AssociationConnector Association="SidejobModel.FK_CustomerGeneral_Customer" ManuallyRouted="false">
-          <ConnectorPoint PointX="7.90038578125" PointY="28.875" />
-          <ConnectorPoint PointX="7.90038578125" PointY="23.990102539062491" />
-          <ConnectorPoint PointX="8.0299432291666655" PointY="23.990102539062491" />
-          <ConnectorPoint PointX="8.1966098958333333" PointY="23.990102539062491" />
-          <ConnectorPoint PointX="8.3151035416666659" PointY="23.990102539062491" />
-          <ConnectorPoint PointX="8.4817702083333337" PointY="23.990102539062491" />
-          <ConnectorPoint PointX="8.5690113541666673" PointY="23.990102539062491" />
-          <ConnectorPoint PointX="8.7356780208333351" PointY="23.990102539062491" />
-          <ConnectorPoint PointX="8.8229191666666669" PointY="23.990102539062491" />
-          <ConnectorPoint PointX="8.9895858333333347" PointY="23.990102539062491" />
-          <ConnectorPoint PointX="9.0260454166666673" PointY="23.990102539062491" />
-          <ConnectorPoint PointX="9.1927120833333351" PointY="23.990102539062491" />
+          <ConnectorPoint PointX="9.096683359375" PointY="28.875" />
+          <ConnectorPoint PointX="9.096683359375" PointY="23.990102539062491" />
           <ConnectorPoint PointX="10" PointY="23.990102539062491" />
         </AssociationConnector>
         <AssociationConnector Association="SidejobModel.FK_CustomerMessage_Customer" ManuallyRouted="false">
@@ -12856,17 +12612,9 @@
           <ConnectorPoint PointX="7.89062125" PointY="57.317047526041677" />
           <ConnectorPoint PointX="10" PointY="57.317047526041677" />
         </AssociationConnector>
-        <AssociationConnector Association="SidejobModel.FK_CustomerHistoryBid_CustomerBid" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.5" PointY="9.8651432291666623" />
-          <ConnectorPoint PointX="12.25" PointY="9.8651432291666623" />
-        </AssociationConnector>
         <AssociationConnector Association="SidejobModel.FK_CustomerPhoto_CustomerPicture" ManuallyRouted="false">
           <ConnectorPoint PointX="11.5" PointY="44.836293945312491" />
           <ConnectorPoint PointX="12.25" PointY="44.836293945312491" />
-        </AssociationConnector>
-        <AssociationConnector Association="SidejobModel.FK_CustomerProjectPhoto_CustomerProjectPicture" ManuallyRouted="false">
-          <ConnectorPoint PointX="16.25" PointY="10.211293945312491" />
-          <ConnectorPoint PointX="17" PointY="10.211293945312491" />
         </AssociationConnector>
         <AssociationConnector Association="SidejobModel.FK_ProfessionalAccount_Professional" ManuallyRouted="false">
           <ConnectorPoint PointX="1.5" PointY="35.875" />

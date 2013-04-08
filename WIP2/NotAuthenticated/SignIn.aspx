@@ -1,4 +1,5 @@
 <%@ Page Language="VB" AutoEventWireup="false" CodeFile="SignIn.aspx.vb" Inherits="NotAuthenticated.SignIn" %>
+
 <%@ Register Assembly="System.Web.Ajax" Namespace="System.Web.UI" TagPrefix="asp" %>
 <%@ Register TagPrefix="UpperNavigationButtons" TagName="NavigationButtons" Src="../common/TemplateMainUpperButtons.ascx" %>
 <%@ Register TagPrefix="LowerNavigationButtons" TagName="NavigationButtons" Src="../common/TemplateMainLowerButtons.ascx" %>
@@ -6,9 +7,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title id="Title1" runat="server" title="<%$ Resources:Resource, HomeTitle %>"></title>
+    <title id="title" runat="server"></title>
+    <meta id="metaTitle" runat="server" name="Title" />
+    <meta id="metaDescription" runat="server" name="Description" />
+    <meta id="metaKeyword" runat="server" name="Keyword" />
     <script type="text/javascript" src="../scripts/jquery-1.5.2.js"></script>
-    <link rel="stylesheet" href="../_assets/css/TemplateStyleSheet.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../_assets/css/TemplateStyleSheet.css" type="text/css"
+        media="screen" />
     <meta property="og:url" content="http://www.my-side-job.com" />
     <link rel="canonical" href="http://www.my-side-job.com" />
     <script type="text/javascript">
@@ -42,7 +47,7 @@
                 <td valign="top" align="center">
                     <asp:Login ID="Login1" runat="server" Width="100%" BackColor="#F7F7DE" BorderColor="#CCCC99"
                         BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="10pt" RememberMeSet="True"
-                        DestinationPageUrl="">
+                        DestinationPageUrl="" PasswordRecoveryUrl="http://www.my-side-job.com/NotAuthenticated/PasswordRecovery.aspx">
                         <TitleTextStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
                         <LayoutTemplate>
                             <table border="0" cellpadding="1" cellspacing="0" style="border-collapse: collapse;

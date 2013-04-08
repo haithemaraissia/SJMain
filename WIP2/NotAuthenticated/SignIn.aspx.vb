@@ -1,10 +1,49 @@
 
 Imports System.Linq
 Imports SidejobModel
+Imports System.Threading
 
 Namespace NotAuthenticated
     Partial Class SignIn
         Inherits Page
+        Private _language As Integer
+
+        Public Property Language() As Integer
+            Get
+                Return _language
+            End Get
+            Set(ByVal value As Integer)
+                value = _language
+            End Set
+        End Property
+
+        Protected Sub SEO()
+            Title.Text = Resources.Resource.SignUpTitle.ToString
+            Page.Title = Resources.Resource.SignUpTitle.ToString
+            Page.MetaDescription = Resources.Resource.SignUpDescription.ToString
+            Page.MetaKeywords = Resources.Resource.SignUpKeywords.ToString
+
+            metaTitle.Content = Resources.Resource.SignUpTitle.ToString
+            metaKeyword.Content = Resources.Resource.SignUpKeywords.ToString
+            MetaDescription.Content = Resources.Resource.SignUpDescription.ToString
+        End Sub
+
+        Protected Overrides Sub InitializeCulture()
+            Utility.InitializeAllCulture(Session("LCID"), Request.QueryString("l"))
+            ActivateLanguage()
+        End Sub
+
+        Protected Sub ActivateLanguage()
+            Select Case Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName.ToString
+                Case "en"
+                    ''English
+                    _language = 1
+
+                Case "fr"
+                    '"French
+                    _language = 2
+            End Select
+        End Sub
 
         Protected Sub LoginButtonClick(ByVal sender As Object, ByVal e As EventArgs)
             Response.Expires = 0
@@ -14,7 +53,7 @@ Namespace NotAuthenticated
 
             If role.SelectedIndex = 0 Then
                 If IsLockedCustomer() Then
-                    Login1.DestinationPageUrl = "LockedUser.aspx?r=CUS&ID=" + Utility.GetUserInformation("CUS")
+                    Login1.DestinationPageUrl = "LockedUser.aspx?r=CUS&ID=" + Utility.GetUserInformation("Customer")
                 Else
                     ReturnURL(role)
                 End If
@@ -22,7 +61,7 @@ Namespace NotAuthenticated
 
             If role.SelectedIndex = 1 Then
                 If IsLockedProfessional() Then
-                    Login1.DestinationPageUrl = "LockedUser.aspx?r=PRO&ID=" + Utility.GetUserInformation("PRO")
+                    Login1.DestinationPageUrl = "LockedUser.aspx?r=PRO&ID=" + Utility.GetUserInformation("Professional")
                 Else
                     ReturnURL(role)
                 End If
@@ -41,36 +80,46 @@ Namespace NotAuthenticated
 
         Public Function IsLockedCustomer() As Boolean
             Dim flag As Boolean = False
-            If Membership.GetUser() IsNot Nothing Then
-                Dim userKey = Membership.GetUser().ProviderUserKey
-                Dim test = Utility.GetCustomerID(CType(userKey, Guid))
+            Dim userId As String
+            If Membership.GetUser(Login1.UserName) IsNot Nothing Then
+                userId = Membership.GetUser(Login1.UserName).ProviderUserKey.ToString()
+                If userId IsNot Nothing Then
+                    Dim userKey = Membership.GetUser(Login1.UserName).ProviderUserKey
+                    Dim customerid = Utility.GetCustomerID(CType(userKey, Guid))
 
-                Using sidejobcontext = New SidejobEntities()
-                    Dim locked = (From c In sidejobcontext.LockedCustomers
-                            Where c.CustomerID = Utility.GetCustomerID(CType(userKey, Guid))
-                            Select c).FirstOrDefault()
-                    If locked Is Nothing Then
-                        flag = True
-                    End If
-                End Using
+                    Using sidejobcontext = New SidejobEntities()
+                        Dim locked = (From c In sidejobcontext.LockedCustomers
+                                Where c.CustomerID = customerid
+                                Select c).FirstOrDefault()
+                        If locked IsNot Nothing Then
+                            flag = True
+                        End If
+                    End Using
+                End If
             End If
             Return flag
         End Function
 
         Public Function IsLockedProfessional() As Boolean
             Dim flag As Boolean = False
-            If Membership.GetUser() IsNot Nothing Then
-                Dim userKey = Membership.GetUser().ProviderUserKey
-                Using sidejobcontext = New SidejobEntities()
-                    Dim locked = (From c In sidejobcontext.LockedProfessionals
-                            Where c.ProID = Utility.GetProfessionalID(CType(userKey, Guid))
-                            Select c).FirstOrDefault()
-                    If locked Is Nothing Then
-                        flag = True
-                    End If
-                End Using
+            Dim userId As String
+            If Membership.GetUser(Login1.UserName) IsNot Nothing Then
+                userId = Membership.GetUser(Login1.UserName).ProviderUserKey.ToString()
+                If userId IsNot Nothing Then
+                    Dim userKey = Membership.GetUser(Login1.UserName).ProviderUserKey
+                    Dim professionalid = Utility.GetProfessionalID(CType(userKey, Guid))
+                    Using sidejobcontext = New SidejobEntities()
+                        Dim locked = (From c In sidejobcontext.LockedProfessionals
+                                Where c.ProID = professionalid
+                                Select c).FirstOrDefault()
+                        If locked IsNot Nothing Then
+                            flag = True
+                        End If
+                    End Using
+                End If
             End If
             Return flag
         End Function
+
     End Class
 End Namespace

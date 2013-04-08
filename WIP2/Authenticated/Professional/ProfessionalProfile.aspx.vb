@@ -1,10 +1,8 @@
-Imports System.Data.SqlClient
-Imports System.Data
+
 Imports System.IO
 Imports System.Net.Mail
 Imports System.Globalization
 Imports System.Threading
-Imports Microsoft.Reporting.WebForms
 Imports Resources
 
 Partial Class UserProfile
@@ -51,63 +49,6 @@ Partial Class UserProfile
         Page.Header.Controls.AddAt(3, keywords)
     End Sub
 
-    Protected Sub SendEmail()
-
-        ''TEST THIS WITH WWW.programmingfundamenatl.com/Haithem-Admin/
-        Dim mailMessage As New System.Net.Mail.MailMessage
-
-        ''set the Address
-        mailMessage.From = New MailAddress("automated_noreply@programmingfundamental.com")
-        mailMessage.To.Add(New MailAddress("haithemaraissia@yahoo.com"))
-
-        'mailMessage.Subject = Subject.Trim()
-        'mailMessage.Body = Body.Trim()
-
-        'set the content
-        mailMessage.Subject = "New invitation to Project"
-        mailMessage.Body = "Gongratulation Mr Adam. Mr Jack send you an invitation to Project. Please Log in to your account to view the Project Details."
-
-        mailMessage.IsBodyHtml = True
-
-        Dim smtpClient As New SmtpClient()
-        Dim userState As Object = mailMessage
-        'Attach event handler for async callback
-        AddHandler smtpClient.SendCompleted, AddressOf SmtpClient_OnCompleted
-
-        Try
-            '' THIS IS WHAT I HAVE DONE IN www.programmingfundamental.com
-            '********************
-            'Dim Smtp As New SmtpClient("localhost")
-            'smtpClient.Send(mailMessage)
-            '********************
-
-            'Send the email asynchronously
-            smtpClient.SendAsync(mailMessage, userState)
-        Catch smtpEx As SmtpException
-            'Error handling here
-        Catch ex As Exception
-            'Error handling here
-        End Try
-
-    End Sub
-
-    Public Sub SmtpClient_OnCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.AsyncCompletedEventArgs)
-
-        'Get UserState as MailMessage instance from SendMail()
-        Dim mailMessage As MailMessage = CType(e.UserState, MailMessage)
-
-        'READJUST THIS AFTER YOU ARE SETTING THE EMAIL PROCESS
-        If (e.Cancelled) Then
-            'ErrorEmailMessage.Text = "Sending of email message was cancelled. Address=" + mailMessage.To(0).Address
-        End If
-
-        If Not (e.Error Is Nothing) Then
-            ' ErrorEmailMessage.Text = "Error occured, info=" + e.Error.Message
-        Else
-            ' ErrorEmailMessage.Text = "Mail sent successfully"
-        End If
-
-    End Sub
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''GLOBAL VARIABLES'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     Public _language As Integer
@@ -224,7 +165,7 @@ Partial Class UserProfile
     Protected Sub LostBidsViewProjectLinkButton_Click(ByVal sender As Object, ByVal e As System.EventArgs)
         Session("LostProject") = True
     End Sub
-    Protected Sub NewBidLinkButton_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Protected Sub NewBidLinkButtonClick(ByVal sender As Object, ByVal e As System.EventArgs)
         Session("NewBid") = True
     End Sub
     Protected Sub WonBidsRemoveProjectLinkButton_Click(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -233,7 +174,7 @@ Partial Class UserProfile
     Protected Sub LostBids_RowDeleting(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewDeleteEventArgs)
         DeleteLostBid(e.Keys.Item(0).ToString())
     End Sub
-    Protected Sub LostBids_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles LostBidsGridView.SelectedIndexChanged
+    Protected Sub LostBidsSelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles LostBidsGridView.SelectedIndexChanged
 
         If Session("LostProject") = True Then
             MoreProjectView()
@@ -588,7 +529,7 @@ Partial Class UserProfile
     Private Sub MessageToggleCheckState(ByVal checkState As Boolean)
 
         For Each row As GridViewRow In MessageGridView.Rows
-            Dim cb As CheckBox = row.FindControl("MessageSelectorCheckBox")
+            Dim cb As CheckBox = CType(row.FindControl("MessageSelectorCheckBox"), CheckBox)
             If cb IsNot Nothing Then
                 cb.Checked = checkState
             End If
@@ -624,8 +565,8 @@ Partial Class UserProfile
         End If
 
         If Convert.ToInt32(Session("messagemode").ToString) = 0 Then
-            Dim ProfessionalInboxAdapter As New NewProfessionalInboxDataSetTableAdapters.QueriesTableAdapter
-            Dim NewInboxValue As String = ProfessionalInboxAdapter.GetProfessionalNewInbox(Session("ProfessionalID").ToString).ToString
+            Dim professionalInboxAdapter As New NewProfessionalInboxDataSetTableAdapters.QueriesTableAdapter
+            Dim NewInboxValue As String = professionalInboxAdapter.GetProfessionalNewInbox(Session("ProfessionalID").ToString).ToString
 
             If NewInboxValue = "0" Then
                 InboxLinkButton.Text = NumberofInboxLinkButton.Text.ToString()
@@ -948,7 +889,7 @@ Partial Class UserProfile
 
     End Sub
 
-    Protected Sub ViewProjectLinkButton_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+    Protected Sub ViewProjectLinkButtonClick(ByVal sender As Object, ByVal e As System.EventArgs)
         _editProject = True
     End Sub
 
@@ -1328,48 +1269,52 @@ Partial Class UserProfile
 
     '''''''''''''''''''''''''''''''''''''CONTRACT TABS'''''''''''''''''''''''''''''''''''''''''''
 
-    Protected Sub DownloadLinkButton_Click(sender As Object, e As System.EventArgs)
-
-        Dim ProfessionalContractAdapter As New ContractDataSetTableAdapters.ContractTableAdapter
-        Dim ProfessionalContractTable As New ContractDataSet.ContractDataTable
-        ProfessionalContractAdapter.FillContract(ProfessionalContractTable, Convert.ToInt32((GlobalContractGridView.SelectedDataKey.Value.ToString())))
-
-        Dim ProfessionalReportDataSource As New ReportDataSource()
-        ProfessionalReportDataSource.Name = "ContractDataSet"
-        ProfessionalReportDataSource.Value = ProfessionalContractTable
-
-        Dim ProfessionalContractDescriptionAdapter As New ContractDataSetTableAdapters.ContractDescriptionTableAdapter
-        Dim ProfessionalContractDescriptionTable As New ContractDataSet.ContractDescriptionDataTable
-        ProfessionalContractDescriptionAdapter.FillContractDescription(ProfessionalContractDescriptionTable, _language.ToString())
-
-        Dim ProfessionalDescriptionReportDataSource As New ReportDataSource()
-        ProfessionalDescriptionReportDataSource.Name = "ContractDescriptionDataSet"
-        ProfessionalDescriptionReportDataSource.Value = ProfessionalContractDescriptionTable
-
-        ProfessionalReportViewer.Visible = True
-        ProfessionalReportViewer.LocalReport.DataSources.Clear()
-        ProfessionalReportViewer.LocalReport.DataSources.Add(ProfessionalReportDataSource)
-        ProfessionalReportViewer.LocalReport.DataSources.Add(ProfessionalDescriptionReportDataSource)
-        ProfessionalReportViewer.LocalReport.Refresh()
-
-        ' ''Export to PDF
-        Dim mimeType As String
-        Dim encoding As String
-        Dim fileNameExtension As String
-        Dim streams As String()
-        Dim warnings As Warning()
-
-        Dim pdfContent As Byte() = ProfessionalReportViewer.LocalReport.Render("PDF", Nothing, mimeType, encoding, fileNameExtension, streams, _
-         warnings)
-
-        'Return PDF
-        Response.Clear()
-        Response.ContentType = "application/pdf"
-        Response.AddHeader("Content-disposition", "attachment; filename=Contract.pdf")
-        Response.BinaryWrite(pdfContent)
-        Response.[End]()
-
+    Protected Sub PDFButtonClick(sender As Object, e As System.Web.UI.ImageClickEventArgs)
+        Response.Redirect("../Contracts/ReportDownload.aspx?ID=" + GlobalContractGridView.SelectedValue.ToString())
     End Sub
+
+    'Protected Sub DownloadLinkButton_Click(sender As Object, e As System.EventArgs)
+
+    '    Dim ProfessionalContractAdapter As New ContractDataSetTableAdapters.ContractTableAdapter
+    '    Dim ProfessionalContractTable As New ContractDataSet.ContractDataTable
+    '    ProfessionalContractAdapter.FillContract(ProfessionalContractTable, Convert.ToInt32((GlobalContractGridView.SelectedDataKey.Value.ToString())))
+
+    '    Dim ProfessionalReportDataSource As New ReportDataSource()
+    '    ProfessionalReportDataSource.Name = "ContractDataSet"
+    '    ProfessionalReportDataSource.Value = ProfessionalContractTable
+
+    '    Dim ProfessionalContractDescriptionAdapter As New ContractDataSetTableAdapters.ContractDescriptionTableAdapter
+    '    Dim ProfessionalContractDescriptionTable As New ContractDataSet.ContractDescriptionDataTable
+    '    ProfessionalContractDescriptionAdapter.FillContractDescription(ProfessionalContractDescriptionTable, _language.ToString())
+
+    '    Dim ProfessionalDescriptionReportDataSource As New ReportDataSource()
+    '    ProfessionalDescriptionReportDataSource.Name = "ContractDescriptionDataSet"
+    '    ProfessionalDescriptionReportDataSource.Value = ProfessionalContractDescriptionTable
+
+    '    ProfessionalReportViewer.Visible = True
+    '    ProfessionalReportViewer.LocalReport.DataSources.Clear()
+    '    ProfessionalReportViewer.LocalReport.DataSources.Add(ProfessionalReportDataSource)
+    '    ProfessionalReportViewer.LocalReport.DataSources.Add(ProfessionalDescriptionReportDataSource)
+    '    ProfessionalReportViewer.LocalReport.Refresh()
+
+    '    ' ''Export to PDF
+    '    Dim mimeType As String
+    '    Dim encoding As String
+    '    Dim fileNameExtension As String
+    '    Dim streams As String()
+    '    Dim warnings As Warning()
+
+    '    Dim pdfContent As Byte() = ProfessionalReportViewer.LocalReport.Render("PDF", Nothing, mimeType, encoding, fileNameExtension, streams, _
+    '     warnings)
+
+    '    'Return PDF
+    '    Response.Clear()
+    '    Response.ContentType = "application/pdf"
+    '    Response.AddHeader("Content-disposition", "attachment; filename=Contract.pdf")
+    '    Response.BinaryWrite(pdfContent)
+    '    Response.[End]()
+
+    'End Sub
 
     '''''''''''''''''''''''''''''''''''''CONTRACT TABS''''''''''''''''''''''''''''''''''''''''''' 
 
@@ -1557,28 +1502,46 @@ Partial Class UserProfile
 
     '''''''''''''''''''''''''''''''''''ACCOUNT TABS''''''''''''''''''''''''''''''''''''''''''' 
 
-    Protected Sub DeleteAccount_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles DeleteAccountLinkButton.Click
+    Protected Sub DeleteAccountClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles DeleteAccountLinkButton.Click
+        Utility.DeleteProfessional()
         DeleteDirectory()
-        Membership.DeleteUser(Membership.GetUser.ToString)
-
-        Dim UserDeletionQuery As New DeleteUserDataSetTableAdapters.QueriesTableAdapter
-        UserDeletionQuery.DeleteUser(Session("ProfessionalID").ToString, 0)
-
-        Response.Redirect("~/NotAuthenticated/index.aspx")
+        Membership.DeleteUser(Membership.GetUser.ToString, True)
+        FormsAuthentication.SignOut()
+        FormsAuthentication.RedirectToLoginPage()
     End Sub
 
     Sub DeleteDirectory()
         Dim Username As String = User.Identity.Name
         Dim rootPath As String = Server.MapPath("~/Authenticated/Professional/Images/")
-        Dim NewProfessionalDirectory As String = rootPath & Username
+        Dim newProfessionalDirectory As String = rootPath & Username
 
-        If Directory.Exists(NewProfessionalDirectory) = True Then
-            Directory.Delete(NewProfessionalDirectory, True)
+        If Directory.Exists(newProfessionalDirectory) = True Then
+            Directory.Delete(newProfessionalDirectory, True)
+        End If
+
+        Dim professionalProjectDirectory As String = newProfessionalDirectory & "/Projects/"
+
+        If Directory.Exists(professionalProjectDirectory) = True Then
+            Directory.Delete(professionalProjectDirectory, True)
+        End If
+
+        Dim rootWorkPath As String = Server.MapPath("~/Authenticated/Professional/WorkImages/")
+        Dim newProfessionalWorkDirectory As String = rootWorkPath & Username
+
+        If Directory.Exists(newProfessionalWorkDirectory) = True Then
+            Directory.Delete(newProfessionalWorkDirectory, True)
+
         End If
     End Sub
 
-    Protected Sub AccountSendMessageLinkButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles AccountSendMessageLinkButton.Click
-
+    Protected Sub AccountSendMessageLinkButtonClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles AccountSendMessageLinkButton.Click
+        Utility.SendEmail(Utility.GetProfessionalGeneralProperties().UserName, Utility.GetProfessionalGeneralProperties().EmailAddress, Utility.GetProfessionalProperties.LCID,
+                        "Contact Us", "Administrator", "postmaster@my-side-job.com",
+                        Server.HtmlEncode(AccountProfessionalServiceMessageTextBox.Text.ToString()),
+                        "http://my-side-job.com/Schedule/MySideJob/EmailTemplates/Professional/ProfessionalContactUs.aspx?id=" + Utility.GetProfessionalProperties.ProID.ToString(),
+                        , , Utility.GetProfessionalProperties.ProID)
+        Dim customMessage = Resource.ThankyouForyourEmail
+        Response.Write("<script language='javascript'>alert('" + customMessage + "'); window.location = 'http://www.my-side-job.com';</script>")
     End Sub
 
     Protected Sub BindQuestions()
@@ -1801,7 +1764,7 @@ Partial Class UserProfile
     Sub PhotoPaths2()
         Dim ProfessionalWorkPhotoAdapter As New CustomModalPhotoSelectionDataSetTableAdapters.ProfessionalWorkPhotoTableAdapter
         Dim ProfessionalWorkPhotoTable As New CustomModalPhotoSelectionDataSet.ProfessionalWorkPhotoDataTable
-        ProfessionalWorkPhotoAdapter.FillCustomProfessionalWorkPhoto(ProfessionalWorkPhotoTable, Session("ProfessionalID").ToString)
+        ProfessionalWorkPhotoAdapter.FillCustomProfessionalWorkPhoto(ProfessionalWorkPhotoTable, CType(Session("ProfessionalID").ToString, Integer))
 
         ''Dynamically Allocated a list box that will be used for the slide show
         Dim numberofrows As Integer = ProfessionalWorkPhotoTable.Rows.Count
@@ -1857,20 +1820,10 @@ Partial Class UserProfile
     ''''''''''''''''''''''''''''''''''''PAGE EVENTS '''''''''''''''''''''''''''''''''''''''''''''
 
     Protected Overrides Sub InitializeCulture()
-
-        Dim lang As String = Request.QueryString("l")
-        If lang IsNot Nothing Or lang <> "" Then
-            Thread.CurrentThread.CurrentUICulture = New CultureInfo(lang)
-            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(lang)
-            Session("LCID") = lang
-        Else
-            If Session("LCID") IsNot Nothing Or Session("LCID") <> "" Then
-                Thread.CurrentThread.CurrentUICulture = New CultureInfo(Session("LCID").ToString())
-                Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(Session("LCID").ToString())
-            End If
-        End If
-
+        Utility.InitializeAllCulture(Session("LCID"), Request.QueryString("l"))
+        ActivateLanguage()
     End Sub
+
 
     Protected Sub ActivateLanguage()
         Select Case Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName.ToString
@@ -1909,6 +1862,9 @@ Partial Class UserProfile
             ActivateLanguage()
         End If
 
+        If (Session("ProfessionalID") IsNot Nothing OrElse [String].Empty.Equals(Session("ProfessionalID"))) Then
+            GetInformation()
+        End If
     End Sub
 
     Sub InitializeJobs()
@@ -1937,13 +1893,7 @@ Partial Class UserProfile
     End Sub
 
     Sub GetInformation()
-
-        Dim guidStringUser As Guid = New Guid(Membership.GetUser.ProviderUserKey().ToString())
-        Dim GetProfessionalIDAdapter As New GetUserIDTableAdapters.LookUpProRolesTableAdapter
-        Dim ProfessionalIDTable As New GetUserID.LookUpProRolesDataTable
-        GetProfessionalIDAdapter.FillProfessionalID(ProfessionalIDTable, guidStringUser.ToString())
-        Session("ProfessionalID") = ProfessionalIDTable.Item(0).ProfessionalId.ToString
-
+        Session("ProfessionalId") = Utility.GetUserInformation("Professional")
     End Sub
 
     Protected Sub TimeUP()
@@ -1970,4 +1920,5 @@ Partial Class UserProfile
     End Sub
 
     ''''''''''''''''''''''''''''''''''''PAGE EVENTS '''''''''''''''''''''''''''''''''''''''''''''
+
 End Class

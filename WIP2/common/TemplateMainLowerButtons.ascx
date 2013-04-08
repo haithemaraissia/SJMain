@@ -214,12 +214,6 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:HyperLink ID="NewsLetterHyperLink2" runat="server" NavigateUrl="~/NotAuthenticated/NewsLetter2.aspx"
-                                        Text="<%$ Resources:Resource, NewsLetter %>"></asp:HyperLink><br />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
                                     <asp:HyperLink ID="EblastHyperLink" runat="server" NavigateUrl="~/NotAuthenticated/Eblast.aspx"
                                         Text="<%$ Resources:Resource, EBlast %>"></asp:HyperLink><br />
                                 </td>

@@ -133,7 +133,8 @@ public partial class Authenticated_Professional_PayPal_Start : System.Web.UI.Pag
 
         ProfessionalPDTDataSet.ProfessionalPaymentDueDataTable ProfessionalPaymentDueTable;
         GetValue(out ProfessionalPaymentDueTable);
-        const string business = "admin_1349299252_biz@yahoo.com";
+       // const string business = "admin_1349299252_biz@yahoo.com";
+        const string business = "site_1359788449_biz@my-side-job.com";
         string item_name = ProfessionalPaymentDueTable.Rows[0]["ProjectTitle"].ToString();
         string project_id = Request.QueryString["ID"].ToString();
         string ProID = GetProfessionalID();
@@ -148,7 +149,7 @@ public partial class Authenticated_Professional_PayPal_Start : System.Web.UI.Pag
             redirect += "&amount=" + Amount.Text.ToString();
             redirect += "&currency_code=" + CurrencyDropDownList.SelectedValue.ToString();
             redirect += "&payer_id=" + ProID.ToString();
-            redirect += "&receiver_email=" + "admin_1349299252_biz@yahoo.com";
+            redirect += "&receiver_email=" + "site_1359788449_biz@my-side-job.com";
             redirect += "&custom=" + project_id;
             redirect += "&notify_url" + notify_url;
             redirect += "&return=" + return_URL;

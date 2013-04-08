@@ -1857,4 +1857,722 @@ Please ensure that your Paypal account has the required amount to complete the t
   <data name="Role" xml:space="preserve">
     <value>Role :</value>
   </data>
+  <data name="AgreementLabel" xml:space="preserve">
+    <value>THIS AGREEMENT</value>
+  </data>
+  <data name="AssitancePart1Label" xml:space="preserve">
+    <value>5.6 Assistance</value>
+  </data>
+  <data name="AssitancePart2Label" xml:space="preserve">
+    <value>Service Provider agrees to assist Buyer in every way, both during and after the
+                            term of this Agreement, to obtain and enforce United States and foreign Intellectual
+                            Property Rights relating to Work Product in all countries.</value>
+  </data>
+  <data name="BackgroundInitialObligationLabel" xml:space="preserve">
+    <value>1. BACKGROUND AND INITIAL OBLIGATIONS.</value>
+  </data>
+  <data name="BackgroundTechnologyPart1Label" xml:space="preserve">
+    <value>5.2 Background Technology</value>
+  </data>
+  <data name="BackgroundTechnologyPart2Label" xml:space="preserve">
+    <value>As used in this Agreement, the term “&lt;b&gt;Background Technology&lt;/b&gt;” means all Inventions
+                        developed by Service Provider other than in the course of providing services to
+                        Buyer hereunder and all Inventions acquired or licensed by Service Provider that
+                        Service Provider uses in performing services under this Agreement or incorporates
+                        into Work Product. Service Provider will disclose any Background Technology which
+                        Service Provider proposes to use or incorporate. If Service Provider discloses no
+                        Background Technology, Service Provider warrants that it will not use Background
+                        Technology or incorporate it into Work Product provided pursuant thereto. Notwithstanding
+                        the foregoing, unless otherwise agreed in the Project, Service Provider agrees that
+                        it will not incorporate into Work Product or otherwise deliver to Buyer any software
+                        code licensed under the GNU GPL or LGPL or any other license that by its terms requires,
+                        or conditions the use or distribution of such code on, the disclosure, licensing,
+                        or distribution of the Work Product or any source code owned or licensed by the
+                        Buyer.</value>
+  </data>
+  <data name="BetweenLabel" xml:space="preserve">
+    <value>BETWEEN </value>
+  </data>
+  <data name="BuyerAddressLabel" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="BuyerCountryRegionCityLabel" xml:space="preserve">
+    <value>Country/Region/City:</value>
+  </data>
+  <data name="BuyerCountryRegionLabel" xml:space="preserve">
+    <value>Country/Region:</value>
+  </data>
+  <data name="BuyerFirstNameLabel" xml:space="preserve">
+    <value>First Name:</value>
+  </data>
+  <data name="BuyerFullNameLabel" xml:space="preserve">
+    <value>Full Name:</value>
+  </data>
+  <data name="BuyerIdentificationNumberLabel" xml:space="preserve">
+    <value>Identification Number:_________________________________</value>
+  </data>
+  <data name="BuyerIslabel" xml:space="preserve">
+    <value>1.1 The  “The Buyer is.”</value>
+  </data>
+  <data name="BuyerLabel" xml:space="preserve">
+    <value>[BUYER]</value>
+  </data>
+  <data name="BuyerLastNameLabel" xml:space="preserve">
+    <value>Last Name:</value>
+  </data>
+  <data name="BuyerSideJobIDLabel" xml:space="preserve">
+    <value>Buyer ID:</value>
+  </data>
+  <data name="BuyerUserNameLabel" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="ChangeControlLabelPart1" xml:space="preserve">
+    <value>2.4 Change Control</value>
+  </data>
+  <data name="ChangeControlLabelPart2" xml:space="preserve">
+    <value>“Provider” will provide “Buyer” project management with comprehensive status reporting
+                        on a regular basis. These reports will indicate the work activities performed, progress
+                        against project milestones, as well as any expenses incurred in the furtherance
+                        of this work to date.</value>
+  </data>
+  <data name="ChangeControlLabelPart3" xml:space="preserve">
+    <value>Material deviations
+                    from the baseline scope and budget documented herein will be mutually reviewed and
+                    agreed by Provider and Buyer. The following provides the process to be followed
+                    for any such material change to the SOW:</value>
+  </data>
+  <data name="ChangeRequestLabelPart1" xml:space="preserve">
+    <value>1. A Change Request
+                    (“CR”) will be the vehicle for requesting a change to the SOW. The CR will describe
+                    the change, the rationale for the change, the impact on the implementation timeline,
+                    and the impact on the Compensation. Both Provider and Buyer may initiate a CR.</value>
+  </data>
+  <data name="ChangeRequestLabelPart2" xml:space="preserve">
+    <value>2. The designated
+                    Project Manager of the requesting party will review the CR and determine whether
+                    to submit the CR to the other party.</value>
+  </data>
+  <data name="ChangeRequestLabelPart3" xml:space="preserve">
+    <value>3. Both Project
+                    Managers will review the proposed CR and either approve for further investigation
+                    or reject. Provider may specify additional charges for such investigation. If the
+                    investigation is authorized, the Project Managers will sign the estimation portion
+                    of the CR, which constitutes authorization for the investigative changes. The investigation
+                    will determine the effect that the implementation of the CR will have on compensation,
+                    schedule and other terms and conditions of the Agreement.</value>
+  </data>
+  <data name="CompensationPart1Label" xml:space="preserve">
+    <value>3.COMPENSATION</value>
+  </data>
+  <data name="CompensationPart2Label" xml:space="preserve">
+    <value>Buyer will pay Service Provider the fee specified for the Project in accordance with the Business Terms, any SOW, and the Terms of Service. Payment will be made by Buyer to Service Provider through the Site in accordance with the MY-SIDE-JOB Payment Service and, if applicable, the Escrow Terms and Conditions, promptly upon each acceptance of the Project Work Product. Service Provider will be responsible for all expenses incurred in performing services under this Agreement, except and only to the extent expressly provided in this Agreement, the Business Terms, or SOW.</value>
+  </data>
+  <data name="CompetitiveorConflictingProjectsPart1Label" xml:space="preserve">
+    <value>6. Competitive or Conflicting Projects.</value>
+  </data>
+  <data name="CompetitiveorConflictingProjectsPart2Label" xml:space="preserve">
+    <value>Service Provider agrees, during the term of this Agreement, not to enter into a
+                        contract or accept an obligation that is inconsistent or incompatible with Service
+                        Provider’s obligations under this Agreement. Service Provider warrants that there
+                        is no such contract or obligation in effect as of the Effective Date. Service Provider
+                        further agrees not to disclose to, deliver to, or induce Buyer to use any confidential
+                        information that belongs to anyone other than Buyer or Service Provider.</value>
+  </data>
+  <data name="ConfidentialInformationPart1Label" xml:space="preserve">
+    <value>7. Confidential Information</value>
+  </data>
+  <data name="ConfidentialInformationPart2Label" xml:space="preserve">
+    <value>Service Provider agrees that during the term of this Agreement and thereafter, except
+                        as expressly authorized in writing by Buyer, it (a) will not use or permit the use
+                        of Confidential Information (defined below) in any manner or for any purpose not
+                        expressly set forth in this Agreement; (b) will not disclose, lecture upon, publish,
+                        or permit others to disclose, lecture upon, or publish any such Confidential Information
+                        to any third party without first obtaining Buyer’s express written consent on a
+                        case-by-case basis; (c) will limit access to Confidential Information to Service
+                        Provider personnel who need to know such information in connection with their work
+                        for Buyer; and (d) will not remove any tangible embodiment of any Confidential Information
+                        from Buyer’s premises without Buyer’s prior written consent. “&lt;b&gt;Confidential Information&lt;/b&gt;”
+                        includes, but is not limited to, all information related to Buyer’s business and
+                        its actual or anticipated research and development, including without limitation
+                        (i) trade secrets, inventions, ideas, processes, computer source and object code,
+                        formulae, data, programs, other works of authorship, know-how, improvements, discoveries,
+                        developments, designs, and techniques; (ii) information regarding products or plans
+                        for research and development, marketing and business plans, budgets, financial statements,
+                        contracts, prices, suppliers, and customers; (iii) information regarding the skills
+                        and compensation of Buyer’s employees, contractors, and any other service providers;
+                        (iv) the existence of any business discussions, negotiations, or agreements between
+                        Buyer and any third party; and (v) all such information related to any third party
+                        that is disclosed to Buyer or to Service Provider during the course of Buyer’s business
+                        (“&lt;b&gt;Third Party Information&lt;/b&gt;”). Notwithstanding the foregoing, it is understood
+                        that Service Provider is free to use information that is generally known in the
+                        trade or industry, information that is not gained as a result of a breach of this
+                        Agreement, and Service Provider’s own skill, knowledge, know-how, and experience.</value>
+  </data>
+  <data name="ContractIDLabel" xml:space="preserve">
+    <value>Contract ID:</value>
+  </data>
+  <data name="DateLabel" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="DurationLabelPart1" xml:space="preserve">
+    <value>2.3 Duration of Services</value>
+  </data>
+  <data name="DurationLabelPart2" xml:space="preserve">
+    <value>The duration of performance of services under this Agreement commences on the Effective
+                        Date and terminates on the Final Delivery Date set forth in &lt;b&gt;Section 1.4&lt;/b&gt; above,
+                        unless the Parties otherwise agree in a writing signed by both parties and uploaded
+                        to the Private Message Board</value>
+  </data>
+  <data name="EngagmentandPerformanceofServicesPart1Label" xml:space="preserve">
+    <value>2. ENGAGEMENT AND PERFORMANCE OF SERVICES.</value>
+  </data>
+  <data name="EngagmentandPerformanceofServicesPart2Label" xml:space="preserve">
+    <value>Buyer hereby engages Service Provider to deliver the Work Product to Buyer, and
+                        Buyer will pay Service Provider for the Project Work Product, in accordance with
+                        the terms and conditions of this Agreement and the Terms of Service. As used in
+                        this Agreement, the “&lt;b&gt;Work Product&lt;/b&gt;” means any and all work product developed
+                        by Service Provider as required to complete the Project and delivered to the Buyer
+                        in the performance of the Project, as specified in the Business Terms, the SOW,
+                        and this Agreement.</value>
+  </data>
+  <data name="EntireAgreementPart1Label" xml:space="preserve">
+    <value>13.9 Entire Agreement</value>
+  </data>
+  <data name="EntireAgreementPart2Label" xml:space="preserve">
+    <value>This Agreement is the final, complete and exclusive agreement of the parties with
+                        respect to the subject matters hereof and supersedes and merges all prior discussions
+                        between the parties with respect to such subject matters. No modification of or
+                        amendment to this Agreement, or any waiver of any rights under this Agreement, will
+                        be effective unless in writing and signed by Service Provider and Buyer. The terms
+                        of this Agreement will govern all Projects and services undertaken by Service Provider
+                        for Buyer. In the event of any conflict between this Agreement and the express written
+                        terms of an agreement applicable to an engagement, the express written terms of
+                        such agreement will govern, but only to the extent and with respect to the services
+                        set forth therein.</value>
+  </data>
+  <data name="ExecutionandDeliveryPart1Label" xml:space="preserve">
+    <value>13.8 Execution and Delivery; Binding Effect</value>
+  </data>
+  <data name="ExecutionandDeliveryPart2Label" xml:space="preserve">
+    <value>The parties will evidence execution and delivery of this Agreement with the intention
+                        of becoming legally bound hereby, by completion of the following process on the
+                        Site:</value>
+  </data>
+  <data name="ExportPart1Label" xml:space="preserve">
+    <value>13.7 Export</value>
+  </data>
+  <data name="ExportPart2Label" xml:space="preserve">
+    <value>Service Provider agrees not to export, directly or indirectly, any U.S. technical
+                            data acquired from Buyer or any products utilizing such data, to countries outside
+                            the United States, because such export could be in violation of the United States
+                            export laws or regulations.</value>
+  </data>
+  <data name="FiveLabel" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="FourLabel" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GeneralProvisionsLabel" xml:space="preserve">
+    <value>13. GENERAL PROVISIONS</value>
+  </data>
+  <data name="GoverningLawandVenuePart1Label" xml:space="preserve">
+    <value>13.1 Governing Law and Venue</value>
+  </data>
+  <data name="GoverningLawandVenuePart2Label" xml:space="preserve">
+    <value> This Agreement and any action related thereto will be governed, controlled, interpreted,
+                        and defined by and under the laws of the State of California, without giving effect
+                        to any conflicts of laws principles that require the application of the law of a
+                        different jurisdiction. Service Provider hereby expressly consents to the personal
+                        jurisdiction and venue in the state and federal courts for the county in which Buyer’s
+                        or MY-SIDE-JOB’s principal place of business is located for any lawsuit filed there
+                        against Service Provider by Buyer or MY-SIDE-JOB arising from or related to this
+                        Agreement. </value>
+  </data>
+  <data name="IndemnificationPart1Label" xml:space="preserve">
+    <value>9. INDEMNIFICATION</value>
+  </data>
+  <data name="IndemnificationPart2Label" xml:space="preserve">
+    <value>Service Provider will defend, indemnify, and hold harmless Buyer against any damage,
+                        cost, loss or expense arising from a claim, suit or proceeding brought against Buyer
+                        alleging that any Work Product that Service Provider delivers pursuant to this Agreement
+                        or the Project: (i) infringes upon any intellectual property rights or (ii) misappropriates
+                        any trade secrets, of any third party.</value>
+  </data>
+  <data name="IndependentContractorRelationshipPart1Label" xml:space="preserve">
+    <value>4.INDEPENDENT CONTRACTOR RELATIONSHIP</value>
+  </data>
+  <data name="IndependentContractorRelationshipPart2Label" xml:space="preserve">
+    <value>Service Provider’s relationship with Buyer will be that of an independent contractor,
+                        and nothing in this Agreement should be construed to create a partnership, joint
+                        venture, or employer-employee relationship. Service Provider (a) is not the agent
+                        of Buyer; (b) is not authorized to make any representation, contract, or commitment
+                        on behalf of Buyer; (c) will not be entitled to any of the benefits that Buyer makes
+                        available to its employees, such as group insurance, profit-sharing or retirement
+                        benefits (and waives the right to receive any such benefits); and (d) will be solely
+                        responsible for all tax returns and payments required to be filed with or made to
+                        any federal, state, or local tax authority with respect to Service Provider’s performance
+                        of services and receipt of fees under this Agreement. If applicable, Buyer will
+                        report amounts paid to Service Provider by filing Form 1099-MISC with the Internal
+                        Revenue Service, as required by law. Service Provider agrees to fill out form W-9
+                        or W8-BEN, as applicable, and as required by Buyer. Service Provider agrees to accept
+                        exclusive liability for complying with all applicable state and federal laws, including
+                        laws governing self-employed individuals, if applicable, such as laws related to
+                        payment of taxes, social security, disability, and other contributions based on
+                        fees paid to Service Provider under this Agreement. Buyer will not withhold or make
+                        payments for social security, unemployment insurance or disability insurance contributions,
+                        or obtain workers’ compensation insurance on Service Provider’s behalf. Service
+                        Provider hereby agrees to indemnify and defend Buyer against any and all such taxes
+                        or contributions, including penalties and interest. Service Provider agrees to provide
+                        proof of payment of appropriate taxes on any fees paid to Service Provider under
+                        this Agreement upon reasonable request of Buyer. </value>
+  </data>
+  <data name="InjunctiveReliefPart1Label" xml:space="preserve">
+    <value>13.5 Injunctive Relief</value>
+  </data>
+  <data name="InjunctiveReliefPart2Label" xml:space="preserve">
+    <value>Service Provider acknowledges that, because its services are personal and unique
+                        and because Service Provider will have access to Confidential Information of Buyer,
+                        any breach of this Agreement by Service Provider would cause irreparable injury
+                        to Buyer for which monetary damages would not be an adequate remedy and, therefore,
+                        will entitle Buyer to injunctive relief (including specific performance). The rights
+                        and remedies provided to each party in this Agreement are cumulative and in addition
+                        to any other rights and remedies available to such party at law or in equity.</value>
+  </data>
+  <data name="InsurancePart1Label" xml:space="preserve">
+    <value>10. INSURANCE</value>
+  </data>
+  <data name="InsurancePart2Label" xml:space="preserve">
+    <value>Service Provider, at its sole cost and expense, will maintain appropriate insurance
+                        in accordance with industry standards. </value>
+  </data>
+  <data name="IntellectualPropertyLabel" xml:space="preserve">
+    <value>5.INTELLECTUAL PROPERTY RIGHTS.</value>
+  </data>
+  <data name="InventionsandIntellectualPropertyRightsPart1Label" xml:space="preserve">
+    <value>5.1 Inventions and Intellectual Property Rights</value>
+  </data>
+  <data name="InventionsandIntellectualPropertyRightsPart2Label" xml:space="preserve">
+    <value>As used in this Agreement, the term “&lt;b&gt;Invention&lt;/b&gt;” means any ideas, concepts,
+                        information, materials, processes, data, programs, know-how, improvements, discoveries,
+                        developments, designs, artwork, formulae, other copyrightable works, and techniques
+                        and all Intellectual Property Rights therein. The term “&lt;b&gt;Intellectual Property Rights&lt;/b&gt;”
+                        means all trade secrets, copyrights, trademarks, mask work rights, patents and other
+                        intellectual property rights recognized by the laws of any country.</value>
+  </data>
+  <data name="InWitnessWhereOfPart1Label" xml:space="preserve">
+    <value>IN WITNESS WHEREOF</value>
+  </data>
+  <data name="InWitnessWhereOfPart2Label" xml:space="preserve">
+    <value>, the parties have caused
+                        this Agreement to be approved by their duly authorized representatives with the
+                        intention of becoming legally bound hereby.</value>
+  </data>
+  <data name="IsMadeOnLabel" xml:space="preserve">
+    <value>is made on</value>
+  </data>
+  <data name="LicensetoBackgroundTechnologyPart1Label" xml:space="preserve">
+    <value>5.3 License to Background Technology</value>
+  </data>
+  <data name="LicensetoBackgroundTechnologyPart2Label" xml:space="preserve">
+    <value>Service Provider hereby automatically upon receipt of payment from Buyer, grants
+                        to Buyer a non-exclusive, perpetual, fully-paid and royalty-free, irrevocable and
+                        world-wide right, with rights to sublicense through multiple levels of sublicensees,
+                        to reproduce, make derivative works of, distribute, publicly perform, and publicly
+                        display in any form or medium, whether now known or later developed, make, have
+                        made, use, sell, import, offer for sale, and exercise any and all present or future
+                        rights in the Background Technology incorporated or used in Work Product.</value>
+  </data>
+  <data name="LicensetoorWaiverofOtherRightsPart1Label" xml:space="preserve">
+    <value>5.5 License to or Waiver of Other Rights</value>
+  </data>
+  <data name="LicensetoorWaiverofOtherRightsPart2Label" xml:space="preserve">
+    <value>If Service Provider has any right to the Work Product that cannot be assigned by
+                        Service Provider, Service Provider hereby automatically upon receipt of payment
+                        from Buyer unconditionally and irrevocably grants to Buyer during the term of such
+                        rights, an exclusive, even as to Service Provider, irrevocable, perpetual, worldwide,
+                        fully paid and royalty-free license, with rights to sublicense through multiple
+                        levels of sublicensees, to reproduce, make derivative works of, distribute, publicly
+                        perform and publicly display in any form or medium, whether now known or later developed,
+                        make, use, sell, import, offer for sale and exercise any and all such rights. If
+                        Service Provider has any rights to the Work Product that cannot be assigned or licensed,
+                        Service Provider hereby automatically upon receipt of payment from Buyer unconditionally
+                        and irrevocably waives the enforcement of such rights, and all claims and causes
+                        of action of any kind against Buyer or related to Buyer’s customers, with respect
+                        to such rights, and agrees, at Buyer’s request and expense, to consent to and join
+                        in any action to enforce such rights.</value>
+  </data>
+  <data name="MutiEmployeeServiceProviderPart1Label" xml:space="preserve">
+    <value>12. MULTI-EMPLOYEE SERVICE PROVIDER</value>
+  </data>
+  <data name="MutiEmployeeServiceProviderPart2Label" xml:space="preserve">
+    <value>Before any Service Provider employee or agent performs services in connection with
+                        this Agreement or has access to Confidential Information, the employee or agent
+                        and Service Provider must have entered into a binding written agreement expressly
+                        for the benefit of Buyer that contains provisions substantially equivalent to the
+                        sections of this Agreement titled “Engagement and Performance of Services” and “Intellectual
+                        Property Rights.” Service Provider agrees (a) that its employees and agents will
+                        not be entitled to or eligible for any benefits that Buyer may make available to
+                        its employees; (b) to limit access to the Confidential Information to employees
+                        or agents of Service Provider who have a reasonable need to have such access in
+                        order to perform the services pursuant to this Agreement; and (c) to be solely responsible
+                        for all expenses incurred by any of its employees or agents in performing the services
+                        or otherwise performing its obligations under this Agreement, except as set forth
+                        in the Engagement.</value>
+  </data>
+  <data name="MutualNonDisclosureAgreementLabel" xml:space="preserve">
+    <value>Mutual Non-Disclosure Agreement</value>
+  </data>
+  <data name="MutualNonDisclosureAgreementPartyALabel" xml:space="preserve">
+    <value>[Party A]</value>
+  </data>
+  <data name="MutualNonDisclosureAgreementPartyBLabel" xml:space="preserve">
+    <value>[Party B]</value>
+  </data>
+  <data name="NoAssignmentPart1Label" xml:space="preserve">
+    <value>13.3 No Assignment</value>
+  </data>
+  <data name="NoAssignmentPart2Label" xml:space="preserve">
+    <value>This Agreement, and the party’s rights and obligations herein, may not be assigned,
+                        subcontracted, delegated, or otherwise transferred by either party without the other’s
+                        prior written consent, and any attempted assignment, subcontract, delegation, or
+                        transfer in violation of the foregoing will be null and void. The terms of this
+                        Agreement will be binding upon assignees.</value>
+  </data>
+  <data name="NotePart1Label" xml:space="preserve">
+    <value>Note:</value>
+  </data>
+  <data name="NotePart2Label" xml:space="preserve">
+    <value>This Template Project
+                    Agreement and Statement of Work is a sample provided for your information only and
+                    may not be relied upon as legal advice. This Template might not be appropriate for
+                    your requirements. MY-SIDE-JOB makes no warranty about the suitability of this Template
+                    and accepts no liability arising out of the use of this Template. Please consult
+                    your legal or business advisor for further information or advice.</value>
+  </data>
+  <data name="NoticesPart1Label" xml:space="preserve">
+    <value>13.4 Notices</value>
+  </data>
+  <data name="NoticesPart2Label" xml:space="preserve">
+    <value>Each party must deliver all notices or other communications required or permitted
+                            under this Agreement to the other party by posting it on the Private Message Board
+                            for the Project.</value>
+  </data>
+  <data name="OneLabel" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="OperativeProvisionsPart1Label" xml:space="preserve">
+    <value>OPERATIVE PROVISIONS</value>
+  </data>
+  <data name="OperativeProvisionsPart2Label" xml:space="preserve">
+    <value>In consideration of the disclosure of Proprietary Information by the Disclosing Party, 
+                    the Receiving Party hereby agrees: (i) to hold the Proprietary Information in strict confidence
+                    and to take all reasonable precautions to protect such Proprietary Information (including,
+                    without limitation, all precautions the Receiving Party employs with respect to
+                    its own confidential materials), (ii) not to disclose any such Proprietary Information
+                    or any information derived therefrom to any third person, (iii) not to make any
+                    use whatsoever at any time of such Proprietary Information except to evaluate internally
+                    its relationship with the Disclosing Party, and (iv) not to copy or reverse engineer
+                    any such Proprietary Information. The Receiving Party shall procure that its employees,
+                    agents and sub-contractors to whom Proprietary Information is disclosed or who have
+                    access to Proprietary Information sign a nondisclosure or similar agreement in content
+                    substantially similar to this Agreement</value>
+  </data>
+  <data name="OperativeProvisionsPart3Label" xml:space="preserve">
+    <value>Without grantingany right or license, the Disclosing Party agrees that the foregoing 
+                    shall not applywith respect to any information after five years following the disclosure
+                    thereof or any information that the Receiving Party can document (i) is or becomes (through
+                    no improper action or inaction by the Receiving Party or any affiliate, agent, consultant
+                    or employee) generally available to the public, or (ii) was in its possession or
+                    known by its prior to receipt from the Disclosing Party as evidenced in writing,
+                    except to the extent that such information was unlawfully appropriated, or (iii)
+                    was rightfully disclosed to it by a third party, or (iv) was independently developed
+                    without use of any Proprietary Information of the Disclosing Party. The Receiving
+                    Party may make disclosures required by law or court order provided the Receiving
+                    Party uses diligent reasonable efforts to limit disclosure and has allowed the Disclosing
+                    Party to seek a protective order.</value>
+  </data>
+  <data name="OperativeProvisionsPart4Label" xml:space="preserve">
+    <value>Immediately upon the written request by the Disclosing Party at any time, 
+                    the Receiving Party will return to the Disclosing Party all Proprietary Information 
+                    and all documents or media containing any such Proprietary Information and any and all 
+                    copies or extracts thereof, save that where such Proprietary Information is a form incapable 
+                    of return or has been copied or transcribed into another document, it shall be destroyed or
+                    erased, as appropriate.</value>
+  </data>
+  <data name="OperativeProvisionsPart5Label" xml:space="preserve">
+    <value>The Receiving Party understands that nothing herein (i) requires the disclosure of 
+                    any Proprietary Information or (ii) requires the Disclosing Party to proceed with any 
+                    transaction or relationship.</value>
+  </data>
+  <data name="OperativeProvisionsPart6Label" xml:space="preserve">
+    <value>Each party further acknowledges and confirms to the other party that no representation 
+                    or warranty, express or implied, is or will be made, and no responsibility or liability is or
+                    will be accepted by either party, or by any of its respective directors, officers, employees, 
+                    agents or advisers, as to, or in relation to, the accuracy of completeness of any Proprietary 
+                    Information made available to the other party or its advisers; it is responsible for making 
+                    its own evaluation of such Proprietary Information.</value>
+  </data>
+  <data name="OperativeProvisionsPart7Label" xml:space="preserve">
+    <value>The failure of either party to enforce its rights under this Agreement at any
+                         time for any period shall not be construed as a waiver of such rights. If any part, 
+                         term or provision of this Agreement is held to be illegal or unenforceable neither 
+                         the validity, nor enforceability of the remainder of this Agreement shall be affected. 
+                         Neither Party shall assign or transfer all or any part of its rights under this Agreement without
+                        the consent of the other Party. This Agreement may not be amended for any other
+                        reason without the prior written agreement of both Parties. This Agreement constitutes
+                        the entire understanding between the Parties relating to the subject matter hereof
+                        unless any representation or warranty made about this Agreement was made fraudulently
+                        and, save as may be expressly referred to or referenced herein, supersedes all prior
+                        representations, writings, negotiations or understandings with respect hereto.</value>
+  </data>
+  <data name="OperativeProvisionsPart8Label" xml:space="preserve">
+    <value>This Agreement shall be governed by the laws of the jurisdiction in which the 
+                    Disclosing Party is located (or if the Disclosing Party is based in more than one country, 
+                    the country in which its headquarters are located) (the &amp;quot;Territory&amp;quot;) and the parties
+                    agree to submit disputes arising out of or in connection with this Agreement to the non-exclusive
+                     of the courts in the Territory.</value>
+  </data>
+  <data name="OwnershipandAssignmentofWorkProductPart1Label" xml:space="preserve">
+    <value>5.4 Ownership and Assignment of Work Product</value>
+  </data>
+  <data name="OwnershipandAssignmentofWorkProductPart2Label" xml:space="preserve">
+    <value>Service Provider agrees that upon receipt of payment from Buyer, any and all Work
+                        Product will be the sole and exclusive property of Buyer. If Service Provider has
+                        any rights to the Work Product that are not owned by Buyer upon creation or embodiment,
+                        Service Provider hereby automatically upon receipt of payment from Buyer irrevocably
+                        assigns to such Buyer all right, title and interest worldwide in and to such Work
+                        Product. Except as set forth below, Service Provider retains no rights to use the
+                        Work Product and agrees not to challenge the validity of Buyer’s ownership in the
+                        Work Product. </value>
+  </data>
+  <data name="PartyA" xml:space="preserve">
+    <value>; and</value>
+  </data>
+  <data name="PartyAB" xml:space="preserve">
+    <value> collectively referred to as the &amp;quot;Parties&amp;quot;.</value>
+  </data>
+  <data name="PartyALabel" xml:space="preserve">
+    <value>1.[Party A],</value>
+  </data>
+  <data name="PartyB" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="PartyBLabel" xml:space="preserve">
+    <value>[Party B],</value>
+  </data>
+  <data name="PerformanceLabelPart1" xml:space="preserve">
+    <value>2.2 Performance</value>
+  </data>
+  <data name="PerformanceLabelPart2" xml:space="preserve">
+    <value>Service Provider will perform the services necessary to complete the Project in
+                        accordance with the procedures described on the Site, in a timely and professional
+                        manner, consistent with industry standards, at a location, place and time that Service
+                        Provider deems appropriate, and all in accordance with the Business Terms, the SOW,
+                        and this Agreement. The manner and means that Service Provider chooses to complete
+                        the Project are in Service Provider’s sole discretion and control. In completing
+                        the Project, Service Provider agrees to provide its own equipment, tools, and other
+                        materials at its own expense.</value>
+  </data>
+  <data name="PosterAddressLabel" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="PosterCountryRegionCityLabel" xml:space="preserve">
+    <value>Country/Region/City:</value>
+  </data>
+  <data name="PosterFirstNameLabel" xml:space="preserve">
+    <value>First Name:</value>
+  </data>
+  <data name="PosterIDLabel" xml:space="preserve">
+    <value>Poster ID:</value>
+  </data>
+  <data name="PosterLastNameLabel" xml:space="preserve">
+    <value>Last Name:</value>
+  </data>
+  <data name="PosterUserNameLabel" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="ProjectAddressLabel" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="ProjectAgreementandStatementofWorkPart1Label" xml:space="preserve">
+    <value>THIS PROJECT AGREEMENT AND STATEMENT OF WORK</value>
+  </data>
+  <data name="ProjectAgreementandStatementofWorkPart2Label" xml:space="preserve">
+    <value>(this “&lt;b&gt;Agreement&lt;/b&gt;”) is entered into by and between the undersigned Buyer and
+                        Service Provider as of the Effective Date. The Buyer and Service Provider are sometimes
+                        referred to collectively herein as the “&lt;b&gt;Parties&lt;/b&gt;” and individually as a “&lt;b&gt;Party&lt;/b&gt;.”
+                        This Agreement is made in pursuance of the Project described herein, on the marketplace
+                        for services owned by MY-SIDE-JOB.COM, Inc. (“&lt;b&gt;MY-SIDE-JOB&lt;/b&gt;”) at the domain
+                        and sub-domains of www.MY-SIDE-JOB.com (the “&lt;b&gt;Site&lt;/b&gt;”). All capitalized terms
+                        not defined in this Agreement have the meanings given to such terms in the Terms
+                        of Service Agreement (“&lt;b&gt;Terms of Service&lt;/b&gt;”) available at the Site, unless the
+                        context requires otherwise.</value>
+  </data>
+  <data name="ProjectAgreementLabel" xml:space="preserve">
+    <value>Project Agreement</value>
+  </data>
+  <data name="ProjectAmountLabel" xml:space="preserve">
+    <value>Amount:</value>
+  </data>
+  <data name="ProjectCountryRegionCityLabel" xml:space="preserve">
+    <value>Country/Region/City:</value>
+  </data>
+  <data name="ProjectCrewNumberLabel" xml:space="preserve">
+    <value>Crew Number:</value>
+  </data>
+  <data name="ProjectCurrencyLabel" xml:space="preserve">
+    <value>Currency:</value>
+  </data>
+  <data name="ProjectEndDateLabel" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="ProjectExperienceLabel" xml:space="preserve">
+    <value>Experience:</value>
+  </data>
+  <data name="ProjectInsuredLabel" xml:space="preserve">
+    <value>Insured:</value>
+  </data>
+  <data name="ProjectIsLabel" xml:space="preserve">
+    <value>1.3 The “&lt;b&gt;Project&lt;/b&gt;” is:</value>
+  </data>
+  <data name="ProjectLicensedLabel" xml:space="preserve">
+    <value>Licensed:</value>
+  </data>
+  <data name="ProjectSpecialNotesLabel" xml:space="preserve">
+    <value>Special Notes:</value>
+  </data>
+  <data name="ProjectStartDateLabel" xml:space="preserve">
+    <value>Start Date:</value>
+  </data>
+  <data name="ProjectWorkLabel" xml:space="preserve">
+    <value>2.1 Project Work Product</value>
+  </data>
+  <data name="RecitalsPart1Label" xml:space="preserve">
+    <value>RECITALS</value>
+  </data>
+  <data name="RecitalsPart2Label" xml:space="preserve">
+    <value>Each undersigned party (the &amp;quot;Receiving Party&amp;quot;) understands and 
+                acknowledges that the other party (the &amp;quot;Disclosing Party&amp;quot;) has disclosed 
+                or may disclose information relating to, which to the extent previously, presently,
+                or subsequently disclosed to the Receiving Party is hereinafter referred to as &amp;quot;
+                Proprietary Information&amp;quot; of the Disclosing Party.</value>
+  </data>
+  <data name="ReturnofPropertyPart1Label" xml:space="preserve">
+    <value>11.2 Return of Property</value>
+  </data>
+  <data name="ReturnofPropertyPart2Label" xml:space="preserve">
+    <value>Upon termination of the Agreement or upon Buyer’s request at any other time, Service
+                        Provider will deliver to Buyer all of Buyer’s property together with all copies
+                        thereof, and any other material containing or disclosing any Work Product, Third
+                        Party Information or Confidential Information.</value>
+  </data>
+  <data name="SellerIdentificationNumberLabel" xml:space="preserve">
+    <value>Identification Number: _________________________________</value>
+  </data>
+  <data name="ServiceProviderCountryRegionLabel" xml:space="preserve">
+    <value>Country/Region:</value>
+  </data>
+  <data name="ServiceProviderFullNameLabel" xml:space="preserve">
+    <value>Full Name:</value>
+  </data>
+  <data name="ServiceProviderIsLabel" xml:space="preserve">
+    <value>1.2 The “Service Provider” is:</value>
+  </data>
+  <data name="ServiceProviderLabel" xml:space="preserve">
+    <value>[SERVICE PROVIDER]</value>
+  </data>
+  <data name="ServiceProviderRepresentationsandWarrantiesPart1Label" xml:space="preserve">
+    <value>8. SERVICE PROVIDER REPRESENTATIONS AND WARRANTIES.</value>
+  </data>
+  <data name="ServiceProviderRepresentationsandWarrantiesPart2Label" xml:space="preserve">
+    <value> Service Provider hereby represents and warrants that (a) the Work Product will be
+                        an original work of Service Provider and any third parties will have executed assignment
+                        of rights prior to being allowed to participate in the development of the Work Product;
+                        (b) the Work Product will fully conform to the requirements and terms set forth
+                        on the Site and in the Project; (c) neither the Work Product nor any element thereof
+                        will infringe or misappropriate the Intellectual Property Rights of any third party;
+                        (d) neither the Work Product nor any element thereof will be subject to any restrictions
+                        or to any mortgages, liens, pledges, security interests, or encumbrances; (e) Service
+                        Provider will not grant, directly or indirectly, any rights or interest whatsoever
+                        in the Work Product to third parties; (f) Service Provider has full right and power
+                        to enter into and perform this Agreement without the consent of any third party;
+                        (g) Service Provider has an unqualified right to grant the license to all Background
+                        Technology as set forth in the section titled “License to Background Technology”;
+                        and (h) Service Provider will comply with all laws and regulations applicable to
+                        Service Provider’s obligations under this Agreement.</value>
+  </data>
+  <data name="SevenLabel" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="SeverabilityPart1Label" xml:space="preserve">
+    <value>13.2 Severability</value>
+  </data>
+  <data name="SeverabilityPart2Label" xml:space="preserve">
+    <value>If any provision of this Agreement is, for any reason, held to be invalid or unenforceable,
+                        the other provisions of this Agreement will be unimpaired and the invalid or unenforceable
+                        provision will be deemed modified so that it is valid and enforceable to the maximum
+                        extent permitted by law.</value>
+  </data>
+  <data name="SixLabel" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="StatementofWorkPart1Label" xml:space="preserve">
+    <value>1.4 Statement of Work</value>
+  </data>
+  <data name="StatementofWorkPart2Label" xml:space="preserve">
+    <value>If Buyer and Service Provider have agreed to a written statement of work, written
+                        project plan, or other written communication to specify in more detail the Project
+                        scope, required features or functionality, deliverables, milestones, development
+                        methods, resources, communications, training, acceptance, change control, payment,
+                        or other terms, such writing (“&lt;b&gt;SOW&lt;/b&gt;”) is incorporated in and made a part of
+                        this Agreement. The SOW may be appended to this Agreement as an Attachment.</value>
+  </data>
+  <data name="SurvivalPart1Label" xml:space="preserve">
+    <value>11.3 Survival</value>
+  </data>
+  <data name="SurvivalPart2Label" xml:space="preserve">
+    <value>The following provisions will survive termination of this Agreement: Sections titled
+                            “Intellectual Property Rights,” “Confidential Information,” “Service Provider Representations
+                            and Warranties,” “Indemnification,” “Return of Property,” “Survival,” and “General
+                            Provisions.”</value>
+  </data>
+  <data name="TerminationPart1Label" xml:space="preserve">
+    <value>11. TERMINATION</value>
+  </data>
+  <data name="TerminationwithCausePart1Label" xml:space="preserve">
+    <value>11.1 Termination with Cause</value>
+  </data>
+  <data name="TerminationwithCausePart2Label" xml:space="preserve">
+    <value>Either party has the right to terminate this Agreement immediately in the event
+                        that the other party has materially breached the Agreement and fails to cure such
+                        breach within fifteen (15) days of receipt of notice by the non-breaching party,
+                        setting forth in reasonable detail the nature of the breach. Buyer may also terminate
+                        this Agreement immediately in its sole discretion in the event of Service Provider’s
+                        material breach of the section titled “Intellectual Property Rights.”</value>
+  </data>
+  <data name="ThreeLabel" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Top6PhotosLabel" xml:space="preserve">
+    <value>Top 6 Photos</value>
+  </data>
+  <data name="TwoLabel" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="WaiverPart1Label" xml:space="preserve">
+    <value>13.6 Waiver</value>
+  </data>
+  <data name="WaiverPart2Label" xml:space="preserve">
+    <value> Any waiver or failure to enforce any provision of this Agreement on one occasion
+                        will not be deemed a waiver of any other provision or of such provision on any other
+                        occasion.</value>
+  </data>
+  <data name="WritterCRLabel" xml:space="preserve">
+    <value>4. A written CR
+                    must be signed by both Buyer and Provider to authorize implementation of the CR.</value>
+  </data>
+  <data name="ThankyouForyourEmail" xml:space="preserve">
+    <value>Thank you for your message. We will respond to your request.</value>
+  </data>
 </root>

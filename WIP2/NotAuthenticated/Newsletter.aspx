@@ -1,37 +1,39 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Newsletter.aspx.vb" Inherits="NotAuthenticated_Template"  Culture="auto:en-us" UICulture="auto:en-us" %>
-<%@ Register TagPrefix="UpperNavigationButtons" TagName="NavigationButtons" Src="../common/TemplateMainUpperButtons.ascx" %>
-<%@ Register TagPrefix="LowerNavigationButtons" TagName="NavigationButtons" Src="../common/TemplateMainLowerButtons.ascx" %>
-<%@ Register Assembly="System.Web.Ajax" Namespace="System.Web.UI" TagPrefix="asp" %>
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <title id="Title1" runat="server" title="<%$ Resources:Resource, HomeTitle %>"></title>
-    <script type="text/javascript" src="../scripts/jquery-1.5.2.js"></script>
-    <link rel="stylesheet" href="../_assets/css/TemplateStyleSheet.css" type="text/css"
-        media="screen" />
-    <meta property="og:url" content="http://www.my-side-job.com" />
-    <link rel="canonical" href="http://www.my-side-job.com" />
-</head>
-<body>
-    <form id="form1" runat="server">
-    <UpperNavigationButtons:NavigationButtons ID="MainUpperNavigationButtons" runat="server">
-    </UpperNavigationButtons:NavigationButtons>
-    <asp:AjaxScriptManager ID="ScriptManager1" runat="server">
-    </asp:AjaxScriptManager>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/NotAuthenticated/Plain.master" AutoEventWireup="false" CodeFile="NewsLetter.aspx.vb" Inherits="NotAuthenticated_NewsLetter" %>
 
-    <div id="wrapper" style="padding: 25px">
-        <table align="center" id="TemplateGlobalTable">
-            <tr>
-                <td>
-                    &nbsp;
-                </td>
-            </tr>
-        </table>
+<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+    <link rel="stylesheet" href="../_assets/nivoslider/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../_assets/nivoslider/themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../_assets/nivoslider/themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../_assets/nivoslider/themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../_assets/nivoslider/nivo-slider.css" type="text/css" media="screen" />
+</asp:Content>
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+    <div id="wrapper">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="../_assets/nivoslider/images/toystory.jpg" data-thumb="images/NivoSlider/toystory.jpg"
+                    alt="" />
+                <a href="http://dev7studios.com">
+                    <img src="../_assets/nivoslider/images/up.jpg" data-thumb="images/NivoSlider/up.jpg" alt=""
+                        title="This is an example of a caption" /></a>
+                <img src="../_assets/nivoslider/images/walle.jpg" data-thumb="images/NivoSlider/walle.jpg" alt=""
+                    data-transition="slideInLeft" />
+                <img src="../_assets/nivoslider/images/nemo.jpg" data-thumb="images/NivoSlider/nemo.jpg" alt=""
+                    title="#htmlcaption" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+            </div>
+        </div>
     </div>
-    <div class="cleaner">
-    </div>
-    <LowerNavigationButtons:NavigationButtons ID="MainLowerNavigationButtons" runat="server" />
-    </form>
-</body>
-</html>
+    <script type="text/javascript" src="../_assets/nivoslider/scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="../_assets/nivoslider/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider();
+        });
+    </script>
+    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Account/Register.aspx">SignUp Now!!</asp:HyperLink>
+</asp:Content>
+
+

@@ -1847,4 +1847,712 @@ S'il vous plaît vous assurer que votre compte de Paypal a la quantité requise 
   <data name="Role" xml:space="preserve">
     <value>Rôle :</value>
   </data>
+  <data name="AgreementLabel" xml:space="preserve">
+    <value>LE PRÉSENT CONTRAT</value>
+  </data>
+  <data name="AssitancePart1Label" xml:space="preserve">
+    <value>5.6 Assistance</value>
+  </data>
+  <data name="AssitancePart2Label" xml:space="preserve">
+    <value>Fournisseur de services s'engage à aider l'acheteur dans tous les sens, à la fois pendant et après la
+                             durée du présent Accord, d'obtenir et de faire respecter États-Unis et intellectuelle étrangère
+                             Droits de propriété relatifs au produit du travail dans tous les pays.</value>
+  </data>
+  <data name="BackgroundInitialObligationLabel" xml:space="preserve">
+    <value>1. CONTEXTE ET OBLIGATIONS INITIALES.</value>
+  </data>
+  <data name="BackgroundTechnologyPart1Label" xml:space="preserve">
+    <value>5.2 Contexte de la technologie</value>
+  </data>
+  <data name="BackgroundTechnologyPart2Label" xml:space="preserve">
+    <value>Aux fins du présent Accord, le terme «&lt;b&gt;technologie de base &lt;/ b&gt;» désigne toutes les inventions
+                         développé par le fournisseur de service autre que dans le cadre de la prestation des services aux
+                         Ci-dessous acheteur et tous les Inventions acquis ou concédés par le fournisseur de services qui
+                         Fournisseur de services utilise dans l'accomplissement de services en vertu du présent Accord ou incorpore
+                         en produit de travail. Fournisseur de services divulguer toute technologie de base qui
+                         Service Provider propose d'utiliser ou incorporer. Si Fournisseur de services ne révèle aucune
+                         Technology garantit fond, fournisseur de services qui à ne pas utiliser de fond
+                         La technologie ou de l'incorporer dans le produit du travail fourni qui en découlent. Nonobstant
+                         ce qui précède, sauf stipulation contraire dans le projet, le fournisseur de services accepte que
+                         il ne sera pas incorporer dans le produit du travail ou de vous livrer à l'acheteur un logiciel
+                         Code sous licence GNU GPL ou LGPL ou de toute autre licence qui exige selon ses termes,
+                         ou les conditions de l'utilisation ou de la distribution de ce code sur la divulgation, les licences,
+                         ou la distribution du produit du travail ou tout autre code source appartenant à ou licenciés par le
+                         Lors de votre achat.</value>
+  </data>
+  <data name="BetweenLabel" xml:space="preserve">
+    <value>ENTRE</value>
+  </data>
+  <data name="BuyerAddressLabel" xml:space="preserve">
+    <value>adresse:</value>
+  </data>
+  <data name="BuyerCountryRegionCityLabel" xml:space="preserve">
+    <value>Pays / Région / Ville:</value>
+  </data>
+  <data name="BuyerCountryRegionLabel" xml:space="preserve">
+    <value>Pays / Région:</value>
+  </data>
+  <data name="BuyerFirstNameLabel" xml:space="preserve">
+    <value>Prénom:</value>
+  </data>
+  <data name="BuyerFullNameLabel" xml:space="preserve">
+    <value>Nom complet:</value>
+  </data>
+  <data name="BuyerIdentificationNumberLabel" xml:space="preserve">
+    <value>Numéro d'identification: _________________________________</value>
+  </data>
+  <data name="BuyerLabel" xml:space="preserve">
+    <value>[ACHETEUR]</value>
+  </data>
+  <data name="BuyerLastNameLabel" xml:space="preserve">
+    <value>Nom de famille:</value>
+  </data>
+  <data name="BuyerUserNameLabel" xml:space="preserve">
+    <value>Nom d'utilisateur:</value>
+  </data>
+  <data name="ChangeControlLabelPart1" xml:space="preserve">
+    <value>2.4 Contrôle de Changement</value>
+  </data>
+  <data name="ChangeControlLabelPart2" xml:space="preserve">
+    <value>«Fournisseur» assurera la gestion du projet "acheteur" avec le rapport d'état complet
+                         sur une base régulière. Ces rapports indiquent les activités de travail effectué, des progrès
+                         au regard des objectifs du projet, ainsi que tous les frais encourus dans la poursuite
+                         de ce travail à ce jour.</value>
+  </data>
+  <data name="ChangeControlLabelPart3" xml:space="preserve">
+    <value>écart important
+                     du champ d'application de base et le budget présentes documentées seront mutuellement examiné et
+                     convenu par le fournisseur et l'acheteur. Ce qui suit est la procédure à suivre
+                     pour tout changement important à la SOW:</value>
+  </data>
+  <data name="ChangeRequestLabelPart1" xml:space="preserve">
+    <value>1. Une demande de changement
+                     («CR») sera le véhicule pour demander un changement de l'ÉT. Le CR décrira
+                     le changement, la raison de ce changement, l'impact sur le calendrier d'exécution,
+                     et l'impact sur la rémunération. Tant fournisseur et l'acheteur peut engager une CR.</value>
+  </data>
+  <data name="ChangeRequestLabelPart2" xml:space="preserve">
+    <value>2. la désigné
+                     Chef de projet de la partie requérante examinera la CR et de déterminer si
+                     de soumettre le CR à l'autre partie.</value>
+  </data>
+  <data name="ChangeRequestLabelPart3" xml:space="preserve">
+    <value>3. Les deux projets
+                     Les gestionnaires examiner le projet de CR et les approuver pour complément d'enquête
+                     ou de rejeter. Fournisseur peut spécifier frais supplémentaires pour une telle enquête. si l'
+                     enquête est autorisée, les gestionnaires de projet signera la partie d'estimation
+                     de la République tchèque, qui constitue autorisation pour les changements d'enquête. l'enquête
+                     permettra de déterminer l'effet que la mise en œuvre de la CR aura sur la rémunération,
+                     planifier et autres termes et conditions de l'accord.</value>
+  </data>
+  <data name="CompensationPart1Label" xml:space="preserve">
+    <value>3.COMPENSATION</value>
+  </data>
+  <data name="CompensationPart2Label" xml:space="preserve">
+    <value>Acheteur paiera Service Provider les droits précisés pour le projet en conformité avec les conditions commerciales, une truie, et les Conditions d'utilisation. Le paiement sera effectué par l'acheteur au fournisseur de services par l'intermédiaire du site en accord avec le service de paiement MY-SIDE-JOB et, le cas échéant, les conditions d'entiercement et Conditions, dès l'acceptation du produit de travail du projet. Fournisseur de services sera responsable de tous les frais engagés dans l'exécution des services en vertu du présent Accord, sauf dans la mesure expressément prévue dans le présent Accord, les termes commerciaux, ou SOW.</value>
+  </data>
+  <data name="CompetitiveorConflictingProjectsPart1Label" xml:space="preserve">
+    <value>6. Les projets concurrentiels ou contradictoires.</value>
+  </data>
+  <data name="CompetitiveorConflictingProjectsPart2Label" xml:space="preserve">
+    <value>Fournisseur de services s'engage, pendant la durée du présent accord, de ne pas entrer dans un
+                         contracter ou accepter une obligation qui n'est pas compatible ou incompatible avec le Service
+                         Fournisseur de ses obligations en vertu du présent Accord. Fournisseur de services garantit qu'il n'y
+                         n'existe pas de contrat ou obligation en vigueur à compter de la date d'effet. fournisseur de services
+                         convient en outre de ne pas divulguer à, livré à, ou d'induire l'acheteur d'utiliser toute information confidentielle
+                         l'information qui appartient à une personne autre que l'acheteur ou fournisseur de services.</value>
+  </data>
+  <data name="ConfidentialInformationPart1Label" xml:space="preserve">
+    <value>
+7. Renseignements confidentiels</value>
+  </data>
+  <data name="ConfidentialInformationPart2Label" xml:space="preserve">
+    <value>Fournisseur de services s'engage, pendant la durée du présent Accord et par la suite, à l'exception
+                        ce qui est expressément autorisé par écrit par l'acheteur, celui-ci (a) à ne pas utiliser ou permettre l'utilisation
+                        de l'information confidentielle (défini ci-dessous) ou de toute autre manière à des fins non
+                        expressément énoncés dans le présent Accord; (b) ne pas divulguer, donner des conférences sur, publier,
+                        ou permettre à autrui de communiquer, donner des conférences sur, ou à publier de telles informations confidentielles
+                        à une tierce partie sans l'autorisation expresse premier acheteur obtienne le consentement écrit sur un
+                        au cas par cas; (c) de limiter l'accès à l'information confidentielle au Service
+                        Personnel des fournisseurs qui ont besoin de connaître ces informations dans le cadre de leur travail
+                        pour l'acheteur, et (d) ne supprimera pas toute réalisation concrète de toute information confidentielle
+                        dans les locaux de l'Acheteur sans l'accord préalable écrit de l'Acheteur. "&lt;b&gt; Renseignements confidentiels &lt;/ b&gt;"
+                        inclut, mais n'est pas limité à, toutes les informations relatives à l'activité de l'acheteur et
+                        ses recherches réelle ou anticipée et le développement, y compris, sans limitation
+                        Secrets commerciaux (i), les inventions, les idées, les processus, les sources ordinateur et le code objet,
+                        formules, données, programmes, autres travaux de l'auteur, savoir-faire, des améliorations, des découvertes,
+                        développements, des conceptions et des techniques, (ii) des informations concernant les produits ou les plans
+                        pour les plans de recherche et développement, de marketing et d'affaires, les budgets, les états financiers,
+                        contrats, les prix, les fournisseurs et les clients, (iii) des informations concernant les compétences
+                        et la rémunération des employés de l'Acheteur, les entrepreneurs et les autres fournisseurs de services;
+                        (Iv) l'existence de discussions d'affaires, négociations, ou d'accords entre
+                        Acheteur et un tiers, et (v) tous les renseignements relatifs à un tiers
+                        qui sont communiqués à l'acheteur ou au fournisseur de service pendant la marche des affaires de l'acheteur
+                        ("&lt;b&gt; Renseignements de tiers &lt;/ b&gt;"). Nonobstant ce qui précède, il est entendu
+                        que fournisseur de services est libre d'utiliser l'information qui est généralement connu dans l'
+                        le commerce ou l'industrie, de l'information qui n'est pas acquise à la suite d'une violation de cette
+                        Accord, et de la compétence propre du fournisseur de services, connaissances, savoir-faire et l'expérience.</value>
+  </data>
+  <data name="DateLabel" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="DurationLabelPart1" xml:space="preserve">
+    <value>2.3 Durée des services</value>
+  </data>
+  <data name="DurationLabelPart2" xml:space="preserve">
+    <value>La durée de la prestation de services en vertu du présent Accord en vigueur à la vigueur
+                         Date et prend fin à la date de livraison finale énoncée à l'article &lt;b&gt; 1,4 &lt;/ b&gt; ci-dessus,
+                         à moins que les Parties n'en conviennent autrement dans un écrit signé par les deux parties et téléchargées
+                         au conseil d'administration Message Privé</value>
+  </data>
+  <data name="EngagmentandPerformanceofServicesPart1Label" xml:space="preserve">
+    <value>2. ENGAGEMENT ET LA PERFORMANCE DES SERVICES.</value>
+  </data>
+  <data name="EngagmentandPerformanceofServicesPart2Label" xml:space="preserve">
+    <value>L'acheteur s'engage par la présente fournisseur de services de livrer le produit du travail à l'acheteur, et
+                         Acheteur paiera fournisseur de services pour le produit de travail du projet, conformément aux
+                         les termes et conditions du présent Contrat et les Conditions d'utilisation. Tel qu'utilisé dans
+                         présent Accord, le «&lt;b&gt;produit du travail  &lt;/ b&gt;" signifie tous les produits de travail élaboré
+                         par fournisseur d'accès tel que requis pour terminer le projet et remis à l'acheteur
+                         dans l'exécution du projet, tel que spécifié dans les Conditions d'affaires, l'énoncé des travaux,
+                         et le présent Accord.</value>
+  </data>
+  <data name="EntireAgreementPart1Label" xml:space="preserve">
+    <value>13.9 Intégralité de l'accord</value>
+  </data>
+  <data name="EntireAgreementPart2Label" xml:space="preserve">
+    <value>Le présent Accord est l'accord final, complet et exclusif entre les parties et
+                         respecter au sujet des questions présentes et annule et remplace et fusionne toutes les discussions préalables
+                         entre les parties en ce qui concerne ces sujets. Aucune modification ou
+                         amendement au présent Accord, ou toute renonciation à des droits en vertu du présent Accord, sera
+                         être efficace que si par écrit et signé par l'acheteur et fournisseur d'accès. les termes
+                         du présent Accord régira tous les projets et aux services fournis par le fournisseur de service
+                         pour l'acheteur. En cas de conflit entre le présent accord et l'autorisation expresse écrite
+                         termes d'un accord applicable à un engagement, expresse et écrite termes de
+                         un tel accord devant régir, mais uniquement dans la mesure et à l'égard des services
+                         qui y sont énoncés.</value>
+  </data>
+  <data name="ExecutionandDeliveryPart1Label" xml:space="preserve">
+    <value>13.8 Exécution et livraison; Effet obligatoire</value>
+  </data>
+  <data name="ExecutionandDeliveryPart2Label" xml:space="preserve">
+    <value>Les parties se l'exécution et la livraison des preuves de cet accord avec l'intention
+                         de devenir légalement responsable des présentes, par l'achèvement de la procédure suivante sur le
+                         site:</value>
+  </data>
+  <data name="ExportPart1Label" xml:space="preserve">
+    <value>13.7 exportation</value>
+  </data>
+  <data name="ExportPart2Label" xml:space="preserve">
+    <value>Fournisseur de services s'engage à ne pas exporter, directement ou indirectement, une technique américaine
+                             données acquises par l'Acheteur ou tout autre produit utilisant ces données, vers des pays extérieurs
+                             Aux États-Unis, parce que cette exportation pourrait être en violation des Etats-Unis
+                             exporter lois ou règlements.</value>
+  </data>
+  <data name="FiveLabel" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="FourLabel" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GeneralProvisionsLabel" xml:space="preserve">
+    <value>13. DISPOSITIONS GENERALES</value>
+  </data>
+  <data name="GoverningLawandVenuePart1Label" xml:space="preserve">
+    <value>13.1 Loi applicable et juridiction compétente</value>
+  </data>
+  <data name="GoverningLawandVenuePart2Label" xml:space="preserve">
+    <value>Cet Accord et ses actions connexes seront régis, contrôlés, interprétés,
+                         et définies en vertu des lois de l'État de Californie, sans donner effet
+                         à des conflits de principes de lois qui exigent l'application de la loi d'un
+                         juridiction différente. Prestataire de services par les présentes consent expressément à le personnel
+                         juridiction et le lieu dans les tribunaux étatiques et fédéraux pour le comté dans lequel l'acheteur est
+                         ou le principal MY-SIDE-JOB d'affaires se trouve de toute plainte déposée il ya
+                         contre Prestataire de services par l'acheteur ou MY SIDE-JOB-découlant de ou liée au présent
+                         Accord.</value>
+  </data>
+  <data name="IndemnificationPart1Label" xml:space="preserve">
+    <value>9. INDEMNISATION</value>
+  </data>
+  <data name="IndemnificationPart2Label" xml:space="preserve">
+    <value>Fournisseur de services s'engage à défendre, indemniser et tenir à couvert l'Acheteur contre tout dommage,
+                         coût, perte ou dépense découlant d'une réclamation, poursuite ou procédure intentée contre l'acheteur
+                         alléguant que tout produit du travail que fournisseur de services fournit en vertu du présent Accord
+                         ou le projet: (i) une contrefaçon des droits de propriété intellectuelle ou (ii) détourne
+                         aucun secret commercial, d'un tiers.</value>
+  </data>
+  <data name="IndependentContractorRelationshipPart1Label" xml:space="preserve">
+    <value>4. Relation d'entrepreneur INDEPENDENT</value>
+  </data>
+  <data name="IndependentContractorRelationshipPart2Label" xml:space="preserve">
+    <value>Relation du fournisseur de services avec l'acheteur sera celle d'un entrepreneur indépendant,
+                        et rien dans le présent Accord doit être interprété comme créant un partenariat, joint
+                        relation risque, ou de l'employeur-employé. Fournisseur de service de (a) n'est pas l'agent
+                        de l'Acheteur; (b) n'est pas autorisé à faire des déclarations, un contrat ou engagement
+                        pour le compte de l'Acheteur; (c) n'aura pas droit à aucun des avantages que l'acheteur fait
+                        à la disposition de ses employés, comme l'assurance collective, l'intéressement ou de la retraite
+                        avantages (et renonce à son droit de recevoir des prestations) et (d) seront uniquement
+                        responsable de toutes les déclarations de revenus et les paiements devant être déposée ou faite à
+                        toute autorité fiscale fédérale, étatique ou locale par rapport à la performance du fournisseur de services
+                        des services et de la réception des frais en vertu du présent Accord. Le cas échéant, l'acheteur sera
+                        déclarer les montants payés au fournisseur de services en déposant le formulaire 1099-MISC à l'interne
+                        Revenue Service, tel que requis par la loi. Fournisseur de services s'engage à remplir le formulaire W-9
+                        ou W8-BEN, le cas échéant, et au besoin par l'acheteur. Fournisseur de services s'engage à accepter
+                        responsabilité exclusive de respecter toutes les lois provinciales et fédérales applicables, y compris
+                        lois régissant les travailleurs indépendants, le cas échéant, telles que les lois relatives à
+                        paiement des impôts, la sécurité sociale, le handicap, et d'autres contributions sur la base de
+                        les honoraires versés au fournisseur de services en vertu du présent Accord. L'Acheteur ne retienne ou
+                        paiements de la sécurité sociale, l'assurance chômage ou des cotisations d'assurance-invalidité,
+                        ou d'obtenir l'assurance d'indemnisation des travailleurs pour le compte du fournisseur de services. Service
+                        Fournisseur accepte d'indemniser et de défendre l'Acheteur contre toutes ces taxes
+                        ou contributions, y compris les pénalités et intérêts. Fournisseur de services s'engage à fournir
+                        preuve du paiement des taxes appropriées sur tous les frais payés au fournisseur de services sous
+                        présent Accord, sur demande raisonnable de l'Acheteur.</value>
+  </data>
+  <data name="InjunctiveReliefPart1Label" xml:space="preserve">
+    <value>13.5 Injonctions</value>
+  </data>
+  <data name="InjunctiveReliefPart2Label" xml:space="preserve">
+    <value>Prestataire reconnaît que, parce que ses services sont personnels et uniques
+                         et parce que prestataire de services auront accès à des renseignements confidentiels de l'Acheteur,
+                         toute violation du présent Contrat par le Fournisseur de service causerait un dommage irréparable
+                         à l'acheteur pour lequel des dommages pécuniaires ne serait pas un recours adéquat et, par conséquent,
+                         permettra à l'acheteur d'une injonction (y compris la performance spécifique). les droits
+                         et recours prévus à chacune des parties dans le présent Accord sont cumulatifs et s'ajoutent
+                         de tous autres droits et recours disponibles pour faire la fête comme en droit ou en équité.</value>
+  </data>
+  <data name="InsurancePart1Label" xml:space="preserve">
+    <value>10. ASSURANCE</value>
+  </data>
+  <data name="InsurancePart2Label" xml:space="preserve">
+    <value>Fournisseur de services, à ses propres frais et dépens, conservera une assurance appropriée
+                         conformément aux normes de l'industrie.</value>
+  </data>
+  <data name="IntellectualPropertyLabel" xml:space="preserve">
+    <value>DROITS DE PROPRIETE 5.INTELLECTUAL.</value>
+  </data>
+  <data name="InventionsandIntellectualPropertyRightsPart1Label" xml:space="preserve">
+    <value>5.1 inventions et droits de propriété intellectuelle</value>
+  </data>
+  <data name="InventionsandIntellectualPropertyRightsPart2Label" xml:space="preserve">
+    <value>Aux fins du présent Accord, le terme «&lt;b&gt; invention  &lt;/ b&gt;" signifie les idées, concepts,
+                         d'information, des matériaux, des processus, des données, des programmes, des savoir-faire, des améliorations, des découvertes,
+                         développements, dessins, graphiques, formules, d'autres œuvres protégeables, et les techniques
+                         et tous les droits de propriété intellectuelle qui y sont. Le terme «&lt;b&gt; droits de propriété intellectuelle &lt;/ b&gt;"
+                         désigne tous les secrets commerciaux, droits d'auteur, marques, droits relatifs aux masques, des brevets et d'autres
+                         droits de propriété intellectuelle reconnu par les lois de tout pays.</value>
+  </data>
+  <data name="InWitnessWhereOfPart1Label" xml:space="preserve">
+    <value>EN FOI DE QUOI</value>
+  </data>
+  <data name="InWitnessWhereOfPart2Label" xml:space="preserve">
+    <value>, Les parties ont
+                         présent accord doit être approuvé par leurs représentants dûment autorisés à l'
+                         intention de devenir légalement responsable des présentes.</value>
+  </data>
+  <data name="IsMadeOnLabel" xml:space="preserve">
+    <value>est réalisé sur</value>
+  </data>
+  <data name="LicensetoBackgroundTechnologyPart1Label" xml:space="preserve">
+    <value>5.3 Licence de la technologie de base</value>
+  </data>
+  <data name="LicensetoBackgroundTechnologyPart2Label" xml:space="preserve">
+    <value>Fournisseur de services présente automatiquement dès réception du paiement de l'acheteur, les subventions
+                         à l'acheteur une licence non exclusive, perpétuelle, entièrement payée et libre de redevances, irrévocable et
+                         dans le monde entier droit, les droits de sous-licence à travers de multiples niveaux de sous-licences,
+                         de reproduire, créer des œuvres dérivées, distribuer, exécuter publiquement, publiquement et
+                         afficher sous quelque forme ou moyen, connu ou développé ultérieurement, faire, avoir
+                         fabriquer, utiliser, vendre, importer, offrir en vente, et exercer tous présents ou futurs
+                         droits dans la technologie de base intégrés ou utilisés dans des produits de travail.</value>
+  </data>
+  <data name="LicensetoorWaiverofOtherRightsPart1Label" xml:space="preserve">
+    <value>5.5 Licence d'ou la renonciation aux autres droits</value>
+  </data>
+  <data name="LicensetoorWaiverofOtherRightsPart2Label" xml:space="preserve">
+    <value>Si Service Provider n'a le droit de le produit du travail qui ne peut être attribué par
+                         Fournisseur Service Provider Service, présente automatiquement dès réception du paiement
+                         de l'acheteur inconditionnellement et irrévocablement accorde à l'acheteur pendant la durée d'une telle
+                         droits, une exclusivité, même au fournisseur de services, irrévocable, perpétuelle, mondiale,
+                         entièrement libérées et libre de redevance, les droits de sous-licence à travers de multiples
+                         niveaux de sous-licences, de reproduire, créer des œuvres dérivées, distribuer,
+                         exécuter et d'afficher publiquement, sous quelque forme ou moyen, connu ou développé ultérieurement,
+                         fabriquer, utiliser, vendre, importer, offrir en vente et à exercer tout droit tels. si
+                         Fournisseur de services a des droits sur le produit de travail qui ne peut être cédé ou concédé,
+                         Fournisseur de services présente automatiquement dès réception du paiement de l'acheteur sans condition
+                         et renonce irrévocablement à l'application de ces droits, les réclamations et les causes
+                         d'action de toute nature contre l'acheteur ou connexes à des clients de l'acheteur, en ce qui concerne
+                         de ces droits, et accepte, à la demande de l'acheteur et à ses frais, à consentir et à rejoindre
+                         dans toute action visant à faire respecter ces droits.</value>
+  </data>
+  <data name="MutiEmployeeServiceProviderPart1Label" xml:space="preserve">
+    <value>12. FOURNISSEUR DE SERVICES MULTI-EMPLOYÉ</value>
+  </data>
+  <data name="MutiEmployeeServiceProviderPart2Label" xml:space="preserve">
+    <value>Avant tout employé ou agent de Service Provider fournit des services dans le cadre de
+                         présent Accord ou a accès à des renseignements confidentiels, l'employé ou le mandataire
+                         et prestataire de services doit avoir conclu un accord écrit liant expressément
+                         au profit de l'acheteur qui contient des dispositions substantiellement équivalentes à la
+                         sections de cet Accord intitulé «Engagement et performance des services» et «intellectuelle
+                         Droits de propriété. Prestataire »s'engage à (a) à ce que ses employés et mandataires
+                         pas droit ou est admissible à des prestations que l'Acheteur peut mettre à la disposition
+                         ses employés, (b) de limiter l'accès à l'information confidentielle aux employés
+                         ou des agents de fournisseur de services qui ont un besoin raisonnable d'avoir accès à
+                         afin de fournir les services en vertu du présent Accord, et (c) d'être seul responsable
+                         pour toutes les dépenses engagées par l'un de ses employés ou agents dans l'exécution des services
+                         ou l'exécution de ses obligations en vertu du présent Accord, sauf stipulation contraire
+                         dans l'engagement.</value>
+  </data>
+  <data name="MutualNonDisclosureAgreementLabel" xml:space="preserve">
+    <value>Mutuelle de non-divulgation</value>
+  </data>
+  <data name="MutualNonDisclosureAgreementPartyALabel" xml:space="preserve">
+    <value>[Partie A]</value>
+  </data>
+  <data name="MutualNonDisclosureAgreementPartyBLabel" xml:space="preserve">
+    <value>[Partie B]</value>
+  </data>
+  <data name="NoAssignmentPart1Label" xml:space="preserve">
+    <value>13.3 Aucune cession</value>
+  </data>
+  <data name="NoAssignmentPart2Label" xml:space="preserve">
+    <value>Le présent accord et les droits de la partie et les obligations présentes, ne peut être cédé,
+                         sous-traitance, déléguée ou autrement transférés par l'une des parties sans l'autre du
+                         consentement préalable et écrit, et toute tentative de cession, sous-traitance, délégation ou
+                         transfert en violation de ce qui précède sera considérée comme nulle et non avenue. Les termes de cette
+                         Accord liera cessionnaires.</value>
+  </data>
+  <data name="NotePart1Label" xml:space="preserve">
+    <value>note:</value>
+  </data>
+  <data name="NotePart2Label" xml:space="preserve">
+    <value>Ce projet de modèle
+                     Accord et énoncé de travail est un exemple fourni à titre d'information seulement et
+                     ne peuvent pas être considérées comme des conseils juridiques. Ce modèle pourrait ne pas être approprié pour
+                     vos besoins. MON-SIDE-JOB n'offre aucune garantie quant à l'adéquation de ce modèle
+                     et décline toute responsabilité découlant de l'utilisation de ce modèle. S'il vous plaît consulter
+                     votre conseiller juridique ou commercial pour de plus amples informations ou des conseils.</value>
+  </data>
+  <data name="NoticesPart1Label" xml:space="preserve">
+    <value>13.4 Avis</value>
+  </data>
+  <data name="NoticesPart2Label" xml:space="preserve">
+    <value>Chaque partie doit remettre tous les avis ou autres communications requises ou autorisées
+                             en vertu du présent Accord à l'autre partie en l'affichant sur le Forum privé
+                             pour le projet.</value>
+  </data>
+  <data name="OneLabel" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="OperativeProvisionsPart1Label" xml:space="preserve">
+    <value>dispositif</value>
+  </data>
+  <data name="OperativeProvisionsPart2Label" xml:space="preserve">
+    <value>En contrepartie de la divulgation de renseignements exclusifs par le fournisseur,
+                     la Partie destinataire accepte: (i) d'organiser des informations exclusives en toute confidentialité
+                     et de prendre toutes les précautions raisonnables pour protéger ces renseignements exclusifs (y compris,
+                     sans limitation, toutes les précautions de la Partie destinataire emploie à l'égard de
+                     ses propres documents confidentiels), (ii) de ne pas divulguer de telles informations exclusives
+                     ou toute autre information qui en découle à une tierce personne, (iii) ne pas faire de
+                     utiliser à tout moment et des renseignements exclusifs tels que pour évaluer l'interne
+                     sa relation avec le fournisseur, et (iv) ne pas copier ou de désosser
+                     tout ces informations. La Partie destinataire doit s'assurer que ses employés,
+                     agents et sous-traitants à qui l'information est divulguée propriétaire ou qui ont
+                     l'accès aux renseignements exclusifs signe un accord de non-divulgation ou un contenu similaire
+                     essentiellement similaire à la présente convention</value>
+  </data>
+  <data name="OperativeProvisionsPart3Label" xml:space="preserve">
+    <value>Sans droit grantingany ou d'une licence, la Partie émettrice accepte que ce qui précède
+                     ne doit pas applywith égard de toute information au bout de cinq ans à compter de la divulgation
+                     celle-ci ou toute autre information que la Partie destinataire peut documenter (i) est ou devient (par le biais
+                     aucune action inadéquate ou une inaction de la Partie destinataire ou une filiale, agent, consultant
+                     ou employé), généralement à la disposition du public, ou (ii) a en sa possession ou
+                     connu par son avant la réception de la Partie émettrice, comme en témoigne par écrit,
+                     sauf dans la mesure où ces renseignements ont été illégalement, ou (iii)
+                     a été légitimement communiqué à un tiers, ou (iv) ont été développées indépendamment
+                     sans l'utilisation de toute information exclusive de la Partie émettrice. la réception
+                     Partie peut faire des divulgations requises par la loi ou d'ordre judiciaire à condition que la réception
+                     Groupe déploie des efforts diligents raisonnables pour limiter la divulgation et a permis à la divulgation
+                     Parti de demander une ordonnance de protection.</value>
+  </data>
+  <data name="OperativeProvisionsPart4Label" xml:space="preserve">
+    <value>Immédiatement après la demande écrite par la Partie émettrice à tout moment,
+                     la Partie destinataire sera de retour à la Partie émettrice toutes les informations exclusives
+                     et tous documents ou supports contenant de telles informations exclusives et tout et tout
+                     des copies ou des extraits de ceux-ci, sauf que, lorsqu'une telle information est une forme brevetée incapable
+                     de rendement ou a été copiée ou transcrite dans un autre document, il doit être détruit ou
+                     effacé, le cas échéant.</value>
+  </data>
+  <data name="OperativeProvisionsPart5Label" xml:space="preserve">
+    <value>La Partie destinataire comprend que rien dans le présent (i) exige la divulgation de
+                     aucune information exclusive ou (ii) exige la Partie émettrice de procéder à toute
+                     transaction ou relation.</value>
+  </data>
+  <data name="OperativeProvisionsPart6Label" xml:space="preserve">
+    <value>Chaque partie reconnaît et confirme à l'autre partie qu'aucune représentation
+                     ou garantie, expresse ou implicite, n'est ou ne sera faite et aucune responsabilité n'est ou
+                     seront acceptées par les deux parties, ou par un de ses administrateurs, dirigeants, employés,
+                     agents ou conseillers, quant à, ou en rapport avec, la précision de l'exhaustivité des Proprietary
+                     Informations mises à la disposition de l'autre partie ou de ses conseillers, il est chargé de faire
+                     sa propre évaluation des renseignements exclusifs tels.</value>
+  </data>
+  <data name="OperativeProvisionsPart7Label" xml:space="preserve">
+    <value>L'échec de l'une des parties à faire valoir ses droits en vertu du présent Accord à tout
+                          temps pour une période ne doit pas être interprété comme une renonciation à ces droits. Si une partie quelconque,
+                          terme ou d'une disposition du présent Contrat est jugée illégale ou non exécutoire ni
+                          la validité, ni l'applicabilité du reste de cet Accord ne pourra être affecté.
+                          Aucune des Parties ne céder ou transférer tout ou partie de ses droits en vertu du présent Accord, sans
+                         le consentement de l'autre partie. Le présent Accord ne peut être modifié à tout autre
+                         raison, sans l'accord écrit préalable des deux Parties. Le présent Accord constitue
+                         l'intégralité de l'accord entre les Parties relatif à l'objet des présentes
+                         à moins que toute déclaration ou garantie faite sur cet accord a été faite de manière frauduleuse
+                         et, sauf dans les cas explicitement mentionnés ou évoqués aux présentes, remplace tous les
+                         représentations, des écrits, des négociations ou ententes relative aux présentes.</value>
+  </data>
+  <data name="OperativeProvisionsPart8Label" xml:space="preserve">
+    <value>Cet accord sera régi par les lois de la juridiction dans laquelle l'
+                     Divulguer la Réception se trouve (ou si la Partie émettrice est située à plus d'un pays,
+                     le pays dans lequel il a son siège) (le "Territoire") et les parties
+                     d'accord pour soumettre les différends découlant de ou en relation avec le présent accord à la non-exclusif
+                      des tribunaux dans le territoire.</value>
+  </data>
+  <data name="OwnershipandAssignmentofWorkProductPart1Label" xml:space="preserve">
+    <value>5.4 La propriété et cession du produit du travail</value>
+  </data>
+  <data name="OwnershipandAssignmentofWorkProductPart2Label" xml:space="preserve">
+    <value>Fournisseur de services s'engage que sur réception du paiement de l'acheteur, tout travail et tout
+                         Le produit sera la propriété exclusive de l'Acheteur. Si prestataire de services doit
+                         aucun droit sur le produit de travail qui ne sont pas détenues par l'acheteur lors de la création ou de réalisation,
+                         Fournisseur de services présente automatiquement dès réception du paiement de l'acheteur de manière irrévocable
+                         attribue à l'acheteur comme tous le monde entier droits, titres et intérêts relatifs aux dits travaux
+                         Produit. Sauf tel que stipulé ci-dessous, Fournisseur de services conserve aucun droit d'utiliser le
+                         Produit du travail et s'engage à ne pas contester la validité de la propriété de l'acheteur dans le
+                         Produit du travail.</value>
+  </data>
+  <data name="PartyA" xml:space="preserve">
+    <value>et</value>
+  </data>
+  <data name="PartyAB" xml:space="preserve">
+    <value>  collectivement dénommés les «Parties».</value>
+  </data>
+  <data name="PartyALabel" xml:space="preserve">
+    <value>1. [Partie A],</value>
+  </data>
+  <data name="PartyB" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="PartyBLabel" xml:space="preserve">
+    <value>[Partie B],</value>
+  </data>
+  <data name="PerformanceLabelPart1" xml:space="preserve">
+    <value>2.2 Performance</value>
+  </data>
+  <data name="PerformanceLabelPart2" xml:space="preserve">
+    <value>Prestataire fournir les services nécessaires à la réalisation du projet en
+                         conformément aux procédures décrites sur le site, en temps opportun et professionnel
+                         Ainsi, conformément aux normes de l'industrie, à un endroit, le lieu et le temps que le Service
+                         Fournisseur juge approprié, et le tout en conformité avec les conditions commerciales, l'énoncé des travaux,
+                         et le présent Accord. La manière et les moyens que le prestataire de service choisit de remplir
+                         du projet sont à la seule discrétion du fournisseur de services et de contrôle. en remplissant
+                         le projet, Fournisseur de services s'engage à fournir son propre équipement, des outils et d'autres
+                         matériaux à ses propres frais.</value>
+  </data>
+  <data name="PosterAddressLabel" xml:space="preserve">
+    <value>adresse:</value>
+  </data>
+  <data name="PosterCountryRegionCityLabel" xml:space="preserve">
+    <value>Pays / Région / Ville:</value>
+  </data>
+  <data name="PosterFirstNameLabel" xml:space="preserve">
+    <value>Prénom:</value>
+  </data>
+  <data name="PosterIDLabel" xml:space="preserve">
+    <value>ID de l'utilisateur:</value>
+  </data>
+  <data name="PosterLastNameLabel" xml:space="preserve">
+    <value>Nom de famille:</value>
+  </data>
+  <data name="PosterUserNameLabel" xml:space="preserve">
+    <value>Nom d'utilisateur:</value>
+  </data>
+  <data name="ProjectAddressLabel" xml:space="preserve">
+    <value>adresse:</value>
+  </data>
+  <data name="ProjectAgreementandStatementofWorkPart1Label" xml:space="preserve">
+    <value>CETTE ENTENTE RELATIVE AU PROJET ET ÉTAT DES TRAVAUX</value>
+  </data>
+  <data name="ProjectAgreementandStatementofWorkPart2Label" xml:space="preserve">
+    <value>(le " &lt;b&gt; Contract&lt;/ b&gt;") est conclu par et entre l'acheteur et le soussigné
+                         Fournisseur de services à la date de prise d'effet. L'acheteur et le fournisseur de services sont parfois
+                         collectivement désignées aux présentes les  "&lt;b&gt; Parties&lt;/ b&gt;» et individuellement une «Partie &lt;b&gt; &lt;/ b&gt;."
+                         Le présent accord est faite en vertu du projet décrits ici, sur le marché
+                         pour les services appartenant à MY-SIDE-JOB.COM, Inc ("&lt;b&gt; MY-SIDE-EMPLOI &lt;/ b&gt;") au niveau du domaine
+                         et sous-domaines de www.MY-SIDE-JOB.com (le «&lt;b&gt;Site&lt;/ b&gt;"). Tous les termes en majuscules
+                         non défini au présent Accord ont le sens qui leur est attribué dans les Conditions
+                         la convention de service (les « &lt;b&gt; les Conditions d'utilisation &lt;/ b&gt;") disponible sur le site, à moins que le
+                         contexte n'exige une interprétation différente.</value>
+  </data>
+  <data name="ProjectAmountLabel" xml:space="preserve">
+    <value>montant:</value>
+  </data>
+  <data name="ProjectCountryRegionCityLabel" xml:space="preserve">
+    <value>Pays / Région / Ville:</value>
+  </data>
+  <data name="ProjectCrewNumberLabel" xml:space="preserve">
+    <value>Nombre d'équipage:</value>
+  </data>
+  <data name="ProjectCurrencyLabel" xml:space="preserve">
+    <value>devise:</value>
+  </data>
+  <data name="ProjectEndDateLabel" xml:space="preserve">
+    <value>date de fin</value>
+  </data>
+  <data name="ProjectExperienceLabel" xml:space="preserve">
+    <value>expérience:</value>
+  </data>
+  <data name="ProjectInsuredLabel" xml:space="preserve">
+    <value>assuré:</value>
+  </data>
+  <data name="ProjectIsLabel" xml:space="preserve">
+    <value>1.3 Le " &lt;b&gt; Projet &lt;/ b&gt;" est la suivante:</value>
+  </data>
+  <data name="ProjectLicensedLabel" xml:space="preserve">
+    <value>licence:</value>
+  </data>
+  <data name="ProjectSpecialNotesLabel" xml:space="preserve">
+    <value>Notes spéciales:</value>
+  </data>
+  <data name="ProjectStartDateLabel" xml:space="preserve">
+    <value>Date de début:</value>
+  </data>
+  <data name="ProjectWorkLabel" xml:space="preserve">
+    <value>2.1 Produit de travail du projet</value>
+  </data>
+  <data name="RecitalsPart1Label" xml:space="preserve">
+    <value>PRÉAMBULE</value>
+  </data>
+  <data name="RecitalsPart2Label" xml:space="preserve">
+    <value>Chaque partie soussigné (le «receveur») comprend et
+                 reconnaît que l'autre partie (la «Partie Emettrice») a révélé
+                 ou peut divulguer des renseignements se rapportant à ce qui, dans la mesure précédemment, actuellement,
+                 ou ultérieurement divulgués à la Partie destinataire est ci-après dénommé "
+                 Informations propriétaires »de la Partie émettrice.</value>
+  </data>
+  <data name="ReturnofPropertyPart1Label" xml:space="preserve">
+    <value>11.2 retour de biens</value>
+  </data>
+  <data name="ReturnofPropertyPart2Label" xml:space="preserve">
+    <value>En cas de résiliation de l'accord ou à la demande de l'Acheteur à tout autre moment, le Service
+                         Fournisseur fournira à l'Acheteur tous les biens de l'acheteur ainsi que toutes les copies
+                         de celle-ci, et toute autre matière contenant ou de divulguer tout produit du travail, Troisième
+                         Informations parti ou des informations confidentielles.</value>
+  </data>
+  <data name="SellerIdentificationNumberLabel" xml:space="preserve">
+    <value>Numéro d'identification: _________________________________</value>
+  </data>
+  <data name="ServiceProviderCountryRegionLabel" xml:space="preserve">
+    <value>Pays / Région:</value>
+  </data>
+  <data name="ServiceProviderFullNameLabel" xml:space="preserve">
+    <value>Nom complet:</value>
+  </data>
+  <data name="ServiceProviderIsLabel" xml:space="preserve">
+    <value>1.2 Le «fournisseur de services» est le suivante:</value>
+  </data>
+  <data name="ServiceProviderLabel" xml:space="preserve">
+    <value>[Fournisseur de services]</value>
+  </data>
+  <data name="ServiceProviderRepresentationsandWarrantiesPart1Label" xml:space="preserve">
+    <value>8. DÉCLARATION DU FOURNISSEUR DE SERVICES ET GARANTIES.</value>
+  </data>
+  <data name="ServiceProviderRepresentationsandWarrantiesPart2Label" xml:space="preserve">
+    <value>Fournisseur de services déclare et garantit que (a) le produit du travail seront
+                         une œuvre originale du fournisseur de services et les tiers aura exécuté l'affectation
+                         des droits avant d'être autorisés à participer à l'élaboration du produit du travail;
+                         (b) le produit du travail seront totalement conformes aux exigences et aux conditions prévus
+                         sur le site et dans le projet; (c) ni le produit du travail, ni aucun de ses éléments
+                         se contrefaire ou détourner les droits de propriété intellectuelle d'un tiers;
+                         (d) ni le produit du travail, ni aucun de ses éléments seront soumis à aucune restriction
+                         ou à des hypothèques, privilèges, nantissements, sûretés ou d'une servitude; (e) Service
+                         Fournisseur n'accordera pas, directement ou indirectement, des droits ou des intérêts que ce soit
+                         dans le produit du travail à des tiers; (f) Prestataire de services a pleinement le droit et le pouvoir
+                         de conclure le présent Contrat sans le consentement d'un tiers;
+                         (g) Prestataire de services a le droit absolu d'accorder la licence à tous Contexte
+                         La technologie comme énoncé dans la section intitulée «Licence de la technologie de base»;
+                         et (h) Prestataire de services se conformera à toutes les lois et règlements applicables aux
+                         Prestataire obligations en vertu du présent Accord.</value>
+  </data>
+  <data name="SevenLabel" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="SeverabilityPart1Label" xml:space="preserve">
+    <value>13.2 Divisibilité</value>
+  </data>
+  <data name="SeverabilityPart2Label" xml:space="preserve">
+    <value>Si une disposition quelconque du présent Accord est, pour une raison quelconque, considérée comme invalide ou inapplicable,
+                         les autres dispositions du présent Accord seront intacts et l'invalide ou inapplicable
+                         disposition sera réputée modifiée afin qu'elle soit valide et opposable au maximum
+                         mesure permise par la loi.</value>
+  </data>
+  <data name="SixLabel" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="StatementofWorkPart1Label" xml:space="preserve">
+    <value>1.4 Énoncé des travaux</value>
+  </data>
+  <data name="StatementofWorkPart2Label" xml:space="preserve">
+    <value>
+Si l'acheteur et le fournisseur de service ont convenu d'une déclaration écrite du travail, écrit
+                         plan de projet, ou toute autre communication écrite de préciser plus en détail le projet
+                         champ d'application, les caractéristiques ou fonctionnalités nécessaires, les produits livrables, les jalons, le développement
+                         méthodes, des ressources, des communications, de la formation, de l'acceptation, de contrôle du changement, le paiement,
+                         ou d'autres termes, l'écriture telle ("&lt;b&gt; SOW &lt;/ b&gt;") a été constituée et a fait une partie de
+                         présent Accord. L'énoncé des travaux peut être joint au présent Accord en tant que pièce jointe.</value>
+  </data>
+  <data name="SurvivalPart1Label" xml:space="preserve">
+    <value>11.3 survie</value>
+  </data>
+  <data name="SurvivalPart2Label" xml:space="preserve">
+    <value>Les dispositions suivantes survivront à la résiliation du présent Accord: Sections intitulé
+                             "Droits de propriété intellectuelle», «information confidentielle», «Représentations des fournisseurs de services
+                             et garanties »,« Indemnisation »,« retour de biens »,« Survie »et« général
+                             Provisions ».</value>
+  </data>
+  <data name="TerminationPart1Label" xml:space="preserve">
+    <value>11. RÉSILIATION</value>
+  </data>
+  <data name="TerminationwithCausePart1Label" xml:space="preserve">
+    <value>11.1 Résiliation pour cause</value>
+  </data>
+  <data name="TerminationwithCausePart2Label" xml:space="preserve">
+    <value>Chaque partie a le droit de résilier le présent Contrat immédiatement en cas
+                         que l'autre partie a commis une violation substantielle de l'accord et ne remédie pas à cette
+                         violation dans les quinze (15) jours suivant la réception de la notification par la partie non défaillante,
+                         énonçant de façon raisonnablement détaillée la nature de la violation. L'acheteur peut également résilier
+                         immédiatement le présent Contrat à sa seule discrétion, en cas de fournisseur de services de
+                         violation substantielle de la section intitulée «Droits de propriété intellectuelle».</value>
+  </data>
+  <data name="ThreeLabel" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Top6PhotosLabel" xml:space="preserve">
+    <value>Top 6 Photos</value>
+  </data>
+  <data name="TwoLabel" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="WaiverPart1Label" xml:space="preserve">
+    <value>13.6 Renonciation</value>
+  </data>
+  <data name="WaiverPart2Label" xml:space="preserve">
+    <value>Toute renonciation ou échec à appliquer une disposition quelconque du présent Accord à une occasion
+                         ne sera pas considéré comme une renonciation à toute autre disposition ou d'une telle disposition sur tout autre
+                         occasion.</value>
+  </data>
+  <data name="WritterCRLabel" xml:space="preserve">
+    <value>4. Un écrite CR
+                     doit être signé par l'acheteur et le fournisseur d'autoriser la mise en œuvre de la CR.</value>
+  </data>
+  <data name="ThankyouForyourEmail" xml:space="preserve">
+    <value>Merci pour votre message. Nous répondrons à votre demande.</value>
+  </data>
 </root>

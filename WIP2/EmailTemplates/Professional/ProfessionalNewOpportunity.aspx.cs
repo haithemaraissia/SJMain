@@ -195,7 +195,7 @@ namespace EmailTemplates.Professional
 
         protected void OkButtonClick(object sender, EventArgs e)
         {
-            Response.Redirect("http://my-side-job.com");
+            Response.Redirect("http://my-side-job.com/Authenticated/Professional/ProfessionalProfile.aspx");
         }
 
         protected void RejectOffer()

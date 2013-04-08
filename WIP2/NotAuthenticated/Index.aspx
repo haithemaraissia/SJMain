@@ -381,19 +381,18 @@
                                     <td>
                                         <a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all"
                                             id="flat"><span class="ui-icon ui-icon-triangle-1-s"></span>
-                                            <img id="selected" alt="earth" border="0" longdesc="earth" src="../Images/flags/earth.png"
+                                            <img id="selected" alt="earth" border="0" longdesc="earth" src="http://my-side-job.com/Images/flags/earth.png"
                                                 runat="server" /></a>
                                         <div id="search-engines" class="hidden" style="width:165px; color:White">
-                                            <ul>
-                                                <li><a href="?l=en-US"><img src="../Images/flags/US.png" <asp:Label ID="EnglishLabel" ForeColor="White" runat="server" Text="<%$ Resources:Resource, English %>" Font-Size="Smaller"></asp:Label>  </></a></li>
-                                                <li><a href="?l=fr"><img src="../Images/flags/FR.png" <asp:Label ID="FrenchLabel" runat="server" Text="<%$ Resources:Resource, French %>" Font-Size="Smaller"></asp:Label>  </></a></li>
-                                                <li><a href="?l=es"><img src="../Images/flags/ES.png"  <asp:Label ID="SpanishLabel" runat="server" Text="<%$ Resources:Resource, Spanish %>" Font-Size="Smaller"></asp:Label>  </></a></li>
-                                                <li><a href="?l=zh-CN"><img src="../Images/flags/CN.png"  <asp:Label ID="ChineseLabel" runat="server" Text="<%$ Resources:Resource, Chinese %>" Font-Size="Smaller"></asp:Label>  </></a></li>
-                                                <li><a href="?l=ru"><img src="../Images/flags/RU.png"  <asp:Label ID="RussianLabel" runat="server" Text="<%$ Resources:Resource, Russian %>" Font-Size="Smaller"></asp:Label></>  </a></li>
-                                                <li><a href="?l=ar"><img src="../Images/flags/AE.png" <asp:Label ID="ArabicLabel" runat="server" Text="<%$ Resources:Resource, Arabic %>" Font-Size="Smaller"></asp:Label></>  </a></li>
-                                                <li><a href="?l=ja"><img src="../Images/flags/JP.png" <asp:Label ID="JapaneseLabel" runat="server" Text="<%$ Resources:Resource, Japanese %>" Font-Size="Smaller"></asp:Label></>  </a></li>
-                                                <li><a href="?l=de"><img src="../Images/flags/DE.png" <asp:Label ID="GermanLabel" runat="server" Text="<%$ Resources:Resource, German %>" Font-Size="Smaller"></asp:Label></>  </a></li>
-                                            </ul>
+                                           <ul>
+                                                <li><a id ="EnglishLanguageLink" href="?l=en-US" runat="server"><img src="http://www.haithem-araissia.com/WIP2/RightCleanSideJOB2008FromInetpub/CleanSIDEJOB2008/Images/flags/US.png" <asp:Label ID="EnglishLabel" ForeColor="White" runat="server" Text="<%$ Resources:Resource, English %>" Font-Size="Smaller"></asp:Label>  </></a></li>
+                                                <li><a id ="FrenchLanguageLink" href="?l=fr"  runat="server"><img src="http://www.haithem-araissia.com/WIP2/RightCleanSideJOB2008FromInetpub/CleanSIDEJOB2008/Images/flags/FR.png" <asp:Label ID="FrenchLabel" runat="server" Text="<%$ Resources:Resource, French %>" Font-Size="Smaller"></asp:Label>  </></a></li>
+                                                <li><a id ="SpanishLanguageLink" href="?l=es" runat="server"><img src="http://www.haithem-araissia.com/WIP2/RightCleanSideJOB2008FromInetpub/CleanSIDEJOB2008/Images/flags/ES.png"  <asp:Label ID="SpanishLabel" runat="server" Text="<%$ Resources:Resource, Spanish %>" Font-Size="Smaller"></asp:Label>  </></a></li>
+                                                <li><a id ="ChineseLanguageLink"  runat="server" href="?l=zh-CN"><img src="http://www.haithem-araissia.com/WIP2/RightCleanSideJOB2008FromInetpub/CleanSIDEJOB2008/Images/flags/CN.png"  <asp:Label ID="ChineseLabel" runat="server" Text="<%$ Resources:Resource, Chinese %>" Font-Size="Smaller"></asp:Label>  </></a></li>
+                                                <li><a id ="RussianLanguageLink" href="?l=ru"  runat="server"><img src="http://www.haithem-araissia.com/WIP2/RightCleanSideJOB2008FromInetpub/CleanSIDEJOB2008/Images/flags/RU.png"  <asp:Label ID="RussianLabel" runat="server" Text="<%$ Resources:Resource, Russian %>" Font-Size="Smaller"></asp:Label></>  </a></li>
+                                                <li><a id ="ArabicLanguageLink" href="?l=ar" runat="server"><img src="http://www.haithem-araissia.com/WIP2/RightCleanSideJOB2008FromInetpub/CleanSIDEJOB2008/Images/flags/AE.png" <asp:Label ID="ArabicLabel" runat="server" Text="<%$ Resources:Resource, Arabic %>" Font-Size="Smaller"></asp:Label></>  </a></li>
+                                                <li><a id ="JapaneseLanguageLink" href="?l=ja" runat="server"><img src="http://www.haithem-araissia.com/WIP2/RightCleanSideJOB2008FromInetpub/CleanSIDEJOB2008/Images/flags/JP.png" <asp:Label ID="JapaneseLabel" runat="server" Text="<%$ Resources:Resource, Japanese %>" Font-Size="Smaller"></asp:Label></>  </a></li>
+                                                <li><a id ="GermanLanguageLink" href="?l=de"  runat="server"><img src="http://www.haithem-araissia.com/WIP2/RightCleanSideJOB2008FromInetpub/CleanSIDEJOB2008/Images/flags/DE.png" <asp:Label ID="GermanLabel" runat="server" Text="<%$ Resources:Resource, German %>" Font-Size="Smaller"></asp:Label></>  </a></li> </ul>  
                                         </div>
                                     </td>
                                 </tr>

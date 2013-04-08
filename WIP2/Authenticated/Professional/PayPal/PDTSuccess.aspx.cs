@@ -9,6 +9,10 @@ using System.Net;
 using System.IO;
 using System.Data;
 
+
+
+//http://www.haithem-araissia.com/WIP2/RightCleanSideJOB2008FromInetpub/CleanSIDEJOB2008/Authenticated/Professional/Paypal/PDTSuccess.aspx?tx=0G0384714B839305M&st=Pending&amt=2800.00&cc=USD&cm=19&item_number=
+
 public partial class Authenticated_Professional_PayPal_PDTSuccess : System.Web.UI.Page
 {
     string authToken, txToken, query;
@@ -48,81 +52,82 @@ public partial class Authenticated_Professional_PayPal_PDTSuccess : System.Web.U
             stIn.Close();
             string ProID = GetProfessionalID();
 
-            PDTHolder pdt = PDTHolder.Parse(strResponse);
+            Response.Write(strResponse);
+            //PDTHolder pdt = PDTHolder.Parse(strResponse);
 
-            ProfessionalPDTDataSetTableAdapters.ProfessionalStartingPaymentTableAdapter ProfessionalPDTAdapter = new ProfessionalPDTDataSetTableAdapters.ProfessionalStartingPaymentTableAdapter();
-            ProfessionalPDTDataSet.ProfessionalStartingPaymentDataTable ProfessionalPDTTable = new ProfessionalPDTDataSet.ProfessionalStartingPaymentDataTable();
-            ProfessionalPDTAdapter.FillVerifyTransaction(ProfessionalPDTTable, Convert.ToInt32(pdt.Custom));
+            //ProfessionalPDTDataSetTableAdapters.ProfessionalStartingPaymentTableAdapter ProfessionalPDTAdapter = new ProfessionalPDTDataSetTableAdapters.ProfessionalStartingPaymentTableAdapter();
+            //ProfessionalPDTDataSet.ProfessionalStartingPaymentDataTable ProfessionalPDTTable = new ProfessionalPDTDataSet.ProfessionalStartingPaymentDataTable();
+            //ProfessionalPDTAdapter.FillVerifyTransaction(ProfessionalPDTTable, Convert.ToInt32(pdt.Custom));
 
 
-            // If response was SUCCESS, parse response string and output details
-            //The payment is succesful
-            if (strResponse.StartsWith("SUCCESS"))
-            {
-                //If there is no match
-                //The Professional close the windows.
+            //// If response was SUCCESS, parse response string and output details
+            ////The payment is succesful
+            //if (strResponse.StartsWith("SUCCESS"))
+            //{
+            //    //If there is no match
+            //    //The Professional close the windows.
 
-                //If There is a match
-                //The Professional return back to the confirmation page.
+            //    //If There is a match
+            //    //The Professional return back to the confirmation page.
 
-                foreach (DataRow row in ProfessionalPDTTable)
-                {
-                    ProfessionalPDTDataSetTableAdapters.QueriesTableAdapter ProfessionalPDT = new ProfessionalPDTDataSetTableAdapters.QueriesTableAdapter();
+            //    foreach (DataRow row in ProfessionalPDTTable)
+            //    {
+            //        ProfessionalPDTDataSetTableAdapters.QueriesTableAdapter ProfessionalPDT = new ProfessionalPDTDataSetTableAdapters.QueriesTableAdapter();
 
-                    if (pdt.Custom.ToString() == row["ProjectID"].ToString() && pdt.Currency.ToString() == row["CurrencyCode"].ToString() && (row["Amount"].ToString() == pdt.GrossTotal.ToString()))
-                    {
-                        //Insert it only 1 time
-                        ////Sucessful PDT////
-                        ProfessionalPDTDataSetTableAdapters.ProfessionalSuccessfulPDTTableAdapter ProfessionalSuccessfulPDTAdapter = new ProfessionalPDTDataSetTableAdapters.ProfessionalSuccessfulPDTTableAdapter();
-                        ProfessionalPDTDataSet.ProfessionalSuccessfulPDTDataTable ProfessionalSuccessfulPDTTable = new ProfessionalPDTDataSet.ProfessionalSuccessfulPDTDataTable();
-                        ProfessionalSuccessfulPDTAdapter.FillProfessionalSuccededPDT(ProfessionalSuccessfulPDTTable, Convert.ToInt32(ProID), Convert.ToInt32(pdt.Custom.ToString()));
+            //        if (pdt.Custom.ToString() == row["ProjectID"].ToString() && pdt.Currency.ToString() == row["CurrencyCode"].ToString() && (row["Amount"].ToString() == pdt.GrossTotal.ToString()))
+            //        {
+            //            //Insert it only 1 time
+            //            ////Sucessful PDT////
+            //            ProfessionalPDTDataSetTableAdapters.ProfessionalSuccessfulPDTTableAdapter ProfessionalSuccessfulPDTAdapter = new ProfessionalPDTDataSetTableAdapters.ProfessionalSuccessfulPDTTableAdapter();
+            //            ProfessionalPDTDataSet.ProfessionalSuccessfulPDTDataTable ProfessionalSuccessfulPDTTable = new ProfessionalPDTDataSet.ProfessionalSuccessfulPDTDataTable();
+            //            ProfessionalSuccessfulPDTAdapter.FillProfessionalSuccededPDT(ProfessionalSuccessfulPDTTable, Convert.ToInt32(ProID), Convert.ToInt32(pdt.Custom.ToString()));
 
-                        if (ProfessionalSuccessfulPDTTable.Rows.Count == 0)
-                        {
-                            ProfessionalPDT.SuccessPDT(pdt.GrossTotal, pdt.InvoiceNumber, pdt.PaymentStatus, pdt.PayerFirstName, pdt.PayerLastName, pdt.PaymentFee, pdt.BusinessEmail, txToken
-                     , pdt.ReceiverEmail, pdt.ItemName, pdt.Currency, pdt.TransactionId, pdt.Custom, "no subscriber", Convert.ToInt32(ProID), Convert.ToInt32(pdt.Custom));
+            //            if (ProfessionalSuccessfulPDTTable.Rows.Count == 0)
+            //            {
+            //                ProfessionalPDT.SuccessPDT(pdt.GrossTotal, pdt.InvoiceNumber, pdt.PaymentStatus, pdt.PayerFirstName, pdt.PayerLastName, pdt.PaymentFee, pdt.BusinessEmail, txToken
+            //         , pdt.ReceiverEmail, pdt.ItemName, pdt.Currency, pdt.TransactionId, pdt.Custom, "no subscriber", Convert.ToInt32(ProID), Convert.ToInt32(pdt.Custom));
 
-                            ProfessionalPDT.AddProfessionalPendingTransaction(Convert.ToInt32(ProID),
-                                                                      Convert.ToInt32(pdt.Custom));
+            //                ProfessionalPDT.AddProfessionalPendingTransaction(Convert.ToInt32(ProID),
+            //                                                          Convert.ToInt32(pdt.Custom));
 
-                            string sucessmessage = pdt.PayerFirstName + " " +
-                                pdt.PayerFirstName + "<br/>";
-                            sucessmessage += Resources.Resource.PaymentOf + " ";
-                            sucessmessage += pdt.Currency + " " + pdt.GrossTotal +
-                                Resources.Resource.PaymentProcessed + "<br/>";
-                            sucessmessage += Resources.Resource.Sincerely + "<br/>";
-                            sucessmessage += Resources.Resource.YourSideJobTeam + "<br/>";
-                        }
-                        else
-                        {
-                            HiddenLabel.Text = Resources.Resource.AlreadyPaid;
-                        }
-                    }
-                    else
-                    {
-                        //Potential Hack
-                        ProfessionalPDT.HackedPDT(pdt.GrossTotal, pdt.InvoiceNumber, pdt.PaymentStatus, pdt.PayerFirstName, pdt.PayerLastName, pdt.PaymentFee, pdt.BusinessEmail, txToken
-                          , pdt.ReceiverEmail, pdt.ItemName, pdt.Currency, pdt.TransactionId, pdt.Custom, "no subscriber", Convert.ToInt32(ProID), Convert.ToInt32(pdt.Custom));
+            //                string sucessmessage = pdt.PayerFirstName + " " +
+            //                    pdt.PayerFirstName + "<br/>";
+            //                sucessmessage += Resources.Resource.PaymentOf + " ";
+            //                sucessmessage += pdt.Currency + " " + pdt.GrossTotal +
+            //                    Resources.Resource.PaymentProcessed + "<br/>";
+            //                sucessmessage += Resources.Resource.Sincerely + "<br/>";
+            //                sucessmessage += Resources.Resource.YourSideJobTeam + "<br/>";
+            //            }
+            //            else
+            //            {
+            //                HiddenLabel.Text = Resources.Resource.AlreadyPaid;
+            //            }
+            //        }
+            //        else
+            //        {
+            //            //Potential Hack
+            //            ProfessionalPDT.HackedPDT(pdt.GrossTotal, pdt.InvoiceNumber, pdt.PaymentStatus, pdt.PayerFirstName, pdt.PayerLastName, pdt.PaymentFee, pdt.BusinessEmail, txToken
+            //              , pdt.ReceiverEmail, pdt.ItemName, pdt.Currency, pdt.TransactionId, pdt.Custom, "no subscriber", Convert.ToInt32(ProID), Convert.ToInt32(pdt.Custom));
 
-                        //Email The Hacker and Admin
-                        string failuremessage = pdt.PayerFirstName + " " +
-                                pdt.PayerFirstName + "<br/>";
-                        failuremessage += Resources.Resource.FailedTransaction + "<br/>";
-                        failuremessage += Resources.Resource.FailurePDT;
-                        HiddenLabel.Text = failuremessage;
+            //            //Email The Hacker and Admin
+            //            string failuremessage = pdt.PayerFirstName + " " +
+            //                    pdt.PayerFirstName + "<br/>";
+            //            failuremessage += Resources.Resource.FailedTransaction + "<br/>";
+            //            failuremessage += Resources.Resource.FailurePDT;
+            //            HiddenLabel.Text = failuremessage;
 
-                    }
+            //        }
 
-                }
-            }
-            else
-            {
-                string failuremessage = pdt.PayerFirstName + " " +
-                                 pdt.PayerFirstName + "<br/>";
-                failuremessage += Resources.Resource.FailedTransaction + "<br/>";
-                failuremessage += Resources.Resource.FailurePDT;
-                HiddenLabel.Text = failuremessage;
-            }
+            //    }
+            //}
+            //else
+            //{
+            //    string failuremessage = pdt.PayerFirstName + " " +
+            //                     pdt.PayerFirstName + "<br/>";
+            //    failuremessage += Resources.Resource.FailedTransaction + "<br/>";
+            //    failuremessage += Resources.Resource.FailurePDT;
+            //    HiddenLabel.Text = failuremessage;
+            //}
         }
     }
 

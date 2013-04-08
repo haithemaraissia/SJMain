@@ -1,5 +1,5 @@
 ﻿
-Partial Class NotAuthenticated_NewsLetter
+Partial Class NotAuthenticated_Legal
     Inherits System.Web.UI.Page
 
 End Class

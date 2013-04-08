@@ -6,8 +6,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
     <p>
         <asp:Label ID="DearLabel" runat="server" Text="<%$ Resources:Resource, Dear%>"></asp:Label>
-        <span class="DarkRed"><strong>
-            <asp:Label ID="UsernameLabel" runat="server" Text=""></asp:Label></strong></span><asp:Label
+        <span class="DarkRed">
+            <asp:Label ID="UsernameLabel" runat="server" Text="" 
+            style="color: #800000; font-weight: 700;"></asp:Label></span><asp:Label
                 ID="CommaLabel" runat="server" Text="<%$ Resources:Resource, Comma%>"></asp:Label>
         <br />
         <br />
@@ -22,7 +23,8 @@
     </p>
     <p>
         <br />
-        <asp:Label ID="IDLabel" runat="server" Text="<%$ Resources:Resource, ID:%>"></asp:Label>&nbsp;<asp:Label
+        <asp:Label ID="IDLabel" runat="server" Text="<%$ Resources:Resource, ID:%>" 
+            style="color: #800000; font-weight: 700"></asp:Label>&nbsp;<asp:Label
             ID="UserID" runat="server" Text=""></asp:Label>
     </p>
     <p>

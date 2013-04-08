@@ -13,7 +13,7 @@
     <script type="text/javascript" src="../scripts/jquery-1.5.2.js"></script>
     <link rel="stylesheet" href="../_assets/css/TemplateStyleSheet.css" type="text/css"
         media="screen" />
-    <meta property="og:url" content="https://www.my-side.job.com" />
+    <meta property="og:url" content="https://www.my-side-job.com" />
     <link rel="canonical" href="http://www.my-side-job.com" />
 </head>
 <body>
